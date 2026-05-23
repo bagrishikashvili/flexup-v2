@@ -303,3 +303,34 @@
 - `adminBypass` flag მერე audit log-ისთვის გამოგვადგება
 
 **Risk:** ADMIN-ის misuse. Mitigation — audit log Phase 2.5-ში (ყოველი admin-bypassed mutation ცალკე ცხრილში).
+
+---
+
+## ADR-023: Haversine raw SQL over PostGIS for geo search
+
+**კონტექსტი:** Location geo search (radius-ით) — distance რომ გავიგოთ, PostGIS-ი თუ pure SQL?
+
+**გადაწყვეტილება:** `Prisma.$queryRaw` + Haversine formula (`6371 * acos(...)`). PostGIS extension არ ვამატებთ.
+
+**მიზეზი:**
+- PostGIS adds operational complexity — extension install per DB, backup/restore care, migration coordination
+- Haversine ≈ 0.5% accuracy radius < 100km-ისთვის — საქართველოს ბაზრისთვის სრულიად საკმარისი
+- Schema-ში უკვე გვაქვს `@@index([latitude, longitude])` — PostgreSQL btree-ი planner-ისთვის
+- ყველა parameter `Prisma.sql` template literal-ით (SQL injection-safe)
+
+**Reevaluate:** location count > ~10k per company, polygon zones (service areas), nearest-neighbor performance regression.
+
+---
+
+## ADR-024: Location HARD delete with shift-reference guard
+
+**კონტექსტი:** Location-ის წაშლის სტრატეგია — soft-delete (`isActive=false`) უკვე გვაქვს, რეალური `DELETE` მაინც გვინდა cleanup-ისთვის.
+
+**გადაწყვეტილება:** `DELETE /api/companies/:companyId/locations/:id` ნამდვილ DB DELETE-ს აკეთებს, **მაგრამ ჯერ ამოწმებს** `Shift`/`ShiftSeries`-ის reference-ებს. თუ რომელიმე არსებობს → 409 Conflict ("Cannot delete location with associated shifts. Deactivate instead.").
+
+**მიზეზი:**
+- Historical shifts-ის locationId stable უნდა იყოს — analytics, payouts, dispute resolution
+- ცარიელი/შეცდომით შექმნილი location-ის cleanup-ი მაინც საჭიროა — soft-delete-მა შესაძლოა garbage დააგროვოს
+- `isActive=false` ნორმალური workflow, hard delete — escape hatch
+
+**Trade-off:** check + delete არ არის atomic transaction — race condition (concurrent shift create + delete). MVP-ისთვის acceptable; Phase 3-ში pessimistic lock-ი ან `ON DELETE RESTRICT` FK policy.

@@ -8,6 +8,7 @@ import { AuthModule } from '@/auth/auth.module';
 import { UsersModule } from '@/users/users.module';
 import { CompaniesModule } from '@/companies/companies.module';
 import { CompanyMembersModule } from '@/company-members/company-members.module';
+import { LocationsModule } from '@/locations/locations.module';
 import { JwtAuthGuard } from '@/auth/guards/jwt-auth.guard';
 import { RolesGuard } from '@/auth/guards/roles.guard';
 
@@ -21,6 +22,7 @@ import { RolesGuard } from '@/auth/guards/roles.guard';
     AuthModule,
     CompaniesModule,
     CompanyMembersModule,
+    LocationsModule,
   ],
   providers: [
     { provide: APP_GUARD, useClass: JwtAuthGuard },

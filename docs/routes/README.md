@@ -13,6 +13,7 @@ Error response shape: `{ statusCode, message, error, timestamp, path }`
 | [users.md](users.md) | User profiles + admin | `/api/users` |
 | [companies.md](companies.md) | Companies (CRUD + logo + admin) | `/api/companies`, `/api/admin/companies` |
 | [company-members.md](company-members.md) | Company member management | `/api/companies/:companyId/members` |
+| [locations.md](locations.md) | Company locations + geo search | `/api/companies/:companyId/locations` |
 
 ## Convention for new routes
 
