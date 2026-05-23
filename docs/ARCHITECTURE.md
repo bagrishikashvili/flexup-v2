@@ -191,3 +191,57 @@
 - Default-secure: დავიწყებული `@UseGuards()` → unprotected endpoint production-ში. ეს risky.
 - `@Public()` explicit და ნათელი — კოდ-review-ში ჩანს
 - Reflector-ით `isPublic` metadata check `JwtAuthGuard.canActivate()`-ში
+
+---
+
+## ADR-015: Avatar storage — local filesystem (MVP)
+
+**კონტექსტი:** Avatar-ების სად შენახვა.
+
+**გადაწყვეტილება:** Local disk, `uploads/avatars/<userId>-<timestamp>.webp`. Sharp-ით resize (512×512 max, WebP q85). `UPLOADS_DIR` / `UPLOADS_BASE_URL` env-driven.
+
+**მიზეზი:** MVP simplicity. Single-instance deployment. Cloud SDK dependency ამ ეტაპზე overkill.
+
+**სამომავლო migration:** `StorageService` interface → local vs S3/R2 implementation swap. Env-driven strategy (`STORAGE_DRIVER=local|s3`). Existing URLs მოიცვა CDN prefix-ით.
+
+---
+
+## ADR-016: Password change revokes all sessions
+
+**კონტექსტი:** Password change-ის შემდეგ სხვა devices-ი authorized უნდა დარჩეს?
+
+**გადაწყვეტილება:** Password change → ყველა `RefreshToken.revokedAt = now()`. User-ს ახელახლა login ეთხოვება.
+
+**მიზეზი:**
+- Stolen credentials scenario: attacker შეძლო login, მსხვერპლი პაროლს ცვლის → ყველა stolen session კვდება
+- Best practice (GitHub, Google, bank apps ყველა ასე იქცევა)
+- User UX impact minimal — 1x re-login across devices
+
+---
+
+## ADR-017: Email/phone change does NOT revoke sessions
+
+**კონტექსტი:** Email ან phone ცვლილება sessions-ს revoke-ავს?
+
+**გადაწყვეტილება:** Sessions valid რჩება. JWT payload `sub` = userId (invariant), email არ არის payload-ში.
+
+**მიზეზი:** Less disruptive UX. Email-ი identity-ის display ელემენტია, auth identifier არა (JWT-ში userId-ია).
+
+**Trade-off:** თუ attacker-მა email შეცვალა (stolen session), user-ის ძველი tokens მაინც valid-ია — user-ს შეუძლია logout-all-ი.
+
+**Mitigation (მომავალი):** Active sessions view + individual session revoke UI.
+
+---
+
+## ADR-018: Soft delete via `isActive` flag
+
+**კონტექსტი:** Account deletion strategy.
+
+**გადაწყვეტილება:** `User.isActive = false`, login blocked, მონაცემები რჩება. RefreshToken-ები revoke-დება.
+
+**მიზეზი:**
+- Referential integrity: User-ზე foreign key reference-ები (Shift, CompanyMember, etc.)
+- Hard delete cascade-ი production risk-ია
+- GDPR right-to-erasure ცალკე task — სპეციალური data scrubbing logic სჭირდება
+
+**Reactivation:** Admin-ს შეუძლია `PATCH /api/users/:id/active` — `isActive: true`.

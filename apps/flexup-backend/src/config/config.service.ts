@@ -33,6 +33,14 @@ export class AppConfigService {
     };
   }
 
+  get uploads() {
+    return {
+      dir: this.config.getOrThrow<string>('UPLOADS_DIR'),
+      baseUrl: this.config.getOrThrow<string>('UPLOADS_BASE_URL'),
+      maxSizeBytes: this.config.getOrThrow<number>('MAX_UPLOAD_SIZE_BYTES'),
+    };
+  }
+
   get jwt() {
     return {
       accessSecret: this.config.getOrThrow<string>('JWT_ACCESS_SECRET'),

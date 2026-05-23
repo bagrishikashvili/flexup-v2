@@ -10,3 +10,5 @@ apps/*/coverage
 .env
 .env.*
 !.env.example
+
+apps/flexup-backend/uploads/
