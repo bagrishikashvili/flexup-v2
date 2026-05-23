@@ -140,3 +140,54 @@
 - isActive flag მარტივი და საკმარისი
 
 **Reevaluate:** თუ GDPR right-to-be-forgotten dare დაგვჭირდება.
+
+---
+
+## ADR-011: Refresh token storage strategy
+
+**კონტექსტი:** Refresh tokens-ი სადმე უნდა ვინახოთ revocation-ისთვის.
+
+**გადაწყვეტილება:** Raw token client-თანაა, DB-ში მხოლოდ SHA-256 hash (`RefreshToken.tokenHash`).
+
+**მიზეზი:**
+- DB breach-ის შემთხვევაში hash-ები უსარგებლოა — raw token-ებს ვერ ამოიღებ
+- SHA-256 one-way function — hash-იდან raw-ის revert შეუძლებელია
+- Lookup ეფექტური: tokenHash indexed unique column
+
+---
+
+## ADR-012: Refresh token rotation + reuse detection
+
+**კონტექსტი:** Stolen token-ების detection.
+
+**გადაწყვეტილება:** ყოველ refresh request-ზე ძველი token revoke-დება, ახალი issue-დება. Revoked token-ის გამოყენება → ყველა user session revoke.
+
+**მიზეზი:**
+- Token rotation ზღუდავს stolen refresh token-ის გამოყენების ფანჯარას
+- Reuse detection: თუ revoked token მოდის, ეს attack სიგნალია → ყველა session-ის kill ანეიტრალებს stolen token-ს
+- Implementation: `revokedAt` timestamp column; reuse check სანამ ახალ token-ს გამოვცემთ
+
+---
+
+## ADR-013: JwtStrategy.validate — DB query per request
+
+**კონტექსტი:** JWT stateless-ია, მაგრამ user.isActive შეიძლება შეიცვალოს token-ის issue-ბის შემდეგ.
+
+**გადაწყვეტილება:** `JwtStrategy.validate()` ყოველ authenticated request-ზე DB-ს query-ს (findById).
+
+**მიზეზი:** Simplicity first. Token payload-ი საკმარისი იქნებოდა stateless-ისთვის, მაგრამ `isActive: false` user-ი უნდა დაიბლოკოს დაუყოვნებლივ.
+
+**სამომავლო:** Redis cache user object-ისთვის TTL 60 წამით — DB hit-ი ყოველ request-ზე შეიცვლება cache hit-ით. Invalidation: user update → cache delete.
+
+---
+
+## ADR-014: Global JwtAuthGuard + `@Public()` opt-out
+
+**კონტექსტი:** Default-ად ყველა endpoint-ი დაცული თუ opt-in?
+
+**გადაწყვეტილება:** `APP_GUARD` provider-ად `JwtAuthGuard` — ყველა endpoint default-ად authenticated. `@Public()` decorator-ით ხელით opt-out.
+
+**მიზეზი:**
+- Default-secure: დავიწყებული `@UseGuards()` → unprotected endpoint production-ში. ეს risky.
+- `@Public()` explicit და ნათელი — კოდ-review-ში ჩანს
+- Reflector-ით `isPublic` metadata check `JwtAuthGuard.canActivate()`-ში
