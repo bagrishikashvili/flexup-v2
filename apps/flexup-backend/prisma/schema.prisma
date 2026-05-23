@@ -1,0 +1,440 @@
+// ============================================
+// flexup — Prisma schema v1.0 (MVP foundation)
+//
+// Scope: Phase 1 — Companies side
+// რჩევა: ამ ფაილს არ ცვლი manually მცირე ცვლილებებისთვის.
+// ცვლილების შემთხვევაში — migration-ი ჩაუშვი (`npm run db:migrate:dev`)
+// ============================================
+
+generator client {
+  provider = "prisma-client-js"x
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// ENUMS
+// ============================================
+
+enum UserRole {
+  WORKER
+  COMPANY_USER
+  ADMIN
+}
+
+enum CompanyMemberRole {
+  OWNER
+  MANAGER
+  VIEWER
+}
+
+enum ShiftVisibility {
+  OPEN              // ღია marketplace
+  PRIVATE           // მხოლოდ მოწვეული workers ხედავენ
+}
+
+enum ShiftStatus {
+  DRAFT
+  PUBLISHED
+  FILLED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum ApplicationStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  WITHDRAWN
+}
+
+enum JobCategory {
+  HOSPITALITY
+  RETAIL
+  LOGISTICS
+  DELIVERY
+  EVENTS
+  CLEANING
+  OTHER
+}
+
+enum DayOfWeek {
+  MON
+  TUE
+  WED
+  THU
+  FRI
+  SAT
+  SUN
+}
+
+// ============================================
+// IDENTITY / AUTH
+// ============================================
+
+model User {
+  id                  String          @id @default(cuid())
+  email               String          @unique
+  phoneNumber         String?         @unique
+  passwordHash        String
+  role                UserRole
+
+  firstName           String
+  lastName            String
+  avatarUrl           String?
+
+  emailVerified       Boolean         @default(false)
+  phoneVerified       Boolean         @default(false)
+  isActive            Boolean         @default(true)
+
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+  lastLoginAt         DateTime?
+
+  refreshTokens       RefreshToken[]
+  companyMembers      CompanyMember[]
+  workerProfile       WorkerProfile?
+  createdShifts       Shift[]         @relation("ShiftCreatedBy")
+
+  @@index([email])
+  @@index([role])
+}
+
+model RefreshToken {
+  id                  String          @id @default(cuid())
+  tokenHash           String          @unique
+  userId              String
+  user                User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  expiresAt           DateTime
+  revokedAt           DateTime?
+  userAgent           String?
+  ipAddress           String?
+
+  createdAt           DateTime        @default(now())
+
+  @@index([userId])
+  @@index([tokenHash])
+}
+
+// ============================================
+// COMPANY (multi-tenant)
+// ============================================
+
+model Company {
+  id                  String          @id @default(cuid())
+  name                String
+  legalName           String?
+  registrationNumber  String?
+  vatNumber           String?
+  logoUrl             String?
+  websiteUrl          String?
+
+  defaultCurrency     String          @default("GEL")
+
+  isVerified          Boolean         @default(false)
+  verifiedAt          DateTime?
+
+  isActive            Boolean         @default(true)
+
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+
+  members             CompanyMember[]
+  locations           Location[]
+  shifts              Shift[]
+  shiftSeries         ShiftSeries[]
+  flexpools           Flexpool[]
+  rateTemplates       RateTemplate[]
+
+  @@index([name])
+}
+
+model CompanyMember {
+  id                  String              @id @default(cuid())
+  userId              String
+  companyId           String
+  role                CompanyMemberRole
+
+  user                User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  company             Company             @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  createdAt           DateTime            @default(now())
+
+  @@unique([userId, companyId])
+  @@index([companyId])
+  @@index([userId])
+}
+
+model Location {
+  id                  String          @id @default(cuid())
+  companyId           String
+  company             Company         @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  name                String
+  address             String
+  city                String
+  country             String          @default("GE")
+  postalCode          String?
+
+  latitude            Float?
+  longitude           Float?
+
+  isActive            Boolean         @default(true)
+
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+
+  shifts              Shift[]
+  shiftSeries         ShiftSeries[]
+
+  @@index([companyId])
+  @@index([city])
+  @@index([latitude, longitude])
+}
+
+// ============================================
+// FLEXPOOLS — categorized favorite workers lists
+// ============================================
+
+model Flexpool {
+  id                  String              @id @default(cuid())
+  companyId           String
+  company             Company             @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  name                String              // "ჩემი ბარმენები", "Cleaners"
+  description         String?
+  category            JobCategory?
+  color               String?             // hex, UI-სთვის
+
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+
+  members             FlexpoolMember[]
+  shiftInvitations    ShiftInvitation[]
+
+  @@unique([companyId, name])
+  @@index([companyId])
+}
+
+model FlexpoolMember {
+  id                  String          @id @default(cuid())
+  flexpoolId          String
+  flexpool            Flexpool        @relation(fields: [flexpoolId], references: [id], onDelete: Cascade)
+  workerProfileId     String
+  workerProfile       WorkerProfile   @relation(fields: [workerProfileId], references: [id], onDelete: Cascade)
+
+  notes               String?         // company-ის private notes
+  addedAt             DateTime        @default(now())
+
+  @@unique([flexpoolId, workerProfileId])
+  @@index([flexpoolId])
+  @@index([workerProfileId])
+}
+
+// ============================================
+// RATE TEMPLATES — reusable pricing schedules
+// ============================================
+
+model RateTemplate {
+  id                  String                @id @default(cuid())
+  companyId           String
+  company             Company               @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  name                String
+  currency            String                @default("GEL")
+
+  rules               RateTemplateRule[]
+
+  createdAt           DateTime              @default(now())
+  updatedAt           DateTime              @updatedAt
+
+  @@unique([companyId, name])
+  @@index([companyId])
+}
+
+model RateTemplateRule {
+  id                  String          @id @default(cuid())
+  rateTemplateId      String
+  rateTemplate        RateTemplate    @relation(fields: [rateTemplateId], references: [id], onDelete: Cascade)
+
+  // "HH:mm" string — e.g. "22:00", "06:00"
+  // თუ timeTo < timeFrom, ფანჯარა შუაღამეს ცდება (e.g. 22:00 → 06:00)
+  timeFrom            String
+  timeTo              String
+
+  amountMinor         Int             // minor units (tetri/cents)
+
+  // ცარიელი = ყველა დღე
+  appliesOnDays       DayOfWeek[]
+
+  @@index([rateTemplateId])
+}
+
+// ============================================
+// SHIFTS (core)
+// ============================================
+
+model ShiftSeries {
+  id                  String          @id @default(cuid())
+  companyId           String
+  company             Company         @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  locationId          String
+  location            Location        @relation(fields: [locationId], references: [id])
+
+  title               String
+  description         String?
+  category            JobCategory
+
+  seriesStartsOn      DateTime
+  seriesEndsOn        DateTime?       // null = open-ended
+
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+
+  shifts              Shift[]
+
+  @@index([companyId])
+  @@index([locationId])
+}
+
+model Shift {
+  id                  String              @id @default(cuid())
+
+  // optional series membership
+  seriesId            String?
+  series              ShiftSeries?        @relation(fields: [seriesId], references: [id], onDelete: SetNull)
+
+  // ownership
+  companyId           String
+  company             Company             @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  locationId          String
+  location            Location            @relation(fields: [locationId], references: [id])
+  createdById         String
+  createdBy           User                @relation("ShiftCreatedBy", fields: [createdById], references: [id])
+
+  // details
+  title               String
+  description         String?
+  category            JobCategory
+
+  // timing — UTC; timezone-ი ცალკე
+  startsAt            DateTime
+  endsAt              DateTime
+  timezone            String              @default("Asia/Tbilisi")
+
+  // pricing
+  currency            String              @default("GEL")
+  // EITHER flatRateMinor OR rateRules. backend validation must enforce this XOR.
+  flatRateMinor       Int?
+
+  // capacity
+  positionsTotal      Int                 @default(1)
+  positionsFilled     Int                 @default(0)
+
+  // visibility & status
+  visibility          ShiftVisibility     @default(OPEN)
+  status              ShiftStatus         @default(DRAFT)
+
+  requiredSkills      String[]
+
+  publishedAt         DateTime?
+  cancelledAt         DateTime?
+  cancellationReason  String?
+
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+
+  rateRules           ShiftRateRule[]
+  applications        Application[]
+  invitations         ShiftInvitation[]
+
+  @@index([companyId])
+  @@index([locationId])
+  @@index([status])
+  @@index([startsAt])
+  @@index([category])
+  @@index([visibility, status])
+}
+
+model ShiftRateRule {
+  id                  String          @id @default(cuid())
+  shiftId             String
+  shift               Shift           @relation(fields: [shiftId], references: [id], onDelete: Cascade)
+
+  timeFrom            String
+  timeTo              String
+  amountMinor         Int
+  appliesOnDays       DayOfWeek[]
+
+  @@index([shiftId])
+}
+
+model ShiftInvitation {
+  id                  String              @id @default(cuid())
+  shiftId             String
+  shift               Shift               @relation(fields: [shiftId], references: [id], onDelete: Cascade)
+
+  // EITHER workerProfileId OR flexpoolId (validated in backend)
+  workerProfileId     String?
+  workerProfile       WorkerProfile?      @relation(fields: [workerProfileId], references: [id], onDelete: Cascade)
+  flexpoolId          String?
+  flexpool            Flexpool?           @relation(fields: [flexpoolId], references: [id], onDelete: Cascade)
+
+  invitedAt           DateTime            @default(now())
+
+  @@index([shiftId])
+  @@index([workerProfileId])
+  @@index([flexpoolId])
+}
+
+// ============================================
+// WORKERS (Phase 2 — schema მზადაა, business logic მერე)
+// ============================================
+
+model WorkerProfile {
+  id                      String              @id @default(cuid())
+  userId                  String              @unique
+  user                    User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  bio                     String?
+  dateOfBirth             DateTime?
+  city                    String?
+  skills                  String[]
+
+  averageRating           Float?
+  totalShiftsCompleted    Int                 @default(0)
+
+  createdAt               DateTime            @default(now())
+  updatedAt               DateTime            @updatedAt
+
+  applications            Application[]
+  flexpoolMemberships     FlexpoolMember[]
+  invitations             ShiftInvitation[]
+
+  @@index([city])
+}
+
+model Application {
+  id                  String              @id @default(cuid())
+  shiftId             String
+  shift               Shift               @relation(fields: [shiftId], references: [id], onDelete: Cascade)
+  workerProfileId     String
+  workerProfile       WorkerProfile       @relation(fields: [workerProfileId], references: [id], onDelete: Cascade)
+
+  status              ApplicationStatus   @default(PENDING)
+  proposedRateMinor   Int?
+  message             String?
+
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+
+  @@unique([shiftId, workerProfileId])
+  @@index([shiftId])
+  @@index([workerProfileId])
+  @@index([status])
+}

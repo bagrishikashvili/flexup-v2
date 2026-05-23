@@ -1,0 +1,7 @@
+node_modules
+apps/*/node_modules
+apps/*/.expo
+apps/*/dist
+npm-debug.log*
+.git
+.DS_Store
