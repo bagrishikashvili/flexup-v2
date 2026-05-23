@@ -245,3 +245,61 @@
 - GDPR right-to-erasure ცალკე task — სპეციალური data scrubbing logic სჭირდება
 
 **Reactivation:** Admin-ს შეუძლია `PATCH /api/users/:id/active` — `isActive: true`.
+
+---
+
+## ADR-019: CompanyAccessGuard role hierarchy (numeric)
+
+**კონტექსტი:** Multi-tenant access control — `@RequireCompanyRole()` decorator-ის semantics.
+
+**გადაწყვეტილება:** Numeric hierarchy — `OWNER=3`, `MANAGER=2`, `VIEWER=1`. `@RequireCompanyRole(MANAGER)` ნიშნავს "MANAGER ან მაღლა" (MANAGER, OWNER).
+
+**მიზეზი:**
+- Intuitive — "minimum required role" ბუნებრივი mental model
+- Explicit role list-ით ვალიდაცია (`[OWNER, MANAGER]`) verbose-ია ყოველ endpoint-ზე
+- Multiple decorators-ის შემთხვევაში — `Math.min` რომ ყველაზე ნაკლები requirement-იც დაკმაყოფილდეს
+
+**Trade-off:** ვერ ვამბობთ "ZUSTAD VIEWER და OWNER, MANAGER არა" — დღევანდელ ბიზნეს-წესებში არ გვჭირდება.
+
+---
+
+## ADR-020: Non-member returns 403, not 404
+
+**კონტექსტი:** Non-member user-ი ცდილობს company-ის access-ს.
+
+**გადაწყვეტილება:** `ForbiddenException` (403) — `"Not a member of this company"`. იგივე response არსებული და არ-არსებული companyId-ისთვის.
+
+**მიზეზი:**
+- Company enumeration attack-ის prevention — 404 vs 403 difference leak-ავს რომ company არსებობს
+- Symmetric response → attacker ვერ ააწყობს valid company id-ების სიას
+
+**Side effect:** Owner-ი თუ შეცდომით wrong companyId გადასცემს, "not a member" message-ს იღებს — UX trade-off.
+
+---
+
+## ADR-021: Last owner protection in service layer
+
+**კონტექსტი:** ბოლო OWNER-ის demote/remove/leave-ის აკრძალვა.
+
+**გადაწყვეტილება:** Business rule `CompanyMembersService`-ში — count check ყოველი role-changing operation-ის წინ. DB constraint არ ვამატებთ.
+
+**მიზეზი:**
+- Prisma schema-ით ვერ გამოვხატავთ (cross-row constraint)
+- PostgreSQL trigger-ი შესაძლებელია, მაგრამ business logic database-ში hidden გახდება
+- Service layer transparent — code review-ში ჩანს
+- Race condition risk: ორი concurrent OWNER demote — count check pre-mutation. ეს corner case acceptable MVP-ისთვის; უმოკლეს pessimistic-lock-ი Phase 3-ში
+
+---
+
+## ADR-022: ADMIN bypass in CompanyAccessGuard
+
+**კონტექსტი:** Platform ADMIN-ი ნებისმიერ company-ში უნდა შევიდეს support-ისთვის.
+
+**გადაწყვეტილება:** `CompanyAccessGuard`-ში ADMIN check — bypass-ი membership lookup-ისა. `request.companyMember` populate-დება synthetic OWNER-ით + `adminBypass: true` flag-ით.
+
+**მიზეზი:**
+- Support workflows: trouble-shooting, manual cleanup, GDPR requests
+- Synthetic OWNER role საშუალებას აძლევს ADMIN-ს ნებისმიერი operation-ი ჩაატაროს guard re-tooling-ის გარეშე
+- `adminBypass` flag მერე audit log-ისთვის გამოგვადგება
+
+**Risk:** ADMIN-ის misuse. Mitigation — audit log Phase 2.5-ში (ყოველი admin-bypassed mutation ცალკე ცხრილში).
