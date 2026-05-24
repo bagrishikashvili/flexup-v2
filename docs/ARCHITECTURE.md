@@ -334,3 +334,92 @@
 - `isActive=false` ნორმალური workflow, hard delete — escape hatch
 
 **Trade-off:** check + delete არ არის atomic transaction — race condition (concurrent shift create + delete). MVP-ისთვის acceptable; Phase 3-ში pessimistic lock-ი ან `ON DELETE RESTRICT` FK policy.
+
+---
+
+## ADR-025: `packages/shared` workspace package for cross-package types
+
+**კონტექსტი:** Backend აქამდე ერთადერთი source of truth-ი იყო, ფრონტენდ-ი ცალკე გადაიწერდა enums/types/validation-ს. ეს მაგრად risky — drift შეუმჩნევლად შევა.
+
+**გადაწყვეტილება:** npm workspace package `@flexup/shared`:
+- `enums/` — UserRole, CompanyMemberRole, JobCategory, ShiftStatus, etc. (string enums Prisma value-ებთან 1-1)
+- `types/` — Request/Response interfaces, ApiErrorResponse, PaginatedResponse, ErrorCode
+- `validation/` — Zod schemas (single-source validation for backend + frontend)
+
+**მიზეზი:**
+- Compile-time contract enforcement (backend ↔ frontend)
+- Frontend-ი იყენებს იგივე Zod schemas-ს React Hook Form-ისთვის
+- OpenAPI codegen alternative-ი — chosen workspace-ი DX-სა და refactor speed-ისთვის
+
+**Trade-off:** Prisma generates its own enums; backend mappers cast at the boundary (`prismaUser.role as UserRole`). Acceptable, რადგან Prisma და shared enum-ი string-value-equal.
+
+---
+
+## ADR-026: Incremental Zod migration (hybrid validation in auth)
+
+**კონტექსტი:** აქამდე class-validator-ით ვამოწმებდით ყველაფერს. shared/Zod schemas-ი frontend-ისთვის გვინდა — backend-მაც გამოიყენოს რომ schema drift არ მოხდეს.
+
+**გადაწყვეტილება:** Hybrid pattern — DTO classes ისევ class-validator-ით ვალიდდება (NestJS `ValidationPipe` global), ცალკეული endpoint-ი ZodValidationPipe-ით ლეიერდება `@UsePipes(new ZodValidationPipe(schema))`. ჯერ მხოლოდ Auth controller-ი (`register`, `login`, `refresh`).
+
+**მიზეზი:**
+- Big-bang refactor risk-ი თავიდან აცილებული
+- Auth-ი demonstrate-ს pattern-ს და highest-value endpoint-ია (frontend მუდმივად ეხება)
+- Both validators რომ ერთსა და იმავე payload-ს იღებენ → double-safety net
+
+**Migration target:** Phase 3 cleanup batch — სრული class-validator → Zod. ალბათ Joi-ც replaced.
+
+---
+
+## ADR-027: In-memory rate limiting MVP (@nestjs/throttler default storage)
+
+**კონტექსტი:** Auth endpoints (`/api/auth/login`, `register`, `refresh`) brute-force-ისგან დაცული უნდა იყოს.
+
+**გადაწყვეტილება:** `@nestjs/throttler` default in-memory storage. Global guard (APP_GUARD), `@Throttle({...})` per-endpoint override, `@SkipThrottle()` health-ისთვის.
+
+Limits:
+- `register` — 3/min
+- `login` — 5/min
+- `refresh` — 10/min
+- Global — 10/sec, 100/min
+
+**Limitation:** per-instance, lost on restart, doesn't work multi-pod. MVP single-instance, ეს არ არის blocker.
+
+**Reevaluate:** scale > 1 instance → `@nest-lab/throttler-storage-redis` (Redis backend already running).
+
+---
+
+## ADR-028: Standardized error response envelope with `code` field
+
+**კონტექსტი:** Frontend-ს რომ reliable error handler ჰქონდეს — `message` ი18n-ში ექვემდებარება ცვლილებას, status code მარტო არასაკმარისია (400 ბევრად რამეს ნიშნავს).
+
+**გადაწყვეტილება:** ერთიანი `ApiErrorResponse` envelope ყველა error-ისთვის:
+```json
+{
+  "statusCode": 400,
+  "error": "Bad Request",
+  "message": "Validation failed",
+  "code": "VALIDATION_ERROR",
+  "details": [{ "field": "email", "message": "..." }],
+  "timestamp": "...",
+  "path": "/api/auth/login"
+}
+```
+
+- `code` — machine-readable, `ErrorCode` enum (`@flexup/shared`)
+- `message` — human-readable (i18n მერე)
+- `details` — field-level validation errors (Zod ან class-validator)
+
+Services-ი exception throw-ის დროს `{ code, message }` object გადასცემს NestJS HttpException-ს:
+```ts
+throw new BadRequestException({
+  code: ErrorCode.LAST_OWNER_PROTECTION,
+  message: 'Cannot demote the last owner',
+});
+```
+
+`AllExceptionsFilter` რთავს envelope-ში; თუ `code` არ მოცემული — auto-derive from HTTP status (e.g., 429 → `RATE_LIMIT_EXCEEDED`).
+
+**Reason:**
+- Frontend-ი switch-ი code-ზე, არა fragile string-match message-ზე
+- Stable contract — message text-ი შეიძლება შეიცვალოს, `code` invariant
+- Self-describing — Swagger UI-ში ApiErrorResponse type-ი frontend developer-ს ხედავს

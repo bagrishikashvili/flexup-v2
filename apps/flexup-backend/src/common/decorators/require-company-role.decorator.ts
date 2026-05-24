@@ -1,5 +1,5 @@
 import { SetMetadata } from '@nestjs/common';
-import { CompanyMemberRole } from '@prisma/client';
+import { CompanyMemberRole } from '@flexup/shared';
 
 export const COMPANY_ROLES_KEY = 'companyRoles';
 

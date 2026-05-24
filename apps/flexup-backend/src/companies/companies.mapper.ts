@@ -1,4 +1,5 @@
-import { Company, CompanyMemberRole } from '@prisma/client';
+import { Company } from '@prisma/client';
+import { CompanyMemberRole } from '@flexup/shared';
 import { CompanyPublicResponse } from '@/companies/dto/company-public.response';
 import { CompanyDetailResponse } from '@/companies/dto/company-detail.response';
 

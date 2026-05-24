@@ -8,7 +8,7 @@ import {
   Max,
   Min,
 } from 'class-validator';
-import { UserRole } from '@prisma/client';
+import { UserRole } from '@flexup/shared';
 
 export class UserListQueryDto {
   @IsOptional()

@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { ValidationPipe } from '@nestjs/common';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { join } from 'path';
 import { existsSync, mkdirSync } from 'fs';
 import { AppModule } from '@/app.module';
@@ -16,8 +17,11 @@ async function bootstrap(): Promise<void> {
   app.setGlobalPrefix('api');
 
   app.enableCors({
-    origin: config.corsOrigin,
+    origin: config.corsOrigins,
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['Content-Type'],
   });
 
   app.useGlobalPipes(
@@ -36,6 +40,30 @@ async function bootstrap(): Promise<void> {
     mkdirSync(uploadsDir, { recursive: true });
   }
   app.useStaticAssets(uploadsDir, { prefix: '/api/uploads' });
+
+  // ─── Swagger / OpenAPI ────────────────────────────────────────────────────
+  if (config.swaggerEnabled) {
+    const swaggerConfig = new DocumentBuilder()
+      .setTitle('flexup API')
+      .setDescription('Shifts marketplace API')
+      .setVersion('0.1.0')
+      .addBearerAuth(
+        { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' },
+        'JWT',
+      )
+      .addTag('auth')
+      .addTag('users')
+      .addTag('companies')
+      .addTag('members')
+      .addTag('locations')
+      .addTag('admin')
+      .addTag('health')
+      .build();
+    const document = SwaggerModule.createDocument(app, swaggerConfig);
+    SwaggerModule.setup('api/docs', app, document, {
+      swaggerOptions: { persistAuthorization: true },
+    });
+  }
 
   app.enableShutdownHooks();
 

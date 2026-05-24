@@ -1,12 +1,16 @@
 import { Controller, Get, HttpCode, HttpStatus, Res } from '@nestjs/common';
+import { SkipThrottle } from '@nestjs/throttler';
+import { ApiTags } from '@nestjs/swagger';
 import type { Response } from 'express';
 import { Public } from '@/common/decorators/public.decorator';
 import { HealthService } from '@/health/health.service';
 
+@ApiTags('health')
 @Controller('health')
 export class HealthController {
   constructor(private readonly healthService: HealthService) {}
 
+  @SkipThrottle()
   @Public()
   @Get()
   @HttpCode(HttpStatus.OK)

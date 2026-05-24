@@ -6,7 +6,8 @@ import {
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
-import { User, UserRole } from '@prisma/client';
+import { User } from '@prisma/client';
+import { UserRole } from '@flexup/shared';
 import { existsSync, mkdirSync, unlinkSync } from 'fs';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';

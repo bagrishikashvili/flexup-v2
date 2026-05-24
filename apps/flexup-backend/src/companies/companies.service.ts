@@ -4,7 +4,8 @@ import {
   Logger,
   NotFoundException,
 } from '@nestjs/common';
-import { Company, CompanyMemberRole, Prisma, UserRole } from '@prisma/client';
+import { Company, Prisma } from '@prisma/client';
+import { CompanyMemberRole, UserRole } from '@flexup/shared';
 import { existsSync, mkdirSync, unlinkSync } from 'fs';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
@@ -40,7 +41,7 @@ export class CompaniesService {
     if (!user) {
       throw new NotFoundException('User not found');
     }
-    if (user.role === UserRole.WORKER) {
+    if ((user.role as UserRole) === UserRole.WORKER) {
       throw new BadRequestException(
         'WORKER role users cannot create companies',
       );
@@ -78,7 +79,9 @@ export class CompaniesService {
       include: { company: true },
       orderBy: { company: { updatedAt: 'desc' } },
     });
-    return memberships.map((m) => toCompanyPublic(m.company, m.role));
+    return memberships.map((m) =>
+      toCompanyPublic(m.company, m.role as CompanyMemberRole),
+    );
   }
 
   async findById(
@@ -92,7 +95,11 @@ export class CompaniesService {
         where: { userId_companyId: { userId, companyId } },
       }),
     ]);
-    return toCompanyDetail(company, memberCount, membership?.role);
+    return toCompanyDetail(
+      company,
+      memberCount,
+      membership?.role as CompanyMemberRole | undefined,
+    );
   }
 
   // ─── Update ──────────────────────────────────────────────────────────────

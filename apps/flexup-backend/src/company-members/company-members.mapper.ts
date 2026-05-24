@@ -1,4 +1,5 @@
 import { CompanyMember, User } from '@prisma/client';
+import { CompanyMemberRole } from '@flexup/shared';
 import { MemberResponse } from '@/company-members/dto/member.response';
 
 type MemberWithUser = CompanyMember & { user: User };
@@ -14,7 +15,7 @@ export function toMemberResponse(member: MemberWithUser): MemberResponse {
       lastName: member.user.lastName,
       avatarUrl: member.user.avatarUrl ?? null,
     },
-    role: member.role,
+    role: member.role as CompanyMemberRole,
     createdAt: member.createdAt,
   };
 }

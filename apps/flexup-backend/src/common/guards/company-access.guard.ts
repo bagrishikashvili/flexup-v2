@@ -6,7 +6,7 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
-import { CompanyMemberRole, UserRole } from '@prisma/client';
+import { CompanyMemberRole, ErrorCode, UserRole } from '@flexup/shared';
 import { PrismaService } from '@/prisma/prisma.service';
 import { COMPANY_ROLES_KEY } from '@/common/decorators/require-company-role.decorator';
 import { CurrentMembershipPayload } from '@/common/decorators/current-membership.decorator';
@@ -56,7 +56,10 @@ export class CompanyAccessGuard implements CanActivate {
     });
 
     if (!membership) {
-      throw new ForbiddenException('Not a member of this company');
+      throw new ForbiddenException({
+        code: ErrorCode.NOT_COMPANY_MEMBER,
+        message: 'Not a member of this company',
+      });
     }
 
     const requiredRoles = this.reflector.getAllAndOverride<
@@ -66,16 +69,19 @@ export class CompanyAccessGuard implements CanActivate {
     if (
       requiredRoles &&
       requiredRoles.length > 0 &&
-      !this.satisfiesRole(membership.role, requiredRoles)
+      !this.satisfiesRole(membership.role as CompanyMemberRole, requiredRoles)
     ) {
-      throw new ForbiddenException('Insufficient company role');
+      throw new ForbiddenException({
+        code: ErrorCode.INSUFFICIENT_COMPANY_ROLE,
+        message: 'Insufficient company role',
+      });
     }
 
     request.companyMember = {
       id: membership.id,
       userId: membership.userId,
       companyId: membership.companyId,
-      role: membership.role,
+      role: membership.role as CompanyMemberRole,
     };
 
     return true;

@@ -15,7 +15,8 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { CompanyMemberRole, UserRole } from '@prisma/client';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+import { CompanyMemberRole, UserRole } from '@flexup/shared';
 import { CurrentUser } from '@/auth/decorators/current-user.decorator';
 import { RolesGuard } from '@/auth/guards/roles.guard';
 import { Roles } from '@/common/decorators/roles.decorator';
@@ -35,6 +36,8 @@ interface AuthUser {
   role: UserRole;
 }
 
+@ApiTags('companies')
+@ApiBearerAuth('JWT')
 @Controller()
 export class CompaniesController {
   constructor(private readonly companiesService: CompaniesService) {}

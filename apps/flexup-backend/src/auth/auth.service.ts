@@ -8,6 +8,7 @@ import { JwtService } from '@nestjs/jwt';
 import { createHash, randomBytes } from 'crypto';
 import bcrypt from 'bcryptjs';
 import { User } from '@prisma/client';
+import { ErrorCode, UserRole } from '@flexup/shared';
 import { PrismaService } from '@/prisma/prisma.service';
 import { UsersService } from '@/users/users.service';
 import { AppConfigService } from '@/config/config.service';
@@ -45,7 +46,10 @@ export class AuthService {
   ): Promise<AuthTokensResponse> {
     const existing = await this.usersService.findByEmail(dto.email);
     if (existing) {
-      throw new ConflictException('Email already in use');
+      throw new ConflictException({
+        code: ErrorCode.EMAIL_TAKEN,
+        message: 'Email already in use',
+      });
     }
 
     if (dto.phoneNumber) {
@@ -53,7 +57,10 @@ export class AuthService {
         dto.phoneNumber,
       );
       if (existingPhone) {
-        throw new ConflictException('Phone number already in use');
+        throw new ConflictException({
+          code: ErrorCode.PHONE_TAKEN,
+          message: 'Phone number already in use',
+        });
       }
     }
 
@@ -65,7 +72,7 @@ export class AuthService {
       passwordHash,
       firstName: dto.firstName,
       lastName: dto.lastName,
-      role: dto.role,
+      role: dto.role as UserRole,
     });
 
     await this.usersService.updateLastLogin(user.id);
@@ -82,7 +89,10 @@ export class AuthService {
     const isMatch = await bcrypt.compare(dto.password, passwordToCheck);
 
     if (!user || !isMatch || !user.isActive) {
-      throw new UnauthorizedException(INVALID_CREDENTIALS);
+      throw new UnauthorizedException({
+        code: ErrorCode.INVALID_CREDENTIALS,
+        message: INVALID_CREDENTIALS,
+      });
     }
 
     await this.usersService.updateLastLogin(user.id);
@@ -101,7 +111,10 @@ export class AuthService {
     });
 
     if (!stored) {
-      throw new UnauthorizedException(INVALID_CREDENTIALS);
+      throw new UnauthorizedException({
+        code: ErrorCode.TOKEN_INVALID,
+        message: INVALID_CREDENTIALS,
+      });
     }
 
     // Reuse attack — token was already revoked, revoke ALL sessions
@@ -110,15 +123,24 @@ export class AuthService {
         `Refresh token reuse detected for userId=${stored.userId}`,
       );
       await this.revokeAllUserTokens(stored.userId);
-      throw new UnauthorizedException(INVALID_CREDENTIALS);
+      throw new UnauthorizedException({
+        code: ErrorCode.REFRESH_REUSE_DETECTED,
+        message: 'Session compromised, please log in again',
+      });
     }
 
     if (stored.expiresAt < new Date()) {
-      throw new UnauthorizedException(INVALID_CREDENTIALS);
+      throw new UnauthorizedException({
+        code: ErrorCode.TOKEN_EXPIRED,
+        message: INVALID_CREDENTIALS,
+      });
     }
 
     if (!stored.user.isActive) {
-      throw new UnauthorizedException(INVALID_CREDENTIALS);
+      throw new UnauthorizedException({
+        code: ErrorCode.INVALID_CREDENTIALS,
+        message: INVALID_CREDENTIALS,
+      });
     }
 
     // Revoke used token (rotation)
@@ -155,7 +177,7 @@ export class AuthService {
   ): Promise<AuthTokensResponse> {
     const payload: Omit<JwtPayload, 'iat' | 'exp'> = {
       sub: user.id,
-      role: user.role,
+      role: user.role as UserRole,
     };
 
     const accessToken = this.jwtService.sign(payload);
@@ -179,7 +201,7 @@ export class AuthService {
       email: user.email,
       firstName: user.firstName,
       lastName: user.lastName,
-      role: user.role,
+      role: user.role as UserRole,
     };
 
     return { accessToken, refreshToken: rawRefresh, user: userPublic };

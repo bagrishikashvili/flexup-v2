@@ -4,7 +4,7 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { CompanyMemberRole, UserRole } from '@prisma/client';
+import { CompanyMemberRole, ErrorCode, UserRole } from '@flexup/shared';
 import { PrismaService } from '@/prisma/prisma.service';
 import { AddMemberDto } from '@/company-members/dto/add-member.dto';
 import { UpdateMemberRoleDto } from '@/company-members/dto/update-member-role.dto';
@@ -45,15 +45,21 @@ export class CompanyMembersService {
     if (!user) {
       throw new NotFoundException('User not registered');
     }
-    if (user.role === UserRole.WORKER) {
-      throw new BadRequestException('WORKER role users cannot join companies');
+    if ((user.role as UserRole) === UserRole.WORKER) {
+      throw new BadRequestException({
+        code: ErrorCode.WORKER_CANNOT_JOIN_COMPANY,
+        message: 'WORKER role users cannot join companies',
+      });
     }
 
     const existing = await this.prisma.companyMember.findUnique({
       where: { userId_companyId: { userId: user.id, companyId } },
     });
     if (existing) {
-      throw new ConflictException('User is already a member of this company');
+      throw new ConflictException({
+        code: ErrorCode.CONFLICT,
+        message: 'User is already a member of this company',
+      });
     }
 
     const created = await this.prisma.companyMember.create({
@@ -71,7 +77,7 @@ export class CompanyMembersService {
     const member = await this.requireMember(companyId, memberId);
 
     if (
-      member.role === CompanyMemberRole.OWNER &&
+      (member.role as CompanyMemberRole) === CompanyMemberRole.OWNER &&
       dto.role !== CompanyMemberRole.OWNER
     ) {
       await this.assertNotLastOwner(companyId);
@@ -93,12 +99,13 @@ export class CompanyMembersService {
     const member = await this.requireMember(companyId, memberId);
 
     if (member.userId === actingUserId) {
-      throw new BadRequestException(
-        'Use leave-company endpoint to remove yourself',
-      );
+      throw new BadRequestException({
+        code: ErrorCode.LAST_OWNER_PROTECTION,
+        message: 'Use leave-company endpoint to remove yourself',
+      });
     }
 
-    if (member.role === CompanyMemberRole.OWNER) {
+    if ((member.role as CompanyMemberRole) === CompanyMemberRole.OWNER) {
       await this.assertNotLastOwner(companyId);
     }
 
@@ -112,14 +119,15 @@ export class CompanyMembersService {
     if (!membership) {
       throw new NotFoundException('Membership not found');
     }
-    if (membership.role === CompanyMemberRole.OWNER) {
+    if ((membership.role as CompanyMemberRole) === CompanyMemberRole.OWNER) {
       const ownerCount = await this.prisma.companyMember.count({
         where: { companyId, role: CompanyMemberRole.OWNER },
       });
       if (ownerCount <= 1) {
-        throw new BadRequestException(
-          'Transfer ownership or deactivate company before leaving',
-        );
+        throw new BadRequestException({
+          code: ErrorCode.LAST_OWNER_PROTECTION,
+          message: 'Transfer ownership or deactivate company before leaving',
+        });
       }
     }
     await this.prisma.companyMember.delete({ where: { id: membership.id } });
@@ -142,7 +150,10 @@ export class CompanyMembersService {
       where: { companyId, role: CompanyMemberRole.OWNER },
     });
     if (ownerCount <= 1) {
-      throw new BadRequestException('Cannot demote the last owner');
+      throw new BadRequestException({
+        code: ErrorCode.LAST_OWNER_PROTECTION,
+        message: 'Cannot demote the last owner',
+      });
     }
   }
 }

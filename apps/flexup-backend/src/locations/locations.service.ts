@@ -5,6 +5,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { Location, Prisma } from '@prisma/client';
+import { ErrorCode } from '@flexup/shared';
 import { PrismaService } from '@/prisma/prisma.service';
 import { PaginatedResponse } from '@/common/types/paginated.response';
 import { CreateLocationDto } from '@/locations/dto/create-location.dto';
@@ -168,9 +169,11 @@ export class LocationsService {
       this.prisma.shiftSeries.count({ where: { locationId } }),
     ]);
     if (shiftCount > 0 || seriesCount > 0) {
-      throw new ConflictException(
-        'Cannot delete location with associated shifts. Deactivate instead.',
-      );
+      throw new ConflictException({
+        code: ErrorCode.LOCATION_HAS_SHIFTS,
+        message:
+          'Cannot delete location with associated shifts. Deactivate instead.',
+      });
     }
 
     await this.prisma.location.delete({ where: { id: locationId } });
@@ -198,9 +201,10 @@ export class LocationsService {
     const latPresent = lat !== undefined && lat !== null;
     const lngPresent = lng !== undefined && lng !== null;
     if (latPresent !== lngPresent) {
-      throw new BadRequestException(
-        'latitude and longitude must be provided together',
-      );
+      throw new BadRequestException({
+        code: ErrorCode.COORDINATES_MUST_BE_PAIRED,
+        message: 'latitude and longitude must be provided together',
+      });
     }
   }
 

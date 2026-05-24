@@ -1,4 +1,4 @@
-import { UserRole } from '@prisma/client';
+import { UserRole } from '@flexup/shared';
 
 export class UserPublicResponse {
   id: string;

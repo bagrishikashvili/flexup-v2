@@ -1,4 +1,4 @@
-import { CompanyMemberRole } from '@prisma/client';
+import { CompanyMemberRole } from '@flexup/shared';
 
 export class MemberResponse {
   id: string;

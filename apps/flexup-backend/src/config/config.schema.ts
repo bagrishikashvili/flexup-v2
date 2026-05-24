@@ -12,6 +12,8 @@ export const validationSchema = Joi.object({
   JWT_ACCESS_TTL_SECONDS: Joi.number().integer().default(900),
   JWT_REFRESH_TTL_SECONDS: Joi.number().integer().default(2592000),
   CORS_ORIGIN: Joi.string().default('*'),
+  CORS_ORIGINS: Joi.string().default(''),
+  SWAGGER_ENABLED: Joi.string().valid('true', 'false').default('true'),
   LOG_LEVEL: Joi.string().default('info'),
   UPLOADS_DIR: Joi.string().default('./uploads'),
   UPLOADS_BASE_URL: Joi.string().default('http://localhost:3000/api/uploads'),

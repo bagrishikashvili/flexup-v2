@@ -11,7 +11,8 @@ import {
   Query,
   UseGuards,
 } from '@nestjs/common';
-import { CompanyMemberRole } from '@prisma/client';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+import { CompanyMemberRole } from '@flexup/shared';
 import { CompanyAccessGuard } from '@/common/guards/company-access.guard';
 import { RequireCompanyRole } from '@/common/decorators/require-company-role.decorator';
 import { PaginatedResponse } from '@/common/types/paginated.response';
@@ -22,6 +23,8 @@ import { LocationQueryDto } from '@/locations/dto/location-query.dto';
 import { LocationResponse } from '@/locations/dto/location.response';
 import { SetUserActiveDto } from '@/users/dto/set-user-active.dto';
 
+@ApiTags('locations')
+@ApiBearerAuth('JWT')
 @Controller('companies/:companyId/locations')
 @UseGuards(CompanyAccessGuard)
 export class LocationsController {

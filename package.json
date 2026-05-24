@@ -3,11 +3,13 @@
   "private": true,
   "version": "0.1.0",
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
     "dev:backend": "npm run start:dev -w apps/flexup-backend",
     "build:backend": "npm run build -w apps/flexup-backend",
+    "build:shared": "npm run build -w @flexup/shared",
     "docker:up": "docker compose up -d --build",
     "docker:down": "docker compose down",
     "docker:logs:backend": "docker compose logs -f backend",

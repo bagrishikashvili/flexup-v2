@@ -1,5 +1,5 @@
 import { IsEmail, IsEnum } from 'class-validator';
-import { CompanyMemberRole } from '@prisma/client';
+import { CompanyMemberRole } from '@flexup/shared';
 
 export class AddMemberDto {
   @IsEmail()

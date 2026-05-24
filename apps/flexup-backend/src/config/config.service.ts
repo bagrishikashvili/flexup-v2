@@ -17,6 +17,33 @@ export class AppConfigService {
     return this.config.getOrThrow<string>('CORS_ORIGIN');
   }
 
+  /**
+   * Parsed list of allowed CORS origins. Preference order:
+   * 1. CORS_ORIGINS (comma-separated list of explicit origins)
+   * 2. CORS_ORIGIN ("*" for wide-open, or a single origin)
+   *
+   * Returns `'*'` to allow any origin or a string[] otherwise.
+   */
+  get corsOrigins(): string | string[] {
+    const raw = this.config.get<string>('CORS_ORIGINS')?.trim() ?? '';
+    if (raw) {
+      const list = raw
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean);
+      if (list.length > 0) {
+        return list;
+      }
+    }
+    const single = this.config.get<string>('CORS_ORIGIN')?.trim() ?? '*';
+    return single === '*' ? '*' : [single];
+  }
+
+  get swaggerEnabled(): boolean {
+    if (this.nodeEnv !== 'production') return true;
+    return this.config.get<string>('SWAGGER_ENABLED') === 'true';
+  }
+
   get logLevel(): string {
     return this.config.getOrThrow<string>('LOG_LEVEL');
   }

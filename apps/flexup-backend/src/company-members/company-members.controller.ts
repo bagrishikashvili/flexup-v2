@@ -10,7 +10,8 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { CompanyMemberRole } from '@prisma/client';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+import { CompanyMemberRole } from '@flexup/shared';
 import { CurrentUser } from '@/auth/decorators/current-user.decorator';
 import { CompanyAccessGuard } from '@/common/guards/company-access.guard';
 import { RequireCompanyRole } from '@/common/decorators/require-company-role.decorator';
@@ -23,6 +24,8 @@ interface AuthUser {
   id: string;
 }
 
+@ApiTags('members')
+@ApiBearerAuth('JWT')
 @Controller('companies/:companyId/members')
 @UseGuards(CompanyAccessGuard)
 export class CompanyMembersController {

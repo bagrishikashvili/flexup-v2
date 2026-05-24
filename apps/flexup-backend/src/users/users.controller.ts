@@ -14,7 +14,8 @@ import {
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { Query } from '@nestjs/common';
-import { UserRole } from '@prisma/client';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+import { UserRole } from '@flexup/shared';
 import { Roles } from '@/common/decorators/roles.decorator';
 import { CurrentUser } from '@/auth/decorators/current-user.decorator';
 import { RolesGuard } from '@/auth/guards/roles.guard';
@@ -33,6 +34,8 @@ interface AuthUser {
   id: string;
 }
 
+@ApiTags('users')
+@ApiBearerAuth('JWT')
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}

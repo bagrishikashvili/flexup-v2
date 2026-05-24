@@ -1,5 +1,5 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
-import { CompanyMemberRole } from '@prisma/client';
+import { CompanyMemberRole } from '@flexup/shared';
 
 export interface CurrentMembershipPayload {
   id?: string;
