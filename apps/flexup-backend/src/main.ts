@@ -4,6 +4,7 @@ import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { join } from 'path';
 import { existsSync, mkdirSync } from 'fs';
+import cookieParser from 'cookie-parser';
 import { AppModule } from '@/app.module';
 import { AllExceptionsFilter } from '@/common/filters/all-exceptions.filter';
 import { PrismaExceptionFilter } from '@/common/filters/prisma-exception.filter';
@@ -15,6 +16,8 @@ async function bootstrap(): Promise<void> {
   const config = app.get(AppConfigService);
 
   app.setGlobalPrefix('api');
+
+  app.use(cookieParser());
 
   app.enableCors({
     origin: config.corsOrigins,
@@ -50,6 +53,11 @@ async function bootstrap(): Promise<void> {
       .addBearerAuth(
         { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' },
         'JWT',
+      )
+      .addCookieAuth(
+        'flexup_refresh',
+        { type: 'apiKey', in: 'cookie' },
+        'flexup_refresh',
       )
       .addTag('auth')
       .addTag('users')

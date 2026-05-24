@@ -388,6 +388,37 @@ Limits:
 
 ---
 
+## ADR-029: Refresh token in HttpOnly cookie
+
+**Decision:** Refresh token returned in `Set-Cookie` (HttpOnly, Secure, SameSite=lax/strict), not in JSON body.
+
+**Reason:**
+- XSS-resistant — JavaScript cannot read HttpOnly cookies
+- Auto-sent with requests to `/api/auth/*` only (path-restricted via `path: '/api/auth'`)
+- Industry standard for SPAs
+- Access token remains in JSON body, stored in memory by frontend
+
+**Trade-offs:**
+- CSRF risk → mitigated by SameSite=lax (dev) / strict (production)
+- Cross-origin in dev → requires CORS `credentials: true`
+- Mobile apps (future) — need separate auth flow (token in Authorization header)
+
+**Implementation:** `cookie-parser` middleware, `AuthCookieConfig` via `AppConfigService.cookies`, helper in `common/utils/auth-cookies.utils.ts`.
+
+---
+
+## ADR-030: Logout revokes only current session
+
+**Decision:** `POST /logout` revokes only the session whose refresh cookie was sent (single-session revoke).
+
+**Alternative:** `POST /logout-all` for all sessions — already implemented separately.
+
+**Reason:** Principle of least surprise — user expects "logout this device", not all devices.
+
+**Implementation:** `AuthService.logout(userId, refreshToken?)` — optional token arg; if missing (no cookie), no-op + cookie cleared.
+
+---
+
 ## ADR-028: Standardized error response envelope with `code` field
 
 **კონტექსტი:** Frontend-ს რომ reliable error handler ჰქონდეს — `message` ი18n-ში ექვემდებარება ცვლილებას, status code მარტო არასაკმარისია (400 ბევრად რამეს ნიშნავს).

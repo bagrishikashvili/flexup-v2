@@ -14,7 +14,6 @@ import { UsersService } from '@/users/users.service';
 import { AppConfigService } from '@/config/config.service';
 import { RegisterDto } from '@/auth/dto/register.dto';
 import { LoginDto } from '@/auth/dto/login.dto';
-import { RefreshDto } from '@/auth/dto/refresh.dto';
 import { JwtPayload } from '@/auth/types/jwt-payload.interface';
 import {
   AuthTokensResponse,
@@ -100,10 +99,10 @@ export class AuthService {
   }
 
   async refresh(
-    dto: RefreshDto,
+    refreshToken: string,
     meta: RequestMeta,
   ): Promise<AuthTokensResponse> {
-    const tokenHash = this.hashToken(dto.refreshToken);
+    const tokenHash = this.hashToken(refreshToken);
 
     const stored = await this.prisma.refreshToken.findUnique({
       where: { tokenHash },

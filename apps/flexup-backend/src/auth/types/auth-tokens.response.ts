@@ -13,3 +13,9 @@ export interface AuthTokensResponse {
   refreshToken: string;
   user: UserPublic;
 }
+
+/** refreshToken is NOT returned — it's set as HttpOnly cookie. */
+export interface AuthResponseWithoutRefresh {
+  accessToken: string;
+  user: UserPublic;
+}

@@ -22,10 +22,9 @@ export const registerSchema = z.object({
   role: z.enum([UserRole.WORKER, UserRole.COMPANY_USER]),
 });
 
-export const refreshSchema = z.object({
-  refreshToken: z.string().min(1),
-});
+// refresh token comes from HttpOnly cookie — no body needed
+export const refreshSchema = z.object({});
 
 export type LoginInput = z.infer<typeof loginSchema>;
 export type RegisterInput = z.infer<typeof registerSchema>;
-export type RefreshInput = z.infer<typeof refreshSchema>;
+export type RefreshInput = z.infer<typeof refreshSchema>; // empty object

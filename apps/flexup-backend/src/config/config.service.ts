@@ -80,4 +80,13 @@ export class AppConfigService {
       ),
     };
   }
+
+  get cookies() {
+    return {
+      domain: this.config.get<string>('COOKIE_DOMAIN') || undefined,
+      secure: this.config.get<boolean>('COOKIE_SECURE')!,
+      sameSite: this.config.get<'lax' | 'strict' | 'none'>('COOKIE_SAME_SITE')!,
+      refreshTokenName: this.config.get<string>('COOKIE_REFRESH_TOKEN_NAME')!,
+    };
+  }
 }

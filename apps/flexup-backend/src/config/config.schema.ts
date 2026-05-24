@@ -18,4 +18,8 @@ export const validationSchema = Joi.object({
   UPLOADS_DIR: Joi.string().default('./uploads'),
   UPLOADS_BASE_URL: Joi.string().default('http://localhost:3000/api/uploads'),
   MAX_UPLOAD_SIZE_BYTES: Joi.number().integer().default(5242880),
+  COOKIE_DOMAIN: Joi.string().allow('').default(''),
+  COOKIE_SECURE: Joi.boolean().default(false),
+  COOKIE_SAME_SITE: Joi.string().valid('lax', 'strict', 'none').default('lax'),
+  COOKIE_REFRESH_TOKEN_NAME: Joi.string().default('flexup_refresh'),
 });
