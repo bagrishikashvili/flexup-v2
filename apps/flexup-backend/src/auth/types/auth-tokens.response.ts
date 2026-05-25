@@ -6,6 +6,7 @@ export interface UserPublic {
   firstName: string;
   lastName: string;
   role: UserRole;
+  emailVerified: boolean;
 }
 
 export interface AuthTokensResponse {

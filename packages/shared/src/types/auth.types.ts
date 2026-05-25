@@ -6,6 +6,7 @@ export interface AuthUserDto {
   firstName: string;
   lastName: string;
   role: UserRole;
+  emailVerified: boolean;
 }
 
 /**
@@ -36,6 +37,15 @@ export interface RegisterRequest {
   firstName: string;
   lastName: string;
   role: UserRole.WORKER | UserRole.COMPANY_USER;
+  language?: 'ka' | 'en';
+}
+
+export interface VerifyEmailRequest {
+  token: string;
+}
+
+export interface ResendVerificationRequest {
+  language?: 'ka' | 'en';
 }
 
 /** refresh token now comes from HttpOnly cookie */

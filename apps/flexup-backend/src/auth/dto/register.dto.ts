@@ -39,4 +39,8 @@ export class RegisterDto {
     message: 'role must be WORKER or COMPANY_USER',
   })
   role: 'WORKER' | 'COMPANY_USER';
+
+  @IsOptional()
+  @IsEnum(['ka', 'en'])
+  language?: 'ka' | 'en';
 }

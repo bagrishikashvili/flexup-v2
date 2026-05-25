@@ -4,6 +4,7 @@ import { PassportModule } from '@nestjs/passport';
 import { AppConfigModule } from '@/config/config.module';
 import { AppConfigService } from '@/config/config.service';
 import { UsersModule } from '@/users/users.module';
+import { EmailVerificationModule } from '@/email-verification/email-verification.module';
 import { AuthService } from '@/auth/auth.service';
 import { AuthController } from '@/auth/auth.controller';
 import { JwtStrategy } from '@/auth/strategies/jwt.strategy';
@@ -23,6 +24,7 @@ import { RolesGuard } from '@/auth/guards/roles.guard';
       }),
     }),
     UsersModule,
+    EmailVerificationModule,
   ],
   providers: [AuthService, JwtStrategy, JwtAuthGuard, RolesGuard],
   controllers: [AuthController],

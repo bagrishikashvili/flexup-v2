@@ -22,4 +22,23 @@ export const validationSchema = Joi.object({
   COOKIE_SECURE: Joi.boolean().default(false),
   COOKIE_SAME_SITE: Joi.string().valid('lax', 'strict', 'none').default('lax'),
   COOKIE_REFRESH_TOKEN_NAME: Joi.string().default('flexup_refresh'),
+  EMAIL_PROVIDER: Joi.string().valid('smtp', 'console').default('smtp'),
+  SMTP_HOST: Joi.string().default('localhost'),
+  SMTP_PORT: Joi.number().port().default(1025),
+  SMTP_USER: Joi.string().allow('').default(''),
+  SMTP_PASS: Joi.string().allow('').default(''),
+  SMTP_SECURE: Joi.boolean().default(false),
+  EMAIL_FROM: Joi.string().email().default('noreply@flexup.local'),
+  EMAIL_FROM_NAME: Joi.string().default('flexup'),
+  WEB_BASE_URL: Joi.string().uri().default('http://localhost:5173'),
+  EMAIL_VERIFICATION_TTL_HOURS: Joi.number()
+    .integer()
+    .min(1)
+    .max(168)
+    .default(24),
+  EMAIL_VERIFICATION_RESEND_COOLDOWN_SECONDS: Joi.number()
+    .integer()
+    .min(0)
+    .default(60),
+  EMAIL_VERIFICATION_MAX_PER_DAY: Joi.number().integer().min(1).default(5),
 });

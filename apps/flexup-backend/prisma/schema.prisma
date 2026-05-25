@@ -7,7 +7,7 @@
 // ============================================
 
 generator client {
-  provider = "prisma-client-js"x
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -95,13 +95,31 @@ model User {
   updatedAt           DateTime        @updatedAt
   lastLoginAt         DateTime?
 
-  refreshTokens       RefreshToken[]
-  companyMembers      CompanyMember[]
-  workerProfile       WorkerProfile?
-  createdShifts       Shift[]         @relation("ShiftCreatedBy")
+  refreshTokens               RefreshToken[]
+  emailVerificationTokens     EmailVerificationToken[]
+  companyMembers              CompanyMember[]
+  workerProfile               WorkerProfile?
+  createdShifts               Shift[]         @relation("ShiftCreatedBy")
 
   @@index([email])
   @@index([role])
+}
+
+model EmailVerificationToken {
+  id            String    @id @default(cuid())
+  tokenHash     String    @unique
+  userId        String
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  email         String
+  expiresAt     DateTime
+  usedAt        DateTime?
+
+  createdAt     DateTime  @default(now())
+
+  @@index([userId])
+  @@index([tokenHash])
+  @@index([expiresAt])
 }
 
 model RefreshToken {

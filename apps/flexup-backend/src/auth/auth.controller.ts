@@ -194,6 +194,7 @@ export class AuthController {
       firstName: user.firstName,
       lastName: user.lastName,
       role: user.role as UserRole,
+      emailVerified: user.emailVerified,
     };
   }
 }

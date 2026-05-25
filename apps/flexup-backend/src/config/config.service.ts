@@ -89,4 +89,33 @@ export class AppConfigService {
       refreshTokenName: this.config.get<string>('COOKIE_REFRESH_TOKEN_NAME')!,
     };
   }
+
+  get email() {
+    return {
+      provider: this.config.get<'smtp' | 'console'>('EMAIL_PROVIDER')!,
+      smtp: {
+        host: this.config.get<string>('SMTP_HOST')!,
+        port: this.config.get<number>('SMTP_PORT')!,
+        user: this.config.get<string>('SMTP_USER')!,
+        pass: this.config.get<string>('SMTP_PASS')!,
+        secure: this.config.get<boolean>('SMTP_SECURE')!,
+      },
+      from: this.config.get<string>('EMAIL_FROM')!,
+      fromName: this.config.get<string>('EMAIL_FROM_NAME')!,
+    };
+  }
+
+  get webBaseUrl(): string {
+    return this.config.get<string>('WEB_BASE_URL')!;
+  }
+
+  get verification() {
+    return {
+      ttlHours: this.config.get<number>('EMAIL_VERIFICATION_TTL_HOURS')!,
+      resendCooldownSeconds: this.config.get<number>(
+        'EMAIL_VERIFICATION_RESEND_COOLDOWN_SECONDS',
+      )!,
+      maxPerDay: this.config.get<number>('EMAIL_VERIFICATION_MAX_PER_DAY')!,
+    };
+  }
 }

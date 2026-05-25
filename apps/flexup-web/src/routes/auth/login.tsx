@@ -30,6 +30,16 @@ export const Route = createFileRoute('/auth/login')({
   component: LoginPage,
 });
 
+function BrandLogo() {
+  return (
+    <div className="flex items-center gap-2.5">
+      <span className="font-bold text-[30px]" style={{ fontFamily: 'var(--font-display)' }}>
+        Flex<span className="gradient-text">Up</span>
+      </span>
+    </div>
+  );
+}
+
 function LoginPage() {
   const { t } = useTranslation('auth');
   const { t: tErrors } = useTranslation('errors');
@@ -50,8 +60,11 @@ function LoginPage() {
       }),
     onSuccess: (data) => {
       setAuth(data.accessToken, data.user);
-      toast.success(t('login.title'));
-      void navigate({ to: '/dashboard' });
+      if (data.user.role === 'COMPANY_USER' && !data.user.emailVerified) {
+        void navigate({ to: '/auth/verify-gate' });
+      } else {
+        void navigate({ to: '/dashboard' });
+      }
     },
     onError: (error) => {
       const code = error instanceof ApiError ? error.code : 'UNKNOWN_ERROR';
@@ -60,74 +73,97 @@ function LoginPage() {
   });
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted/30 p-4">
+    <div className="min-h-screen bg-[#fff] flex items-center justify-center p-4">
       <div className="absolute top-4 right-4">
         <LanguageSwitcher />
       </div>
 
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle>{t('login.title')}</CardTitle>
-          <CardDescription>{t('login.subtitle')}</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit((data) => mutation.mutate(data))}
-              className="space-y-4"
-            >
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>{t('login.email')}</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="email"
-                        placeholder={t('login.emailPlaceholder')}
-                        autoComplete="email"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+      <div className="w-full max-w-[440px] flex flex-col gap-6">
+        <div className="flex justify-center">
+          <BrandLogo />
+        </div>
 
-              <FormField
-                control={form.control}
-                name="password"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>{t('login.password')}</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="password"
-                        placeholder={t('login.passwordPlaceholder')}
-                        autoComplete="current-password"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <Card className="shadow-[var(--shadow-md)] overflow-hidden">
+          <div className="h-1 w-full" style={{ background: 'var(--gradient-brain)' }} />
+          <CardHeader className="pb-4">
+            <CardTitle className="text-2xl">{t('login.title')}</CardTitle>
+            <CardDescription>{t('login.subtitle')}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit((data) => mutation.mutate(data))}
+                className="flex flex-col gap-4"
+              >
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>{t('login.email')}</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="email"
+                          placeholder={t('login.emailPlaceholder')}
+                          autoComplete="email"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-              <Button type="submit" className="w-full" disabled={mutation.isPending}>
-                {mutation.isPending ? t('login.loading') : t('login.submit')}
-              </Button>
+                <FormField
+                  control={form.control}
+                  name="password"
+                  render={({ field }) => (
+                    <FormItem>
+                      <div className="flex items-center justify-between">
+                        <FormLabel>{t('login.password')}</FormLabel>
+                        <span className="text-xs text-muted-foreground cursor-pointer hover:text-primary transition-colors">
+                          {t('login.forgotPassword')}
+                        </span>
+                      </div>
+                      <FormControl>
+                        <Input
+                          type="password"
+                          placeholder={t('login.passwordPlaceholder')}
+                          autoComplete="current-password"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-              <p className="text-center text-sm text-muted-foreground">
-                {t('login.noAccount')}{' '}
-                <Link to="/auth/register" className="text-primary hover:underline">
-                  {t('login.register')}
-                </Link>
-              </p>
-            </form>
-          </Form>
-        </CardContent>
-      </Card>
+                <Button
+                  type="submit"
+                  className="w-full mt-2"
+                  disabled={mutation.isPending}
+                >
+                  {mutation.isPending ? t('login.loading') : t('login.submit')}
+                </Button>
+
+                <p className="text-center text-sm text-muted-foreground pt-1">
+                  {t('login.noAccount')}{' '}
+                  <Link
+                    to="/auth/register"
+                    className="text-primary font-medium hover:underline"
+                  >
+                    {t('login.register')}
+                  </Link>
+                </p>
+              </form>
+            </Form>
+          </CardContent>
+        </Card>
+
+        <p className="text-center text-xs text-muted-foreground font-mono">
+          FLEXUP © {new Date().getFullYear()}
+        </p>
+      </div>
     </div>
   );
 }

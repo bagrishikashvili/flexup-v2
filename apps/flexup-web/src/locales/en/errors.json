@@ -11,5 +11,12 @@
   "RATE_LIMIT_EXCEEDED": "Too many attempts. Please try again later",
   "INTERNAL_ERROR": "Server error",
   "NETWORK_ERROR": "Connection error",
-  "UNKNOWN_ERROR": "An unknown error occurred"
+  "UNKNOWN_ERROR": "An unknown error occurred",
+  "EMAIL_NOT_VERIFIED": "Please verify your email using the link sent to your inbox",
+  "EMAIL_ALREADY_VERIFIED": "Your account is already verified",
+  "VERIFICATION_TOKEN_INVALID": "Verification link is invalid",
+  "VERIFICATION_TOKEN_EXPIRED": "Verification link has expired",
+  "VERIFICATION_TOKEN_USED": "This link has already been used",
+  "VERIFICATION_RESEND_COOLDOWN": "Please wait before resending",
+  "VERIFICATION_DAILY_LIMIT": "Daily email limit reached"
 }

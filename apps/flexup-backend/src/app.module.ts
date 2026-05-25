@@ -5,6 +5,7 @@ import { AppConfigModule } from '@/config/config.module';
 import { PrismaModule } from '@/prisma/prisma.module';
 import { RedisModule } from '@/redis/redis.module';
 import { HealthModule } from '@/health/health.module';
+import { EmailModule } from '@/email/email.module';
 import { AuthModule } from '@/auth/auth.module';
 import { UsersModule } from '@/users/users.module';
 import { CompaniesModule } from '@/companies/companies.module';
@@ -23,6 +24,7 @@ import { RolesGuard } from '@/auth/guards/roles.guard';
     PrismaModule,
     RedisModule,
     HealthModule,
+    EmailModule,
     UsersModule,
     AuthModule,
     CompaniesModule,

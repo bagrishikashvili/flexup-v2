@@ -11,5 +11,12 @@
   "RATE_LIMIT_EXCEEDED": "ძალიან ბევრი მცდელობა. სცადეთ მოგვიანებით",
   "INTERNAL_ERROR": "სერვერის შეცდომა",
   "NETWORK_ERROR": "კავშირის შეცდომა",
-  "UNKNOWN_ERROR": "უცნობი შეცდომა"
+  "UNKNOWN_ERROR": "უცნობი შეცდომა",
+  "EMAIL_NOT_VERIFIED": "გთხოვთ, გააქტიურეთ ანგარიში ემეილზე გაგზავნილი ბმულით",
+  "EMAIL_ALREADY_VERIFIED": "ანგარიში უკვე გააქტიურებულია",
+  "VERIFICATION_TOKEN_INVALID": "verification ბმული არასწორია",
+  "VERIFICATION_TOKEN_EXPIRED": "verification ბმული ვადაგასულია",
+  "VERIFICATION_TOKEN_USED": "ეს ბმული უკვე გამოყენებულია",
+  "VERIFICATION_RESEND_COOLDOWN": "გთხოვთ დაელოდოთ ხელახლა გამოგზავნამდე",
+  "VERIFICATION_DAILY_LIMIT": "დღიური ლიმიტი ამოწურულია"
 }

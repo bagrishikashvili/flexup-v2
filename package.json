@@ -21,7 +21,8 @@
     "db:generate": "npm run prisma:generate -w apps/flexup-backend",
     "db:seed": "npm run prisma:seed -w apps/flexup-backend",
     "db:seed:demo": "SEED_DEMO_DATA=true npm run prisma:seed -w apps/flexup-backend",
-    "db:baseline": "npm run prisma:baseline -w apps/flexup-backend"
+    "db:baseline": "npm run prisma:baseline -w apps/flexup-backend",
+    "dev:web": "npm run dev -w apps/flexup-web"
   },
   "engines": {
     "node": ">=20.19.4"

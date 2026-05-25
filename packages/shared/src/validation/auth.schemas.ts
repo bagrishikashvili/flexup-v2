@@ -19,7 +19,16 @@ export const registerSchema = z.object({
     .optional(),
   firstName: z.string().trim().min(1).max(100),
   lastName: z.string().trim().min(1).max(100),
-  role: z.enum([UserRole.WORKER, UserRole.COMPANY_USER]),
+  role: z.literal(UserRole.COMPANY_USER),
+  language: z.enum(['ka', 'en']).optional(),
+});
+
+export const verifyEmailSchema = z.object({
+  token: z.string().min(1),
+});
+
+export const resendVerificationSchema = z.object({
+  language: z.enum(['ka', 'en']).optional(),
 });
 
 // refresh token comes from HttpOnly cookie — no body needed
@@ -28,3 +37,5 @@ export const refreshSchema = z.object({});
 export type LoginInput = z.infer<typeof loginSchema>;
 export type RegisterInput = z.infer<typeof registerSchema>;
 export type RefreshInput = z.infer<typeof refreshSchema>; // empty object
+export type VerifyEmailInput = z.infer<typeof verifyEmailSchema>;
+export type ResendVerificationInput = z.infer<typeof resendVerificationSchema>;

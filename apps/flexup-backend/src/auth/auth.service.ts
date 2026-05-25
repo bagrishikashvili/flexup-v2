@@ -19,6 +19,7 @@ import {
   AuthTokensResponse,
   UserPublic,
 } from '@/auth/types/auth-tokens.response';
+import { EmailVerificationService } from '@/email-verification/email-verification.service';
 
 export interface RequestMeta {
   userAgent: string | undefined;
@@ -37,6 +38,7 @@ export class AuthService {
     private readonly usersService: UsersService,
     private readonly jwtService: JwtService,
     private readonly config: AppConfigService,
+    private readonly emailVerificationService: EmailVerificationService,
   ) {}
 
   async register(
@@ -75,6 +77,17 @@ export class AuthService {
     });
 
     await this.usersService.updateLastLogin(user.id);
+
+    if (user.role === 'COMPANY_USER') {
+      void this.emailVerificationService
+        .issueAndSend(user.id, dto.language ?? 'ka')
+        .catch((err: unknown) => {
+          this.logger.error(
+            `Failed to send verification email on register: ${user.email}`,
+            err,
+          );
+        });
+    }
 
     return this.issueTokenPair(user, meta);
   }
@@ -201,6 +214,7 @@ export class AuthService {
       firstName: user.firstName,
       lastName: user.lastName,
       role: user.role as UserRole,
+      emailVerified: user.emailVerified,
     };
 
     return { accessToken, refreshToken: rawRefresh, user: userPublic };
