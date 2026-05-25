@@ -454,3 +454,54 @@ throw new BadRequestException({
 - Frontend-ი switch-ი code-ზე, არა fragile string-match message-ზე
 - Stable contract — message text-ი შეიძლება შეიცვალოს, `code` invariant
 - Self-describing — Swagger UI-ში ApiErrorResponse type-ი frontend developer-ს ხედავს
+
+---
+
+## ADR-031: Frontend stack — Vite + React 19 + TanStack
+
+**Decision:** `apps/flexup-web` — Vite 6 + React 19 SPA. TanStack Router (file-based routes), TanStack Query 5, shadcn/ui, Tailwind 4.
+
+**Reason:**
+- Vite 6: fastest HMR, native ESM, excellent monorepo support
+- React 19: latest, server actions-ready for future phases
+- TanStack Router: fully type-safe routing with file-based convention, zero magic
+- TanStack Query: server state management with caching, deduplication, background refetch
+- shadcn/ui: copy-paste components — full control, no black-box library
+- Tailwind 4: modern CSS-first approach, `@theme` inline variables
+
+**Trade-off:** TanStack Router generates `routeTree.gen.ts` — must be committed or regenerated on each route change. Acceptable since Vite plugin auto-regenerates on dev server start.
+
+**Note:** `@flexup/shared` resolved from source (`packages/shared/src/index.ts`) via Vite alias to avoid CJS/ESM bundling issues. TypeScript `paths` aligned to match.
+
+---
+
+## ADR-032: Access token in memory only
+
+**Decision:** JWT access token stored exclusively in Zustand store (in-memory). No `localStorage`, no `sessionStorage`, no cookies.
+
+**Reason:** Minimize XSS attack surface — a script injected via XSS cannot read memory state (only its own execution context). `localStorage` is readable by any script on the same origin.
+
+**Trade-off:** Page reload loses the access token. Mitigated by app bootstrap: on mount, `POST /auth/refresh` fires automatically using the HttpOnly refresh cookie. User remains logged in across reloads within refresh token TTL (30 days).
+
+---
+
+## ADR-033: Vite proxy in development
+
+**Decision:** Vite dev server proxies `/api/*` to `http://localhost:3002`. Frontend runs on `localhost:5173`.
+
+**Reason:** Browsers treat proxied requests as same-origin. HttpOnly cookies set by backend on `localhost:3002/api/auth` are sent back on subsequent `/api` requests through the proxy without any CORS `credentials` dance. In production, a reverse proxy (nginx) or a same-domain deployment handles this.
+
+**Production:** Backend and frontend on separate domains requires proper CORS `credentials: true` + `allowedOrigins` configuration (already in place in backend).
+
+---
+
+## ADR-034: i18n with namespaced JSON files
+
+**Decision:** `react-i18next` with three namespaces: `common`, `auth`, `errors`. Language detection via `localStorage` key `flexup-lang`, fallback to browser language, default `ka` (Georgian).
+
+**Reason:**
+- Namespaces enable code-split-friendly lazy loading in future
+- `errors` namespace maps 1-to-1 with backend `ErrorCode` enum — frontend does `t(errorCode)` with no custom mapping logic
+- Georgian as default aligns with primary market (Georgia)
+
+**Supported languages:** `ka` (Georgian), `en` (English). Easy to extend — add JSON file + `supportedLngs` entry.

@@ -1,0 +1,20 @@
+{
+  "appName": "flexup",
+  "loading": "Loading...",
+  "error": "Error",
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "edit": "Edit",
+  "submit": "Submit",
+  "language": "Language",
+  "languages": {
+    "ka": "Georgian",
+    "en": "English"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "VALIDATION_ERROR": "Invalid data provided",
+  "INVALID_CREDENTIALS": "Invalid email or password",
+  "TOKEN_EXPIRED": "Session expired",
+  "TOKEN_INVALID": "Invalid session, please sign in again",
+  "REFRESH_REUSE_DETECTED": "All sessions have been revoked for security reasons",
+  "EMAIL_TAKEN": "This email is already in use",
+  "PHONE_TAKEN": "This phone number is already in use",
+  "NOT_FOUND": "Not found",
+  "FORBIDDEN": "Access denied",
+  "RATE_LIMIT_EXCEEDED": "Too many attempts. Please try again later",
+  "INTERNAL_ERROR": "Server error",
+  "NETWORK_ERROR": "Connection error",
+  "UNKNOWN_ERROR": "An unknown error occurred"
+}
