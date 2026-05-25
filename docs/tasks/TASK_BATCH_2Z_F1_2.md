@@ -907,7 +907,7 @@ export const registerSchema = z.object({
     "lastNamePlaceholder": "Your last name",
     "email": "Email",
     "emailPlaceholder": "name@example.com",
-    "phoneNumber": "Phone number (optional)",
+    "phoneNumber": "Phone number",
     "phoneNumberPlaceholder": "+995 555 12 34 56",
     "password": "Password",
     "passwordPlaceholder": "At least 8 characters",

@@ -7,16 +7,16 @@ import {
   MaxLength,
   MinLength,
 } from 'class-validator';
+
 export class RegisterDto {
   @IsEmail()
   email: string;
 
-  @IsOptional()
   @IsString()
-  @Matches(/^\+[1-9]\d{1,14}$/, {
+  @Matches(/^\+[1-9]\d{6,14}$/, {
     message: 'phoneNumber must be in E.164 format',
   })
-  phoneNumber?: string;
+  phoneNumber: string;
 
   @IsString()
   @MinLength(8)

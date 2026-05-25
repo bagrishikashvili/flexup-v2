@@ -16,7 +16,7 @@ export const registerSchema = z.object({
   phoneNumber: z
     .string()
     .regex(/^\+[1-9]\d{6,14}$/, 'Phone must be E.164 format')
-    .optional(),
+    .min(1, 'Phone number is required'),
   firstName: z.string().trim().min(1).max(100),
   lastName: z.string().trim().min(1).max(100),
   role: z.literal(UserRole.COMPANY_USER),

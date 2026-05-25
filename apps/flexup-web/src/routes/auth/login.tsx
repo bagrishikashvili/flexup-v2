@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate, Link } from '@tanstack/react-router';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { zodResolver } from '@/lib/zod-resolver';
 import { loginSchema, type LoginInput, type AuthResponseWithoutRefresh } from '@flexup/shared';
 import { useMutation } from '@tanstack/react-query';
 import { toast } from 'sonner';
