@@ -1,0 +1,10 @@
+{
+  "required": "Required",
+  "invalidEmail": "Invalid email address",
+  "invalidPhone": "Invalid phone number (e.g. +995555123456)",
+  "tooShort": "Too short",
+  "tooLong": "Too long",
+  "invalidFormat": "Invalid format",
+  "passwordWeak": "Min 8 characters, at least one letter and one digit",
+  "invalidOption": "Invalid option"
+}
