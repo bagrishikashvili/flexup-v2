@@ -34,6 +34,28 @@ export const resendVerificationSchema = z.object({
 // refresh token comes from HttpOnly cookie — no body needed
 export const refreshSchema = z.object({});
 
+export const forgotPasswordSchema = z.object({
+  email: z.string().email().toLowerCase().trim(),
+  language: z.enum(['ka', 'en']).optional(),
+});
+
+export const validatePasswordResetTokenSchema = z.object({
+  token: z.string().min(32),
+});
+
+export const resetPasswordSchema = z.object({
+  token: z.string().min(32),
+  newPassword: z
+    .string()
+    .min(8, 'Password must be at least 8 characters')
+    .regex(/[a-zA-Z]/, 'Password must contain at least one letter')
+    .regex(/[0-9]/, 'Password must contain at least one number'),
+});
+
+export type ForgotPasswordInput = z.infer<typeof forgotPasswordSchema>;
+export type ValidatePasswordResetTokenInput = z.infer<typeof validatePasswordResetTokenSchema>;
+export type ResetPasswordInput = z.infer<typeof resetPasswordSchema>;
+
 export type LoginInput = z.infer<typeof loginSchema>;
 export type RegisterInput = z.infer<typeof registerSchema>;
 export type RefreshInput = z.infer<typeof refreshSchema>; // empty object

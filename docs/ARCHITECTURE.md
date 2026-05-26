@@ -505,3 +505,33 @@ throw new BadRequestException({
 - Georgian as default aligns with primary market (Georgia)
 
 **Supported languages:** `ka` (Georgian), `en` (English). Easy to extend — add JSON file + `supportedLngs` entry.
+
+---
+
+## ADR-035: Password reset tokens are random opaque tokens (not JWT)
+
+**Decision:** Reset token is `crypto.randomBytes(64).toString('hex')`. DB stores only SHA-256 hash. Raw token is sent only inside the email link — never returned by API.
+
+**Reason:** DB breach cannot be used to reset passwords, since the raw token is never persisted. JWT was considered and rejected: revocation/one-time-use is harder to enforce reliably with JWT because the DB check negates the stateless benefit anyway.
+
+**Security properties:** 128-bit entropy, one-time use (`usedAt != null` → invalid), 60-minute expiry (configurable), previous unused tokens invalidated on new request.
+
+---
+
+## ADR-036: Forgot-password response is always generic
+
+**Decision:** `POST /api/auth/forgot-password` returns the same success response regardless of whether the email exists, whether the user is inactive, or whether a rate limit was hit.
+
+**Reason:** Prevent user enumeration. An attacker cannot determine from the HTTP response whether a given email is registered in the system.
+
+**Trade-off:** User may not realise they mistyped their email. Mitigated by the UI copy: "If an account exists, reset instructions have been sent."
+
+---
+
+## ADR-037: Password reset revokes all refresh tokens (all sessions)
+
+**Decision:** On successful password reset, all `RefreshToken` rows for the user are revoked (`revokedAt = now()`) in the same DB transaction as the password update.
+
+**Reason:** A password reset implies the account may have been compromised. Existing sessions that were active under the old credentials should not persist — they may belong to the attacker.
+
+**UX trade-off:** User must re-login on every device. Acceptable given the security context (account recovery).

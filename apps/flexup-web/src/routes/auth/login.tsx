@@ -1,10 +1,12 @@
 import { createFileRoute, useNavigate, Link } from '@tanstack/react-router';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 import { zodResolver } from '@/lib/zod-resolver';
 import { loginSchema, type LoginInput, type AuthResponseWithoutRefresh } from '@flexup/shared';
 import { useMutation } from '@tanstack/react-query';
 import { toast } from 'sonner';
+import { useEffect } from 'react';
 import { apiRequest, ApiError } from '@/shared/api/client';
 import { useAuthStore } from '@/features/auth/stores/auth.store';
 import { Button } from '@/shared/components/ui/button';
@@ -26,7 +28,12 @@ import {
 import { Input } from '@/shared/components/ui/input';
 import { LanguageSwitcher } from '@/shared/components/LanguageSwitcher';
 
+const searchSchema = z.object({
+  reset: z.literal('success').optional(),
+});
+
 export const Route = createFileRoute('/auth/login')({
+  validateSearch: searchSchema,
   component: LoginPage,
 });
 
@@ -45,6 +52,13 @@ function LoginPage() {
   const { t: tErrors } = useTranslation('errors');
   const navigate = useNavigate();
   const setAuth = useAuthStore((s) => s.setAuth);
+  const { reset } = Route.useSearch();
+
+  useEffect(() => {
+    if (reset === 'success') {
+      toast.success(t('resetPassword.success'));
+    }
+  }, [reset, t]);
 
   const form = useForm<LoginInput>({
     resolver: zodResolver(loginSchema),
@@ -121,9 +135,12 @@ function LoginPage() {
                     <FormItem>
                       <div className="flex items-center justify-between">
                         <FormLabel>{t('login.password')}</FormLabel>
-                        <span className="text-xs text-muted-foreground cursor-pointer hover:text-primary transition-colors">
+                        <Link
+                          to="/auth/forgot-password"
+                          className="text-xs text-muted-foreground hover:text-primary transition-colors"
+                        >
                           {t('login.forgotPassword')}
-                        </span>
+                        </Link>
                       </div>
                       <FormControl>
                         <Input

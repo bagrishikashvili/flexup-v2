@@ -97,6 +97,7 @@ model User {
 
   refreshTokens               RefreshToken[]
   emailVerificationTokens     EmailVerificationToken[]
+  passwordResetTokens         PasswordResetToken[]
   companyMembers              CompanyMember[]
   workerProfile               WorkerProfile?
   createdShifts               Shift[]         @relation("ShiftCreatedBy")
@@ -137,6 +138,23 @@ model RefreshToken {
 
   @@index([userId])
   @@index([tokenHash])
+}
+
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  tokenHash String    @unique
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  email     String
+  expiresAt DateTime
+  usedAt    DateTime?
+
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+  @@index([tokenHash])
+  @@index([expiresAt])
 }
 
 // ============================================

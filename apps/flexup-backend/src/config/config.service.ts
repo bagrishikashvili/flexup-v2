@@ -105,6 +105,16 @@ export class AppConfigService {
     };
   }
 
+  get passwordReset() {
+    return {
+      ttlMinutes: this.config.get<number>('PASSWORD_RESET_TTL_MINUTES')!,
+      resendCooldownSeconds: this.config.get<number>(
+        'PASSWORD_RESET_RESEND_COOLDOWN_SECONDS',
+      )!,
+      maxPerDay: this.config.get<number>('PASSWORD_RESET_MAX_PER_DAY')!,
+    };
+  }
+
   get webBaseUrl(): string {
     return this.config.get<string>('WEB_BASE_URL')!;
   }

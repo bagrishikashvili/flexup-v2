@@ -41,4 +41,14 @@ export const validationSchema = Joi.object({
     .min(0)
     .default(60),
   EMAIL_VERIFICATION_MAX_PER_DAY: Joi.number().integer().min(1).default(5),
+  PASSWORD_RESET_TTL_MINUTES: Joi.number()
+    .integer()
+    .min(5)
+    .max(1440)
+    .default(60),
+  PASSWORD_RESET_RESEND_COOLDOWN_SECONDS: Joi.number()
+    .integer()
+    .min(0)
+    .default(60),
+  PASSWORD_RESET_MAX_PER_DAY: Joi.number().integer().min(1).max(20).default(5),
 });

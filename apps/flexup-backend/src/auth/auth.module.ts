@@ -6,6 +6,7 @@ import { AppConfigService } from '@/config/config.service';
 import { UsersModule } from '@/users/users.module';
 import { EmailVerificationModule } from '@/email-verification/email-verification.module';
 import { AuthService } from '@/auth/auth.service';
+import { PasswordResetService } from '@/auth/password-reset.service';
 import { AuthController } from '@/auth/auth.controller';
 import { JwtStrategy } from '@/auth/strategies/jwt.strategy';
 import { JwtAuthGuard } from '@/auth/guards/jwt-auth.guard';
@@ -26,7 +27,13 @@ import { RolesGuard } from '@/auth/guards/roles.guard';
     UsersModule,
     EmailVerificationModule,
   ],
-  providers: [AuthService, JwtStrategy, JwtAuthGuard, RolesGuard],
+  providers: [
+    AuthService,
+    PasswordResetService,
+    JwtStrategy,
+    JwtAuthGuard,
+    RolesGuard,
+  ],
   controllers: [AuthController],
   exports: [JwtAuthGuard, RolesGuard],
 })

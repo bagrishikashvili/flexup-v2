@@ -52,3 +52,30 @@ export interface ResendVerificationRequest {
 export interface RefreshRequest {
   // intentionally empty
 }
+
+export interface ForgotPasswordRequest {
+  email: string;
+  language?: 'ka' | 'en';
+}
+
+export interface ForgotPasswordResponse {
+  message: string;
+}
+
+export interface ValidatePasswordResetTokenRequest {
+  token: string;
+}
+
+export interface ValidatePasswordResetTokenResponse {
+  valid: boolean;
+  email?: string;
+}
+
+export interface ResetPasswordRequest {
+  token: string;
+  newPassword: string;
+}
+
+export interface ResetPasswordResponse {
+  message: string;
+}

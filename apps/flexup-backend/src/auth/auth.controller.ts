@@ -15,6 +15,7 @@ import {
   ApiBearerAuth,
   ApiCookieAuth,
   ApiOperation,
+  ApiResponse,
   ApiTags,
 } from '@nestjs/swagger';
 import type { Request, Response } from 'express';
@@ -25,10 +26,20 @@ import {
   loginSchema,
   refreshSchema,
   registerSchema,
+  forgotPasswordSchema,
+  validatePasswordResetTokenSchema,
+  resetPasswordSchema,
+  type ForgotPasswordResponse,
+  type ValidatePasswordResetTokenResponse,
+  type ResetPasswordResponse,
 } from '@flexup/shared';
 import { Public } from '@/common/decorators/public.decorator';
 import { ZodValidationPipe } from '@/common/pipes/zod-validation.pipe';
 import { AuthService } from '@/auth/auth.service';
+import { PasswordResetService } from '@/auth/password-reset.service';
+import { ForgotPasswordDto } from '@/auth/dto/forgot-password.dto';
+import { ValidatePasswordResetTokenDto } from '@/auth/dto/validate-password-reset-token.dto';
+import { ResetPasswordDto } from '@/auth/dto/reset-password.dto';
 import { RegisterDto } from '@/auth/dto/register.dto';
 import { LoginDto } from '@/auth/dto/login.dto';
 import {
@@ -49,6 +60,7 @@ export class AuthController {
   constructor(
     private readonly authService: AuthService,
     private readonly configService: AppConfigService,
+    private readonly passwordResetService: PasswordResetService,
   ) {}
 
   @ApiOperation({ summary: 'Register a new user' })
@@ -182,6 +194,76 @@ export class AuthController {
   ): Promise<void> {
     await this.authService.logoutAllSessions(user.id);
     clearRefreshTokenCookie(res, this.configService.cookies);
+  }
+
+  @ApiOperation({
+    summary: 'Request a password reset email',
+    description:
+      'Always returns the same generic response regardless of whether the email exists, to prevent user enumeration.',
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'Generic success — reset email sent if account exists.',
+  })
+  @Throttle({ short: { ttl: 60_000, limit: 3 } })
+  @Public()
+  @Post('forgot-password')
+  @HttpCode(HttpStatus.OK)
+  @UsePipes(new ZodValidationPipe(forgotPasswordSchema))
+  async forgotPassword(
+    @Body() dto: ForgotPasswordDto,
+  ): Promise<ForgotPasswordResponse> {
+    await this.passwordResetService.requestPasswordReset(
+      dto.email,
+      dto.language,
+    );
+    return {
+      message:
+        'If an account with this email exists, password reset instructions have been sent.',
+    };
+  }
+
+  @ApiOperation({
+    summary: 'Validate a password reset token',
+    description:
+      'Returns whether the token is valid and the masked email it belongs to.',
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'Token validity result.',
+  })
+  @Throttle({ short: { ttl: 60_000, limit: 10 } })
+  @Public()
+  @Post('reset-password/validate')
+  @HttpCode(HttpStatus.OK)
+  @UsePipes(new ZodValidationPipe(validatePasswordResetTokenSchema))
+  async validateResetToken(
+    @Body() dto: ValidatePasswordResetTokenDto,
+  ): Promise<ValidatePasswordResetTokenResponse> {
+    return this.passwordResetService.validateResetToken(dto.token);
+  }
+
+  @ApiOperation({
+    summary: 'Reset password using a valid reset token',
+    description:
+      'Sets a new password, marks the token as used, and revokes all refresh tokens.',
+  })
+  @ApiResponse({ status: 200, description: 'Password reset successful.' })
+  @ApiResponse({
+    status: 401,
+    description:
+      'Token invalid, expired, or already used. Check error code: PASSWORD_RESET_TOKEN_INVALID | PASSWORD_RESET_TOKEN_EXPIRED | PASSWORD_RESET_TOKEN_USED',
+  })
+  @Throttle({ short: { ttl: 60_000, limit: 5 } })
+  @Public()
+  @Post('reset-password')
+  @HttpCode(HttpStatus.OK)
+  @UsePipes(new ZodValidationPipe(resetPasswordSchema))
+  async resetPassword(
+    @Body() dto: ResetPasswordDto,
+  ): Promise<ResetPasswordResponse> {
+    await this.passwordResetService.resetPassword(dto.token, dto.newPassword);
+    return { message: 'Password has been reset successfully.' };
   }
 
   @ApiBearerAuth('JWT')
