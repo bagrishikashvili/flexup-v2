@@ -18,9 +18,14 @@ export const useAuthStore = create<AuthState>((set) => ({
   setAccessToken: (token, user) => set({ accessToken: token, user, isAuthenticated: true }),
   logout: () => {
     set({ accessToken: null, user: null, isAuthenticated: false });
-    import('@/features/companies/stores/company.store').then(({ clearActiveCompany }) => {
-      clearActiveCompany();
-    }).catch(() => undefined);
+    Promise.all([
+      import('@/features/companies/stores/company.store').then(({ clearActiveCompany }) => {
+        clearActiveCompany();
+      }),
+      import('@/lib/query-client').then(({ queryClient }) => {
+        queryClient.clear();
+      }),
+    ]).catch(() => undefined);
   },
 }));
 
