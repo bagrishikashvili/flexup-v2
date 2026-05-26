@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { useMutation } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
-import { toast } from 'sonner';
 import { apiRequest, ApiError } from '@/shared/api/client';
 import { useAuthStore } from '@/features/auth/stores/auth.store';
 import { Button } from '@/shared/components/ui/button';
@@ -104,7 +103,6 @@ function ResetPasswordPage() {
       }),
     onSuccess: () => {
       logoutAuth();
-      toast.success(t('resetPassword.success'));
       void navigate({ to: '/auth/login', search: { reset: 'success' } });
     },
     onError: (error) => {
