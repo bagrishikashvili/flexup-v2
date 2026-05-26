@@ -1,11 +1,12 @@
-import { createFileRoute, useNavigate } from '@tanstack/react-router';
+import { createFileRoute, useNavigate, Link } from '@tanstack/react-router';
 import { useTranslation } from 'react-i18next';
-import { Building2 } from 'lucide-react';
+import { Building2, LogOut } from 'lucide-react';
 import { CompanyCreateForm } from '@/features/companies/components/CompanyCreateForm';
 import { LanguageSwitcher } from '@/shared/components/LanguageSwitcher';
 import { useActiveCompany } from '@/features/companies/hooks/useActiveCompany';
+import { useAuthStore } from '@/features/auth/stores/auth.store';
+import { apiRequest } from '@/shared/api/client';
 import { Button } from '@/shared/components/ui/button';
-import { Link } from '@tanstack/react-router';
 import type { CompanyDetailResponse } from '@flexup/shared';
 
 export const Route = createFileRoute('/app/onboarding/company')({
@@ -16,6 +17,17 @@ function CompanyOnboardingPage() {
   const { t } = useTranslation('companies');
   const navigate = useNavigate();
   const { isEmpty, isLoading, companies } = useActiveCompany();
+  const logoutStore = useAuthStore((s) => s.logout);
+
+  const handleLogout = async () => {
+    try {
+      await apiRequest('/auth/logout', { method: 'POST' });
+    } catch {
+      // ignore
+    }
+    logoutStore();
+    void navigate({ to: '/auth/login' });
+  };
 
   const handleSuccess = (company: CompanyDetailResponse) => {
     void navigate({
@@ -27,8 +39,12 @@ function CompanyOnboardingPage() {
   if (!isLoading && !isEmpty) {
     return (
       <div className="min-h-screen bg-[#F9FAFB] flex flex-col items-center justify-center p-6">
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-4 right-4 flex items-center gap-2">
           <LanguageSwitcher />
+          <Button variant="ghost" size="sm" onClick={() => void handleLogout()}>
+            <LogOut className="w-4 h-4" />
+            {t('logout')}
+          </Button>
         </div>
         <div className="w-full max-w-md text-center">
           <h2
