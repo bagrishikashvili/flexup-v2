@@ -28,7 +28,7 @@ export const validationSchema = Joi.object({
   SMTP_USER: Joi.string().allow('').default(''),
   SMTP_PASS: Joi.string().allow('').default(''),
   SMTP_SECURE: Joi.boolean().default(false),
-  EMAIL_FROM: Joi.string().email().default('noreply@flexup.local'),
+  EMAIL_FROM: Joi.string().email({ tlds: { allow: false } }).default('noreply@flexup.local'),
   EMAIL_FROM_NAME: Joi.string().default('flexup'),
   WEB_BASE_URL: Joi.string().uri().default('http://localhost:5173'),
   EMAIL_VERIFICATION_TTL_HOURS: Joi.number()
