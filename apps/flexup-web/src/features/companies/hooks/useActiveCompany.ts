@@ -14,6 +14,7 @@ export function useActiveCompany() {
     queryFn: getMyCompanies,
     staleTime: 30_000,
     refetchOnWindowFocus: true,
+    retry: false,
   });
 
   const activeCompany: CompanyPublicResponse | undefined =
@@ -38,6 +39,6 @@ export function useActiveCompany() {
     isLoading,
     isError,
     refetch,
-    isEmpty: !isLoading && companies.length === 0,
+    isEmpty: !isLoading && !isError && companies.length === 0,
   };
 }

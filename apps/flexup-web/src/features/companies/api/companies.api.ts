@@ -8,11 +8,11 @@ import type {
 } from '@flexup/shared';
 
 export async function getMyCompanies(): Promise<CompanyPublicResponse[]> {
-  return withRefresh(() => apiRequest<CompanyPublicResponse[]>('/companies/mine'));
+  return apiRequest<CompanyPublicResponse[]>('/companies/mine');
 }
 
 export async function getCompany(companyId: string): Promise<CompanyDetailResponse> {
-  return withRefresh(() => apiRequest<CompanyDetailResponse>(`/companies/${companyId}`));
+  return apiRequest<CompanyDetailResponse>(`/companies/${companyId}`);
 }
 
 export async function createCompany(payload: CreateCompanyRequest): Promise<CompanyDetailResponse> {

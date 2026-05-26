@@ -14,5 +14,14 @@ export const queryClient = new QueryClient({
         return failureCount < 2;
       },
     },
+    mutations: {
+      onError: (error) => {
+        if (error instanceof ApiError && error.status === 401) {
+          import('@/features/auth/stores/auth.store').then(({ logout }) => {
+            logout();
+          }).catch(() => undefined);
+        }
+      },
+    },
   },
 });
