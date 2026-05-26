@@ -58,7 +58,8 @@ function LoginPage() {
     if (reset === 'success') {
       toast.success(t('resetPassword.success'));
     }
-  }, [reset, t]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [reset]);
 
   const form = useForm<LoginInput>({
     resolver: zodResolver(loginSchema),
