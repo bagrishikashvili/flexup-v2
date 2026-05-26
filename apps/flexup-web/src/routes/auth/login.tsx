@@ -78,7 +78,7 @@ function LoginPage() {
       if (data.user.role === 'COMPANY_USER' && !data.user.emailVerified) {
         void navigate({ to: '/auth/verify-gate' });
       } else {
-        void navigate({ to: '/dashboard' });
+        void navigate({ to: '/app' });
       }
     },
     onError: (error) => {

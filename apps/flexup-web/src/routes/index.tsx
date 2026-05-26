@@ -13,6 +13,6 @@ export const Route = createFileRoute('/')({
       throw redirect({ to: '/auth/verify-gate' });
     }
 
-    throw redirect({ to: '/dashboard' });
+    throw redirect({ to: '/app' });
   },
 });

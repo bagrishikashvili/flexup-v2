@@ -3,8 +3,9 @@ import type { ApiErrorResponse } from '@flexup/shared';
 const API_BASE = '/api';
 
 export interface RequestOptions extends Omit<RequestInit, 'body'> {
-  body?: unknown;
+  body?: unknown | FormData;
   skipAuth?: boolean;
+  isFormData?: boolean;
 }
 
 export class ApiError extends Error {
@@ -22,12 +23,14 @@ export class ApiError extends Error {
 }
 
 export async function apiRequest<T>(path: string, options: RequestOptions = {}): Promise<T> {
-  const { body, skipAuth = false, headers = {}, ...rest } = options;
+  const { body, skipAuth = false, isFormData = false, headers = {}, ...rest } = options;
+
+  const isMultipart = isFormData || body instanceof FormData;
 
   const init: RequestInit = {
     ...rest,
     headers: {
-      'Content-Type': 'application/json',
+      ...(isMultipart ? {} : { 'Content-Type': 'application/json' }),
       ...(headers as Record<string, string>),
     },
     credentials: 'include',
@@ -42,7 +45,7 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
   }
 
   if (body !== undefined) {
-    init.body = JSON.stringify(body);
+    init.body = isMultipart ? (body as FormData) : JSON.stringify(body);
   }
 
   let response: Response;

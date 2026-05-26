@@ -16,7 +16,12 @@ export const useAuthStore = create<AuthState>((set) => ({
   isAuthenticated: false,
   setAuth: (token, user) => set({ accessToken: token, user, isAuthenticated: true }),
   setAccessToken: (token, user) => set({ accessToken: token, user, isAuthenticated: true }),
-  logout: () => set({ accessToken: null, user: null, isAuthenticated: false }),
+  logout: () => {
+    set({ accessToken: null, user: null, isAuthenticated: false });
+    import('@/features/companies/stores/company.store').then(({ clearActiveCompany }) => {
+      clearActiveCompany();
+    }).catch(() => undefined);
+  },
 }));
 
 export const getAccessToken = () => useAuthStore.getState().accessToken;

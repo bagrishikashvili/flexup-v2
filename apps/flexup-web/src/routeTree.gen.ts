@@ -10,23 +10,40 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as AppRouteImport } from './routes/app'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AppIndexRouteImport } from './routes/app/index'
 import { Route as AuthVerifyGateRouteImport } from './routes/auth/verify-gate'
 import { Route as AuthVerifyEmailRouteImport } from './routes/auth/verify-email'
 import { Route as AuthResetPasswordRouteImport } from './routes/auth/reset-password'
 import { Route as AuthRegisterRouteImport } from './routes/auth/register'
 import { Route as AuthLoginRouteImport } from './routes/auth/login'
 import { Route as AuthForgotPasswordRouteImport } from './routes/auth/forgot-password'
+import { Route as AppCompaniesIndexRouteImport } from './routes/app/companies/index'
+import { Route as AppOnboardingCompanyRouteImport } from './routes/app/onboarding/company'
+import { Route as AppCompaniesNewRouteImport } from './routes/app/companies/new'
+import { Route as AppCompaniesCompanyIdIndexRouteImport } from './routes/app/companies/$companyId/index'
+import { Route as AppCompaniesCompanyIdSettingsRouteImport } from './routes/app/companies/$companyId/settings'
 
 const DashboardRoute = DashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AppIndexRoute = AppIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppRoute,
 } as any)
 const AuthVerifyGateRoute = AuthVerifyGateRouteImport.update({
   id: '/auth/verify-gate',
@@ -58,9 +75,37 @@ const AuthForgotPasswordRoute = AuthForgotPasswordRouteImport.update({
   path: '/auth/forgot-password',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppCompaniesIndexRoute = AppCompaniesIndexRouteImport.update({
+  id: '/companies/',
+  path: '/companies/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppOnboardingCompanyRoute = AppOnboardingCompanyRouteImport.update({
+  id: '/onboarding/company',
+  path: '/onboarding/company',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppCompaniesNewRoute = AppCompaniesNewRouteImport.update({
+  id: '/companies/new',
+  path: '/companies/new',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppCompaniesCompanyIdIndexRoute =
+  AppCompaniesCompanyIdIndexRouteImport.update({
+    id: '/companies/$companyId/',
+    path: '/companies/$companyId/',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppCompaniesCompanyIdSettingsRoute =
+  AppCompaniesCompanyIdSettingsRouteImport.update({
+    id: '/companies/$companyId/settings',
+    path: '/companies/$companyId/settings',
+    getParentRoute: () => AppRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/app': typeof AppRouteWithChildren
   '/dashboard': typeof DashboardRoute
   '/auth/forgot-password': typeof AuthForgotPasswordRoute
   '/auth/login': typeof AuthLoginRoute
@@ -68,6 +113,12 @@ export interface FileRoutesByFullPath {
   '/auth/reset-password': typeof AuthResetPasswordRoute
   '/auth/verify-email': typeof AuthVerifyEmailRoute
   '/auth/verify-gate': typeof AuthVerifyGateRoute
+  '/app/': typeof AppIndexRoute
+  '/app/companies/new': typeof AppCompaniesNewRoute
+  '/app/onboarding/company': typeof AppOnboardingCompanyRoute
+  '/app/companies/': typeof AppCompaniesIndexRoute
+  '/app/companies/$companyId/settings': typeof AppCompaniesCompanyIdSettingsRoute
+  '/app/companies/$companyId/': typeof AppCompaniesCompanyIdIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,10 +129,17 @@ export interface FileRoutesByTo {
   '/auth/reset-password': typeof AuthResetPasswordRoute
   '/auth/verify-email': typeof AuthVerifyEmailRoute
   '/auth/verify-gate': typeof AuthVerifyGateRoute
+  '/app': typeof AppIndexRoute
+  '/app/companies/new': typeof AppCompaniesNewRoute
+  '/app/onboarding/company': typeof AppOnboardingCompanyRoute
+  '/app/companies': typeof AppCompaniesIndexRoute
+  '/app/companies/$companyId/settings': typeof AppCompaniesCompanyIdSettingsRoute
+  '/app/companies/$companyId': typeof AppCompaniesCompanyIdIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/app': typeof AppRouteWithChildren
   '/dashboard': typeof DashboardRoute
   '/auth/forgot-password': typeof AuthForgotPasswordRoute
   '/auth/login': typeof AuthLoginRoute
@@ -89,11 +147,18 @@ export interface FileRoutesById {
   '/auth/reset-password': typeof AuthResetPasswordRoute
   '/auth/verify-email': typeof AuthVerifyEmailRoute
   '/auth/verify-gate': typeof AuthVerifyGateRoute
+  '/app/': typeof AppIndexRoute
+  '/app/companies/new': typeof AppCompaniesNewRoute
+  '/app/onboarding/company': typeof AppOnboardingCompanyRoute
+  '/app/companies/': typeof AppCompaniesIndexRoute
+  '/app/companies/$companyId/settings': typeof AppCompaniesCompanyIdSettingsRoute
+  '/app/companies/$companyId/': typeof AppCompaniesCompanyIdIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/app'
     | '/dashboard'
     | '/auth/forgot-password'
     | '/auth/login'
@@ -101,6 +166,12 @@ export interface FileRouteTypes {
     | '/auth/reset-password'
     | '/auth/verify-email'
     | '/auth/verify-gate'
+    | '/app/'
+    | '/app/companies/new'
+    | '/app/onboarding/company'
+    | '/app/companies/'
+    | '/app/companies/$companyId/settings'
+    | '/app/companies/$companyId/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,9 +182,16 @@ export interface FileRouteTypes {
     | '/auth/reset-password'
     | '/auth/verify-email'
     | '/auth/verify-gate'
+    | '/app'
+    | '/app/companies/new'
+    | '/app/onboarding/company'
+    | '/app/companies'
+    | '/app/companies/$companyId/settings'
+    | '/app/companies/$companyId'
   id:
     | '__root__'
     | '/'
+    | '/app'
     | '/dashboard'
     | '/auth/forgot-password'
     | '/auth/login'
@@ -121,10 +199,17 @@ export interface FileRouteTypes {
     | '/auth/reset-password'
     | '/auth/verify-email'
     | '/auth/verify-gate'
+    | '/app/'
+    | '/app/companies/new'
+    | '/app/onboarding/company'
+    | '/app/companies/'
+    | '/app/companies/$companyId/settings'
+    | '/app/companies/$companyId/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppRoute: typeof AppRouteWithChildren
   DashboardRoute: typeof DashboardRoute
   AuthForgotPasswordRoute: typeof AuthForgotPasswordRoute
   AuthLoginRoute: typeof AuthLoginRoute
@@ -143,12 +228,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/app/': {
+      id: '/app/'
+      path: '/'
+      fullPath: '/app/'
+      preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRoute
     }
     '/auth/verify-gate': {
       id: '/auth/verify-gate'
@@ -192,11 +291,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthForgotPasswordRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/app/companies/': {
+      id: '/app/companies/'
+      path: '/companies'
+      fullPath: '/app/companies/'
+      preLoaderRoute: typeof AppCompaniesIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/onboarding/company': {
+      id: '/app/onboarding/company'
+      path: '/onboarding/company'
+      fullPath: '/app/onboarding/company'
+      preLoaderRoute: typeof AppOnboardingCompanyRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/companies/new': {
+      id: '/app/companies/new'
+      path: '/companies/new'
+      fullPath: '/app/companies/new'
+      preLoaderRoute: typeof AppCompaniesNewRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/companies/$companyId/': {
+      id: '/app/companies/$companyId/'
+      path: '/companies/$companyId'
+      fullPath: '/app/companies/$companyId/'
+      preLoaderRoute: typeof AppCompaniesCompanyIdIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/companies/$companyId/settings': {
+      id: '/app/companies/$companyId/settings'
+      path: '/companies/$companyId/settings'
+      fullPath: '/app/companies/$companyId/settings'
+      preLoaderRoute: typeof AppCompaniesCompanyIdSettingsRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
+interface AppRouteChildren {
+  AppIndexRoute: typeof AppIndexRoute
+  AppCompaniesNewRoute: typeof AppCompaniesNewRoute
+  AppOnboardingCompanyRoute: typeof AppOnboardingCompanyRoute
+  AppCompaniesIndexRoute: typeof AppCompaniesIndexRoute
+  AppCompaniesCompanyIdSettingsRoute: typeof AppCompaniesCompanyIdSettingsRoute
+  AppCompaniesCompanyIdIndexRoute: typeof AppCompaniesCompanyIdIndexRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppIndexRoute: AppIndexRoute,
+  AppCompaniesNewRoute: AppCompaniesNewRoute,
+  AppOnboardingCompanyRoute: AppOnboardingCompanyRoute,
+  AppCompaniesIndexRoute: AppCompaniesIndexRoute,
+  AppCompaniesCompanyIdSettingsRoute: AppCompaniesCompanyIdSettingsRoute,
+  AppCompaniesCompanyIdIndexRoute: AppCompaniesCompanyIdIndexRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AppRoute: AppRouteWithChildren,
   DashboardRoute: DashboardRoute,
   AuthForgotPasswordRoute: AuthForgotPasswordRoute,
   AuthLoginRoute: AuthLoginRoute,
