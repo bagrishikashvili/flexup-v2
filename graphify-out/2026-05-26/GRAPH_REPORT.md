@@ -1,13 +1,18 @@
-# Graph Report - .  (2026-05-26)
+# Graph Report - flexup  (2026-05-26)
 
 ## Corpus Check
-- 177 files · ~55,325 words
+- 177 files · ~55,655 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1223 nodes · 1790 edges · 87 communities (67 shown, 20 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 55 edges (avg confidence: 0.85)
-- Token cost: 9,800 input · 2,400 output
+- 1243 nodes · 1804 edges · 89 communities (69 shown, 20 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 51 edges (avg confidence: 0.85)
+- Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `e463b48f`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Backend NestJS Core|Backend NestJS Core]]
@@ -94,6 +99,8 @@
 - [[_COMMUNITY_Separator UI Component|Separator UI Component]]
 - [[_COMMUNITY_Project README|Project README]]
 - [[_COMMUNITY_Claude Permissions Config|Claude Permissions Config]]
+- [[_COMMUNITY_Community 87|Community 87]]
+- [[_COMMUNITY_Community 88|Community 88]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `AppConfigService` - 39 edges
@@ -108,16 +115,16 @@
 10. `scripts` - 18 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `JWT Auth Flow (access + refresh token rotation)` --conceptually_related_to--> `Email Verification Flow`  [INFERRED]
-  CLAUDE.md → apps/flexup-web/src/locales/en/auth.json
-- `Root package.json (npm workspaces)` --implements--> `Flexup Shifts Marketplace Platform`  [INFERRED]
-  package.json → CLAUDE.md
-- `Multi-Tenancy (company-scoped access control)` --conceptually_related_to--> `NestJS 11 Framework`  [INFERRED]
-  CLAUDE.md → apps/flexup-backend/package.json
-- `Feature-Based NestJS Module Structure` --rationale_for--> `NestJS 11 Framework`  [INFERRED]
-  CLAUDE.md → apps/flexup-backend/package.json
 - `Mailpit SMTP Dev Email Service` --conceptually_related_to--> `Email Verification Flow`  [INFERRED]
   docker-compose.yml → apps/flexup-web/src/locales/en/auth.json
+- `ClickUp-Inspired Design System for flexup-web` --conceptually_related_to--> `Tailwind CSS 4`  [INFERRED]
+  DESIGN.md → apps/flexup-web/package.json
+- `Mailpit SMTP Dev Email Service` --conceptually_related_to--> `Nodemailer Email Transport`  [INFERRED]
+  docker-compose.yml → apps/flexup-backend/package.json
+- `Task Batch F1.1 — Frontend Foundation` --references--> `Georgian Common Translations`  [EXTRACTED]
+  docs/tasks/TASK_BATCH_F1_1.md → apps/flexup-web/src/locales/ka/common.json
+- `Task Batch F1.1 — Frontend Foundation` --references--> `Georgian Auth Translations`  [EXTRACTED]
+  docs/tasks/TASK_BATCH_F1_1.md → apps/flexup-web/src/locales/ka/auth.json
 
 ## Hyperedges (group relationships)
 - **Auth & Email Verification Flow (backend JWT + nodemailer + frontend i18n)** — concept_jwt_auth_flow, concept_email_verification, backend_dep_nodemailer, docker_service_mailpit, web_locales_en_auth [INFERRED 0.85]
@@ -127,27 +134,27 @@
 - **Multi-tenant Access Control: CompanyAccessGuard + Role Hierarchy + Admin Bypass** — concept_company_access_guard, concept_require_company_role, adr_022_admin_bypass [EXTRACTED 0.95]
 - **Frontend Auth Flow: Zustand Store + Bootstrap + Verify Gate** — concept_zustand_auth_store, concept_auth_bootstrap, concept_verify_gate_route [INFERRED 0.85]
 
-## Communities (87 total, 20 thin omitted)
+## Communities (89 total, 20 thin omitted)
 
 ### Community 0 - "Backend NestJS Core"
-Cohesion: 0.05
-Nodes (21): AuthModule, CompaniesModule, CompanyMembersModule, Public(), EmailModule, AllExceptionsFilter, HttpExceptionBody, PRISMA_ERROR_MAP (+13 more)
+Cohesion: 0.07
+Nodes (20): AuthModule, CompaniesModule, CompanyMembersModule, Public(), EmailModule, EmailService, JwtAuthGuard, HealthController (+12 more)
 
 ### Community 1 - "Frontend Auth & Forms"
 Cohesion: 0.05
 Nodes (40): LoginPage(), Route, RegisterPage(), Route, Route, searchSchema, VerifyEmailPage(), VerifyState (+32 more)
 
 ### Community 2 - "User Profile DTOs"
-Cohesion: 0.09
-Nodes (12): ChangeEmailDto, ChangePhoneDto, DeactivateAccountDto, UpdateProfileDto, UserListQueryDto, UserPublicResponse, AuthUser, UsersController (+4 more)
+Cohesion: 0.08
+Nodes (15): Roles(), ChangeEmailDto, ChangePhoneDto, DeactivateAccountDto, UpdateProfileDto, UserListQueryDto, UserPublicResponse, RolesGuard (+7 more)
 
 ### Community 3 - "Companies Module"
-Cohesion: 0.11
-Nodes (13): AuthUser, CompaniesController, toCompanyDetail(), toCompanyPublic(), ALLOWED_LOGO_MIME, CompaniesService, Roles(), CompanyDetailResponse (+5 more)
+Cohesion: 0.13
+Nodes (11): AuthUser, CompaniesController, toCompanyDetail(), toCompanyPublic(), ALLOWED_LOGO_MIME, CompaniesService, CompanyDetailResponse, CompanyListQueryDto (+3 more)
 
 ### Community 4 - "Backend Tech Stack"
-Cohesion: 0.06
-Nodes (43): NestJS 11 Framework, Nodemailer Email Transport, Prisma 6 ORM, NestJS Swagger / OpenAPI, Zod 3 Schema Validation (backend), NestJS CLI Config (nest-cli.json), Backend package.json (@flexup/backend), CLAUDE.md Project Instructions (+35 more)
+Cohesion: 0.07
+Nodes (36): NestJS 11 Framework, Nodemailer Email Transport, Prisma 6 ORM, NestJS Swagger / OpenAPI, Zod 3 Schema Validation (backend), NestJS CLI Config (nest-cli.json), Backend package.json (@flexup/backend), ClickUp-Inspired Design System for flexup-web (+28 more)
 
 ### Community 5 - "Company Members Access Control"
 Cohesion: 0.09
@@ -178,8 +185,8 @@ Cohesion: 0.07
 Nodes (27): dependencies, class-variance-authority, clsx, date-fns, @flexup/shared, @hookform/resolvers, i18next, i18next-browser-languagedetector (+19 more)
 
 ### Community 13 - "Auth Module"
-Cohesion: 0.15
-Nodes (9): AuthController, RequestMeta, LoginDto, RegisterDto, ZodValidationPipe, AuthCookieConfig, clearRefreshTokenCookie(), getRefreshTokenFromCookie() (+1 more)
+Cohesion: 0.14
+Nodes (9): AuthController, CurrentUser, LoginDto, RegisterDto, ZodValidationPipe, AuthCookieConfig, clearRefreshTokenCookie(), getRefreshTokenFromCookie() (+1 more)
 
 ### Community 14 - "Architecture Decision Records"
 Cohesion: 0.13
@@ -246,12 +253,12 @@ Cohesion: 0.13
 Nodes (14): compilerOptions, allowImportingTsExtensions, lib, module, moduleDetection, moduleResolution, noEmit, noUnusedLocals (+6 more)
 
 ### Community 30 - "Email Module & Providers"
-Cohesion: 0.40
-Nodes (5): EmailService, ConsoleEmailProvider, EmailMessage, EmailProvider, SmtpEmailProvider
+Cohesion: 0.09
+Nodes (21): API კონვენციები, Auth flow, Backend-ის სტრუქტურის წესები, code:block1 (/                           — root workspace), code:block2 (src/), code:json ({ "statusCode": 400, "message": "...", "error": "Bad Request), Database წესები, Error handling (+13 more)
 
 ### Community 31 - "Config & Email Templates"
-Cohesion: 0.23
-Nodes (6): AppConfigModule, validationSchema, EmailVerificationModule, escapeHtml(), renderVerificationEmail(), VerificationEmailParams
+Cohesion: 0.21
+Nodes (6): RequestMeta, AppConfigModule, validationSchema, EmailVerificationModule, JwtStrategy, JwtPayload
 
 ### Community 32 - "shadcn/ui Component Config"
 Cohesion: 0.14
@@ -278,8 +285,8 @@ Cohesion: 0.17
 Nodes (9): FormControl, FormDescription, FormFieldContext, FormFieldContextValue, FormItem, FormItemContext, FormItemContextValue, FormLabel (+1 more)
 
 ### Community 38 - "Email Verification Controller"
-Cohesion: 0.27
-Nodes (4): CurrentUser, ResendVerificationDto, VerifyEmailDto, EmailVerificationController
+Cohesion: 0.33
+Nodes (3): ResendVerificationDto, VerifyEmailDto, EmailVerificationController
 
 ### Community 39 - "Shared Auth Types"
 Cohesion: 0.22
@@ -353,6 +360,14 @@ Nodes (6): Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle
 Cohesion: 0.33
 Nodes (6): scripts, build, dev, lint, preview, type-check
 
+### Community 58 - "JWT Strategy"
+Cohesion: 0.21
+Nodes (5): AllExceptionsFilter, HttpExceptionBody, PRISMA_ERROR_MAP, PrismaExceptionFilter, AppModule
+
+### Community 59 - "Email Verification Service"
+Cohesion: 0.29
+Nodes (4): EmailVerificationService, escapeHtml(), renderVerificationEmail(), VerificationEmailParams
+
 ### Community 60 - "Email Verification Concepts"
 Cohesion: 0.47
 Nodes (6): Email Verification Flow (Gate + Token), SMTP Email Provider with Mailpit Dev, Verify Gate Route (Email Not Verified Block), Georgian Auth Translations, Georgian Validation Translations, Task Batch 2.Z+F1.2 — Email Verification
@@ -386,24 +401,24 @@ Cohesion: 0.50
 Nodes (3): Avatar, AvatarFallback, AvatarImage
 
 ## Knowledge Gaps
-- **620 isolated node(s):** `name`, `private`, `version`, `workspaces`, `dev:backend` (+615 more)
+- **640 isolated node(s):** `PreToolUse`, `პროექტი`, `Tech Stack (ფიქსირებული — არ შეცვალო)`, `code:block1 (/                           — root workspace)`, `code:block2 (src/)` (+635 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `T` connect `Frontend Auth & Forms` to `Config & Email Templates`?**
-  _High betweenness centrality (0.044) - this node is a cross-community bridge._
-- **Why does `AppConfigService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Auth Module`, `JWT Strategy`, `Email Verification Service`, `Email Module & Providers`, `Config & Email Templates`?**
-  _High betweenness centrality (0.028) - this node is a cross-community bridge._
-- **Why does `PrismaService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Company Members Access Control`, `Locations Module`, `Auth Module`, `Email Verification Service`, `Config & Email Templates`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **What connects `name`, `private`, `version` to the rest of the system?**
-  _627 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `T` connect `Frontend Auth & Forms` to `Email Verification Service`?**
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+- **Why does `PrismaService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Company Members Access Control`, `Locations Module`, `Email Verification Service`, `Config & Email Templates`?**
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `AppConfigService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Auth Module`, `JWT Strategy`, `Email Verification Service`, `Config & Email Templates`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **What connects `PreToolUse`, `პროექტი`, `Tech Stack (ფიქსირებული — არ შეცვალო)` to the rest of the system?**
+  _646 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Backend NestJS Core` be split into smaller, more focused modules?**
-  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06516290726817042 - nodes in this community are weakly interconnected._
 - **Should `Frontend Auth & Forms` be split into smaller, more focused modules?**
   _Cohesion score 0.052597402597402594 - nodes in this community are weakly interconnected._
 - **Should `User Profile DTOs` be split into smaller, more focused modules?**
-  _Cohesion score 0.0899854862119013 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07540983606557378 - nodes in this community are weakly interconnected._
