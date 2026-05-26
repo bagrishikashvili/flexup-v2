@@ -12,3 +12,5 @@ apps/*/coverage
 !.env.example
 
 apps/flexup-backend/uploads/
+graphify-out/manifest.json
+graphify-out/cost.json
