@@ -56,7 +56,7 @@ function LoginPage() {
 
   useEffect(() => {
     if (reset === 'success') {
-      toast.success(t('resetPassword.success'));
+      toast.success(t('resetPassword.success'), { id: 'password-reset-success' });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reset]);
