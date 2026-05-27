@@ -5,12 +5,12 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1884 nodes · 2430 edges · 154 communities (121 shown, 33 thin omitted)
+- 1887 nodes · 2438 edges · 154 communities (123 shown, 31 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 48 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `69d42999`
+- Built from commit: `56358a7e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -162,7 +162,6 @@
 - [[_COMMUNITY_Community 148|Community 148]]
 - [[_COMMUNITY_Community 149|Community 149]]
 - [[_COMMUNITY_Community 150|Community 150]]
-- [[_COMMUNITY_Community 151|Community 151]]
 - [[_COMMUNITY_Community 152|Community 152]]
 - [[_COMMUNITY_Community 153|Community 153]]
 
@@ -198,7 +197,7 @@
 - **Multi-tenant Access Control: CompanyAccessGuard + Role Hierarchy + Admin Bypass** — concept_company_access_guard, concept_require_company_role, adr_022_admin_bypass [EXTRACTED 0.95]
 - **Frontend Auth Flow: Zustand Store + Bootstrap + Verify Gate** — concept_zustand_auth_store, concept_auth_bootstrap, concept_verify_gate_route [INFERRED 0.85]
 
-## Communities (154 total, 33 thin omitted)
+## Communities (154 total, 31 thin omitted)
 
 ### Community 0 - "Backend NestJS Core"
 Cohesion: 0.19
@@ -209,20 +208,20 @@ Cohesion: 0.07
 Nodes (27): Route, AppCompaniesCompanyIdIndexRoute, AppCompaniesCompanyIdJobsIndexRoute, AppCompaniesCompanyIdJobsJobIdEditRoute, AppCompaniesCompanyIdJobsJobIdIndexRoute, AppCompaniesCompanyIdJobsNewRoute, AppCompaniesCompanyIdSettingsRoute, AppCompaniesIndexRoute (+19 more)
 
 ### Community 2 - "User Profile DTOs"
-Cohesion: 0.12
-Nodes (9): ChangeEmailDto, ChangePhoneDto, UpdateProfileDto, UserListQueryDto, UserPublicResponse, UsersController, UsersModule, ALLOWED_MIME_TYPES (+1 more)
+Cohesion: 0.08
+Nodes (15): Roles(), ChangeEmailDto, ChangePhoneDto, DeactivateAccountDto, UpdateProfileDto, UserListQueryDto, UserPublicResponse, RolesGuard (+7 more)
 
 ### Community 3 - "Companies Module"
-Cohesion: 0.24
-Nodes (9): AuthUser, toCompanyPublic(), ALLOWED_LOGO_MIME, CompanyListQueryDto, CompanyPublicResponse, CreateCompanyDto, UpdateCompanyDto, PaginatedMeta (+1 more)
+Cohesion: 0.12
+Nodes (14): AuthUser, CompaniesController, toCompanyDetail(), toCompanyPublic(), ALLOWED_LOGO_MIME, CompaniesService, CompanyDetailResponse, CompanyListQueryDto (+6 more)
 
 ### Community 4 - "Backend Tech Stack"
 Cohesion: 0.11
 Nodes (22): ClickUp-Inspired Design System for flexup-web, Bilingual i18n (Georgian + English), ClickUp Design System (DESIGN.md), Root package.json (npm workspaces), shadcn/ui components.json Config, i18next Internationalization, React Hook Form, shadcn/ui + Radix UI Components (+14 more)
 
 ### Community 5 - "Company Members Access Control"
-Cohesion: 0.19
-Nodes (8): AuthUser, CompanyMembersController, MemberWithUser, toMemberResponse(), ROLE_ORDER, AddMemberDto, MemberResponse, UpdateMemberRoleDto
+Cohesion: 0.09
+Nodes (17): CompaniesModule, AuthUser, CompanyMembersController, MemberWithUser, toMemberResponse(), CompanyMembersModule, CompanyMembersService, ROLE_ORDER (+9 more)
 
 ### Community 7 - "Backend Package Config"
 Cohesion: 0.11
@@ -245,8 +244,8 @@ Cohesion: 0.07
 Nodes (27): dependencies, class-variance-authority, clsx, date-fns, @flexup/shared, @hookform/resolvers, i18next, i18next-browser-languagedetector (+19 more)
 
 ### Community 13 - "Auth Module"
-Cohesion: 0.13
-Nodes (9): AuthController, RequestMeta, LoginDto, RegisterDto, ZodValidationPipe, AuthCookieConfig, clearRefreshTokenCookie(), getRefreshTokenFromCookie() (+1 more)
+Cohesion: 0.17
+Nodes (5): AuthController, AuthCookieConfig, clearRefreshTokenCookie(), getRefreshTokenFromCookie(), setRefreshTokenCookie()
 
 ### Community 14 - "Architecture Decision Records"
 Cohesion: 0.04
@@ -317,8 +316,8 @@ Cohesion: 0.09
 Nodes (21): API კონვენციები, Auth flow, Backend-ის სტრუქტურის წესები, code:block1 (/                           — root workspace), code:block2 (src/), code:json ({ "statusCode": 400, "message": "...", "error": "Bad Request), Database წესები, Error handling (+13 more)
 
 ### Community 31 - "Config & Email Templates"
-Cohesion: 0.23
-Nodes (6): AuthModule, CompaniesModule, CompanyMembersModule, EmailModule, JwtAuthGuard, PrismaModule
+Cohesion: 0.25
+Nodes (5): EmailModule, JwtAuthGuard, JobPostingsModule, PrismaModule, ReferenceDataModule
 
 ### Community 32 - "shadcn/ui Component Config"
 Cohesion: 0.14
@@ -393,8 +392,8 @@ Cohesion: 0.22
 Nodes (5): CreateJobPostingInput, createJobPostingSchema, jobPostingBaseSchema, UpdateJobPostingInput, updateJobPostingSchema
 
 ### Community 51 - "Community 51"
-Cohesion: 0.15
-Nodes (8): ResendVerificationDto, VerifyEmailDto, EmailVerificationController, EmailVerificationModule, EmailVerificationService, escapeHtml(), renderVerificationEmail(), VerificationEmailParams
+Cohesion: 0.29
+Nodes (4): EmailVerificationService, escapeHtml(), renderVerificationEmail(), VerificationEmailParams
 
 ### Community 52 - "ADRs — Guard & Geo Decisions"
 Cohesion: 0.18
@@ -425,8 +424,8 @@ Cohesion: 0.21
 Nodes (5): AllExceptionsFilter, HttpExceptionBody, PRISMA_ERROR_MAP, PrismaExceptionFilter, AppModule
 
 ### Community 59 - "Email Verification Service"
-Cohesion: 0.19
-Nodes (6): CurrentUser, Roles(), DeactivateAccountDto, SetUserActiveDto, RolesGuard, AuthUser
+Cohesion: 0.27
+Nodes (4): CurrentUser, ResendVerificationDto, VerifyEmailDto, EmailVerificationController
 
 ### Community 61 - "Location Types"
 Cohesion: 0.15
@@ -471,10 +470,6 @@ Nodes (9): forgotPassword, backToLogin, description, emailLabel, loading, submit
 ### Community 89 - "Community 89"
 Cohesion: 0.15
 Nodes (13): resetPassword, confirmPassword, confirmPasswordPlaceholder, description, invalidLink, loading, newPassword, newPasswordPlaceholder (+5 more)
-
-### Community 90 - "Community 90"
-Cohesion: 0.05
-Nodes (18): CreateJobPostingDto, JobPostingListQueryDto, SetArchivedDto, UpdateJobPostingDto, AuthUser, JobPostingsController, jobPostingFullInclude, JobPostingWithCategory (+10 more)
 
 ### Community 91 - "Community 91"
 Cohesion: 0.18
@@ -576,6 +571,10 @@ Nodes (4): code:json ({), code:json ({), code:txt (locales/ka/companies.json), P
 Cohesion: 0.07
 Nodes (30): form, address, addressLine, addressLinePlaceholder, appearance, appearanceHint, briefing, briefingHint (+22 more)
 
+### Community 118 - "Community 118"
+Cohesion: 0.16
+Nodes (7): CreateJobPostingDto, JobPostingListQueryDto, SetArchivedDto, UpdateJobPostingDto, AuthUser, JobPostingsController, ALLOWED_COVER_MIME
+
 ### Community 119 - "Community 119"
 Cohesion: 0.13
 Nodes (14): active, archive, archived, create, delete, deleteConfirm, edit, hideArchived (+6 more)
@@ -596,21 +595,25 @@ Nodes (14): ADR-ი, code:json ({), code:typescript (interface AddressAutocomple
 Cohesion: 0.26
 Nodes (11): CreateJobPostingRequest, JobPostingListItemResponse, JobPostingListQuery, JobPostingResponse, SetArchivedRequest, UpdateJobPostingRequest, AppearanceResponse, JobCategoryResponse (+3 more)
 
+### Community 125 - "Community 125"
+Cohesion: 0.27
+Nodes (4): RequestMeta, LoginDto, RegisterDto, ZodValidationPipe
+
 ### Community 127 - "Community 127"
 Cohesion: 0.18
 Nodes (11): 1. Prisma schema — წაშალე ეს models:, 2. Company model-დან წაშალე, 3. Migration, A. Schema migration, B. Backend code removal, C. Frontend code removal, code:prisma (// წავა:), code:prisma (// წავა:) (+3 more)
 
 ### Community 129 - "Community 129"
-Cohesion: 0.25
-Nodes (6): APPEARANCES, CATEGORIES, LANGUAGES, prisma, SECTIONS, SKILLS
+Cohesion: 0.33
+Nodes (8): APPEARANCES, CATEGORIES, client_1, LANGUAGES, prisma, SECTIONS, seedReferenceData(), SKILLS
 
 ### Community 130 - "Community 130"
 Cohesion: 0.25
 Nodes (8): code:typescript (@Module({), code:typescript (@Injectable()), code:typescript (@Module({), code:typescript (@Injectable()), I. Reference Data Module (read-only API), J. JobPostings Module, K. JobPostings Controller, PART 4 — BACKEND CODE
 
 ### Community 131 - "Community 131"
-Cohesion: 0.27
-Nodes (4): AppConfigModule, validationSchema, JwtStrategy, JwtPayload
+Cohesion: 0.21
+Nodes (6): AuthModule, AppConfigModule, validationSchema, EmailVerificationModule, JwtStrategy, JwtPayload
 
 ### Community 132 - "Community 132"
 Cohesion: 0.33
@@ -661,32 +664,32 @@ Cohesion: 0.50
 Nodes (4): categoryMeta, experienced, minPay, tippable
 
 ### Community 150 - "Community 150"
-Cohesion: 0.21
-Nodes (6): CurrentMembership, CurrentMembershipPayload, RequireCompanyRole(), CompanyAccessGuard, RequestWithMembership, ROLE_HIERARCHY
+Cohesion: 0.22
+Nodes (5): jobPostingFullInclude, JobPostingWithCategory, JobPostingWithIncludes, toJobCategoryResponse(), toJobPostingListItem()
 
 ### Community 152 - "Community 152"
 Cohesion: 0.50
 Nodes (3): Route, searchSchema, VerifyState
 
 ## Knowledge Gaps
-- **1115 isolated node(s):** `extends`, `rootDir`, `tsBuildInfoFile`, `exclude`, `name` (+1110 more)
+- **1110 isolated node(s):** `client_1`, `extends`, `rootDir`, `tsBuildInfoFile`, `exclude` (+1105 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `T` connect `ADRs — Guard & Geo Decisions` to `Community 51`, `Community 93`, `Community 94`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
-- **Why does `PrismaService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Company Members Access Control`, `Auth Module`, `Community 51`, `Community 150`, `Community 90`, `Config & Email Templates`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `AppConfigService` connect `App Config & Bootstrap` to `User Profile DTOs`, `Community 131`, `Community 58`, `Companies Module`, `Email Verification Controller`, `Auth Module`, `Community 51`, `Community 90`, `Community 124`?**
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
+- **Why does `PrismaService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Company Members Access Control`, `Community 51`, `Community 118`, `Community 90`, `Community 125`, `Config & Email Templates`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `AppConfigService` connect `App Config & Bootstrap` to `User Profile DTOs`, `Community 131`, `Companies Module`, `Email Verification Controller`, `Auth Module`, `Community 51`, `Community 118`, `Community 58`, `Community 124`, `Community 125`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **What connects `extends`, `rootDir`, `tsBuildInfoFile` to the rest of the system?**
-  _1115 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `client_1`, `extends`, `rootDir` to the rest of the system?**
+  _1110 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Frontend Auth & Forms` be split into smaller, more focused modules?**
   _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
 - **Should `User Profile DTOs` be split into smaller, more focused modules?**
-  _Cohesion score 0.12315270935960591 - nodes in this community are weakly interconnected._
-- **Should `Backend Tech Stack` be split into smaller, more focused modules?**
-  _Cohesion score 0.10822510822510822 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07540983606557378 - nodes in this community are weakly interconnected._
+- **Should `Companies Module` be split into smaller, more focused modules?**
+  _Cohesion score 0.11563367252543941 - nodes in this community are weakly interconnected._

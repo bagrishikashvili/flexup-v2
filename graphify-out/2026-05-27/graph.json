@@ -125,10 +125,19 @@
       "norm_label": "rootdir"
     },
     {
+      "label": "tsBuildInfoFile",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/tsconfig.build.json",
+      "source_location": "L5",
+      "id": "flexup_backend_tsconfig_build_compileroptions_tsbuildinfofile",
+      "community": 69,
+      "norm_label": "tsbuildinfofile"
+    },
+    {
       "label": "exclude",
       "file_type": "code",
       "source_file": "apps/flexup-backend/tsconfig.build.json",
-      "source_location": "L6",
+      "source_location": "L7",
       "id": "flexup_backend_tsconfig_build_exclude",
       "community": 69,
       "norm_label": "exclude"
@@ -11775,7 +11784,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/prisma/prisma.service.ts",
       "source_location": "L1",
-      "community": 12,
+      "community": 51,
       "norm_label": "prisma.service.ts",
       "id": "apps_flexup_backend_src_prisma_prisma_service_ts"
     },
@@ -11973,7 +11982,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/company-members/company-members.service.ts",
       "source_location": "L22",
-      "community": 151,
+      "community": 12,
       "norm_label": ".constructor()",
       "id": "company_members_company_members_service_companymembersservice_constructor"
     },
@@ -11982,7 +11991,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/company-members/company-members.service.ts",
       "source_location": "L24",
-      "community": 5,
+      "community": 151,
       "norm_label": ".listmembers()",
       "id": "company_members_company_members_service_companymembersservice_listmembers"
     },
@@ -12234,7 +12243,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/decorators/require-company-role.decorator.ts",
       "source_location": "L1",
-      "community": 5,
+      "community": 150,
       "norm_label": "require-company-role.decorator.ts",
       "id": "apps_flexup_backend_src_common_decorators_require_company_role_decorator_ts"
     },
@@ -12243,7 +12252,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/decorators/require-company-role.decorator.ts",
       "source_location": "L6",
-      "community": 5,
+      "community": 150,
       "norm_label": "requirecompanyrole()",
       "id": "decorators_require_company_role_decorator_requirecompanyrole"
     },
@@ -17329,9 +17338,9 @@
       "source_file": "apps/flexup-backend/tsconfig.build.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_flexup_backend_tsconfig_build_json",
-      "target": "flexup_backend_tsconfig_build_compileroptions",
-      "confidence_score": 1.0
+      "target": "flexup_backend_tsconfig_build_compileroptions"
     },
     {
       "relation": "contains",
@@ -17349,8 +17358,18 @@
       "source_file": "apps/flexup-backend/tsconfig.build.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "flexup_backend_tsconfig_build_compileroptions",
-      "target": "flexup_backend_tsconfig_build_compileroptions_rootdir",
+      "target": "flexup_backend_tsconfig_build_compileroptions_rootdir"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/tsconfig.build.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "flexup_backend_tsconfig_build_compileroptions",
+      "target": "flexup_backend_tsconfig_build_compileroptions_tsbuildinfofile",
       "confidence_score": 1.0
     },
     {
@@ -42432,5 +42451,5 @@
       "source_file": "docs/tasks/TASK_BATCH_F1_1.md"
     }
   ],
-  "built_at_commit": "7734cc00cd09d4aef7d1a53aa53b299afca6632b"
+  "built_at_commit": "69d42999ca165f6aca4b2af29c85d4fae4d60eda"
 }

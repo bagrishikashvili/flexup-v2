@@ -1,16 +1,16 @@
 # Graph Report - flexup  (2026-05-27)
 
 ## Corpus Check
-- 227 files · ~80,965 words
+- 227 files · ~80,967 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1883 nodes · 2429 edges · 154 communities (121 shown, 33 thin omitted)
+- 1884 nodes · 2430 edges · 154 communities (121 shown, 33 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 48 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7734cc00`
+- Built from commit: `69d42999`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -221,8 +221,8 @@ Cohesion: 0.11
 Nodes (22): ClickUp-Inspired Design System for flexup-web, Bilingual i18n (Georgian + English), ClickUp Design System (DESIGN.md), Root package.json (npm workspaces), shadcn/ui components.json Config, i18next Internationalization, React Hook Form, shadcn/ui + Radix UI Components (+14 more)
 
 ### Community 5 - "Company Members Access Control"
-Cohesion: 0.16
-Nodes (9): AuthUser, CompanyMembersController, MemberWithUser, toMemberResponse(), ROLE_ORDER, RequireCompanyRole(), AddMemberDto, MemberResponse (+1 more)
+Cohesion: 0.19
+Nodes (8): AuthUser, CompanyMembersController, MemberWithUser, toMemberResponse(), ROLE_ORDER, AddMemberDto, MemberResponse, UpdateMemberRoleDto
 
 ### Community 7 - "Backend Package Config"
 Cohesion: 0.11
@@ -393,7 +393,7 @@ Cohesion: 0.22
 Nodes (5): CreateJobPostingInput, createJobPostingSchema, jobPostingBaseSchema, UpdateJobPostingInput, updateJobPostingSchema
 
 ### Community 51 - "Community 51"
-Cohesion: 0.16
+Cohesion: 0.15
 Nodes (8): ResendVerificationDto, VerifyEmailDto, EmailVerificationController, EmailVerificationModule, EmailVerificationService, escapeHtml(), renderVerificationEmail(), VerificationEmailParams
 
 ### Community 52 - "ADRs — Guard & Geo Decisions"
@@ -457,8 +457,8 @@ Cohesion: 0.50
 Nodes (3): Avatar, AvatarFallback, AvatarImage
 
 ### Community 69 - "Backend Build TS Config"
-Cohesion: 0.40
-Nodes (4): compilerOptions, rootDir, exclude, extends
+Cohesion: 0.33
+Nodes (5): compilerOptions, rootDir, tsBuildInfoFile, exclude, extends
 
 ### Community 76 - "EN Logout Translations"
 Cohesion: 0.20
@@ -661,15 +661,15 @@ Cohesion: 0.50
 Nodes (4): categoryMeta, experienced, minPay, tippable
 
 ### Community 150 - "Community 150"
-Cohesion: 0.27
-Nodes (5): CurrentMembership, CurrentMembershipPayload, CompanyAccessGuard, RequestWithMembership, ROLE_HIERARCHY
+Cohesion: 0.21
+Nodes (6): CurrentMembership, CurrentMembershipPayload, RequireCompanyRole(), CompanyAccessGuard, RequestWithMembership, ROLE_HIERARCHY
 
 ### Community 152 - "Community 152"
 Cohesion: 0.50
 Nodes (3): Route, searchSchema, VerifyState
 
 ## Knowledge Gaps
-- **1114 isolated node(s):** `extends`, `rootDir`, `exclude`, `name`, `version` (+1109 more)
+- **1115 isolated node(s):** `extends`, `rootDir`, `tsBuildInfoFile`, `exclude`, `name` (+1110 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -677,13 +677,13 @@ Nodes (3): Route, searchSchema, VerifyState
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `T` connect `ADRs — Guard & Geo Decisions` to `Community 51`, `Community 93`, `Community 94`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
-- **Why does `PrismaService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Company Members Access Control`, `Auth Module`, `Community 51`, `Community 150`, `Community 151`, `Community 90`, `Config & Email Templates`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **Why does `PrismaService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Company Members Access Control`, `Auth Module`, `Community 51`, `Community 150`, `Community 90`, `Config & Email Templates`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `AppConfigService` connect `App Config & Bootstrap` to `User Profile DTOs`, `Community 131`, `Community 58`, `Companies Module`, `Email Verification Controller`, `Auth Module`, `Community 51`, `Community 90`, `Community 124`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
-- **What connects `extends`, `rootDir`, `exclude` to the rest of the system?**
-  _1114 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **What connects `extends`, `rootDir`, `tsBuildInfoFile` to the rest of the system?**
+  _1115 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Frontend Auth & Forms` be split into smaller, more focused modules?**
   _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
 - **Should `User Profile DTOs` be split into smaller, more focused modules?**
