@@ -63,8 +63,12 @@ function CompanyOnboardingPage() {
 
   return (
     <div className="min-h-screen bg-[#F9FAFB] flex flex-col items-center justify-center p-6">
-      <div className="absolute top-4 right-4">
+      <div className="absolute top-4 right-4 flex items-center gap-2">
         <LanguageSwitcher />
+        <Button variant="ghost" size="sm" onClick={() => void handleLogout()}>
+          <LogOut className="w-4 h-4" />
+          {t('logout')}
+        </Button>
       </div>
 
       <div className="w-full max-w-[720px]">

@@ -89,58 +89,85 @@
   },
   "nodes": [
     {
+      "label": "company.tsx",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
+      "source_location": "L1",
+      "id": "apps_flexup_web_src_routes_app_onboarding_company_tsx",
+      "community": 1,
+      "norm_label": "company.tsx"
+    },
+    {
+      "label": "Route",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
+      "source_location": "L12",
+      "id": "onboarding_company_route",
+      "community": 1,
+      "norm_label": "route"
+    },
+    {
+      "label": "CompanyOnboardingPage()",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
+      "source_location": "L16",
+      "id": "onboarding_company_companyonboardingpage",
+      "community": 1,
+      "norm_label": "companyonboardingpage()"
+    },
+    {
       "label": "auth.store.ts",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/features/auth/stores/auth.store.ts",
       "source_location": "L1",
-      "id": "apps_flexup_web_src_features_auth_stores_auth_store_ts",
       "community": 28,
-      "norm_label": "auth.store.ts"
+      "norm_label": "auth.store.ts",
+      "id": "apps_flexup_web_src_features_auth_stores_auth_store_ts"
     },
     {
       "label": "AuthState",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/features/auth/stores/auth.store.ts",
       "source_location": "L4",
-      "id": "stores_auth_store_authstate",
       "community": 28,
-      "norm_label": "authstate"
+      "norm_label": "authstate",
+      "id": "stores_auth_store_authstate"
     },
     {
       "label": "useAuthStore",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/features/auth/stores/auth.store.ts",
       "source_location": "L13",
-      "id": "stores_auth_store_useauthstore",
       "community": 52,
-      "norm_label": "useauthstore"
+      "norm_label": "useauthstore",
+      "id": "stores_auth_store_useauthstore"
     },
     {
       "label": "getAccessToken()",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/features/auth/stores/auth.store.ts",
       "source_location": "L32",
-      "id": "stores_auth_store_getaccesstoken",
       "community": 28,
-      "norm_label": "getaccesstoken()"
+      "norm_label": "getaccesstoken()",
+      "id": "stores_auth_store_getaccesstoken"
     },
     {
       "label": "setAccessToken()",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/features/auth/stores/auth.store.ts",
       "source_location": "L33",
-      "id": "stores_auth_store_setaccesstoken",
       "community": 28,
-      "norm_label": "setaccesstoken()"
+      "norm_label": "setaccesstoken()",
+      "id": "stores_auth_store_setaccesstoken"
     },
     {
       "label": "logout()",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/features/auth/stores/auth.store.ts",
       "source_location": "L35",
-      "id": "stores_auth_store_logout",
       "community": 28,
-      "norm_label": "logout()"
+      "norm_label": "logout()",
+      "id": "stores_auth_store_logout"
     },
     {
       "label": "index.tsx",
@@ -2220,33 +2247,6 @@
       "community": 99,
       "norm_label": "newcompanypage()",
       "id": "companies_new_newcompanypage"
-    },
-    {
-      "label": "company.tsx",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
-      "source_location": "L1",
-      "community": 1,
-      "norm_label": "company.tsx",
-      "id": "apps_flexup_web_src_routes_app_onboarding_company_tsx"
-    },
-    {
-      "label": "Route",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
-      "source_location": "L11",
-      "community": 1,
-      "norm_label": "route",
-      "id": "onboarding_company_route"
-    },
-    {
-      "label": "CompanyOnboardingPage()",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
-      "source_location": "L15",
-      "community": 1,
-      "norm_label": "companyonboardingpage()",
-      "id": "onboarding_company_companyonboardingpage"
     },
     {
       "label": "login.tsx",
@@ -14158,6 +14158,70 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_routes_app_onboarding_company_tsx",
+      "target": "onboarding_company_route"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_routes_app_onboarding_company_tsx",
+      "target": "onboarding_company_companyonboardingpage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/routeTree.gen.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_routetree_gen_ts",
+      "target": "apps_flexup_web_src_routes_app_onboarding_company_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/routeTree.gen.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_routetree_gen_ts",
+      "target": "onboarding_company_route"
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/routeTree.gen.ts",
+      "source_location": "L301",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_routetree_gen_fileroutesbypath",
+      "target": "onboarding_company_route"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "onboarding_company_companyonboardingpage",
+      "target": "hooks_useactivecompany_useactivecompany"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "apps/flexup-web/src/features/auth/stores/auth.store.ts",
       "source_location": "L4",
       "weight": 1.0,
@@ -14945,17 +15009,6 @@
       "source_location": "L18",
       "weight": 1.0,
       "source": "companies_index_companieslistpage",
-      "target": "hooks_useactivecompany_useactivecompany"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "onboarding_company_companyonboardingpage",
       "target": "hooks_useactivecompany_useactivecompany"
     },
     {
@@ -16612,28 +16665,6 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "apps/flexup-web/src/routeTree.gen.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_routetree_gen_ts",
-      "target": "apps_flexup_web_src_routes_app_onboarding_company_tsx"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/routeTree.gen.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_routetree_gen_ts",
-      "target": "onboarding_company_route"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/routeTree.gen.ts",
       "source_location": "L24",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -17050,17 +17081,6 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "apps/flexup-web/src/routeTree.gen.ts",
-      "source_location": "L301",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_routetree_gen_fileroutesbypath",
-      "target": "onboarding_company_route"
-    },
-    {
-      "relation": "references",
-      "context": "field",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/routeTree.gen.ts",
       "source_location": "L308",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -17253,26 +17273,6 @@
       "confidence_score": 1.0,
       "source": "apps_flexup_web_src_routes_app_companies_new_tsx",
       "target": "companies_new_newcompanypage"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_routes_app_onboarding_company_tsx",
-      "target": "onboarding_company_route"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_routes_app_onboarding_company_tsx",
-      "target": "onboarding_company_companyonboardingpage"
     },
     {
       "relation": "contains",
@@ -35667,5 +35667,5 @@
       "source_file": "docs/tasks/TASK_BATCH_F1_1.md"
     }
   ],
-  "built_at_commit": "171d3b9b2eb735fd5cbc6f1f4b206ad938e21fe3"
+  "built_at_commit": "a8324820ac50ea687b02bd384ff5beb6330d8cb9"
 }

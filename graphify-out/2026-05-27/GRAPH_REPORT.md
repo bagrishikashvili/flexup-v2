@@ -1,7 +1,7 @@
 # Graph Report - flexup  (2026-05-27)
 
 ## Corpus Check
-- 205 files · ~66,412 words
+- 205 files · ~66,470 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `171d3b9b`
+- Built from commit: `a8324820`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -136,8 +136,8 @@
   docker-compose.yml → apps/flexup-backend/package.json
 - `Task Batch F1.1 — Frontend Foundation` --references--> `Georgian Common Translations`  [EXTRACTED]
   docs/tasks/TASK_BATCH_F1_1.md → apps/flexup-web/src/locales/ka/common.json
-- `CompaniesListPage()` --calls--> `useActiveCompany()`  [INFERRED]
-  apps/flexup-web/src/routes/app/companies/index.tsx → apps/flexup-web/src/features/companies/hooks/useActiveCompany.ts
+- `CompanyOnboardingPage()` --calls--> `useActiveCompany()`  [INFERRED]
+  apps/flexup-web/src/routes/app/onboarding/company.tsx → apps/flexup-web/src/features/companies/hooks/useActiveCompany.ts
 
 ## Hyperedges (group relationships)
 - **Auth & Email Verification Flow (backend JWT + nodemailer + frontend i18n)** — concept_jwt_auth_flow, concept_email_verification, backend_dep_nodemailer, docker_service_mailpit, web_locales_en_auth [INFERRED 0.85]
@@ -470,7 +470,7 @@ Nodes (3): Route, RouterContext, FileRoutesById
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `T` connect `ADRs — Guard & Geo Decisions` to `Community 93`, `Community 94`, `Config & Email Templates`?**
-  _High betweenness centrality (0.052) - this node is a cross-community bridge._
+  _High betweenness centrality (0.048) - this node is a cross-community bridge._
 - **Why does `AppConfigService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Email Verification Controller`, `Auth Module`, `Email Verification Service`, `Config & Email Templates`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `Sidebar()` connect `Community 93` to `ADRs — Guard & Geo Decisions`?**
