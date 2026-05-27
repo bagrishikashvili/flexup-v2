@@ -8,7 +8,9 @@ export class ResetPasswordDto implements ResetPasswordRequest {
 
   @IsString()
   @MinLength(8)
-  @Matches(/[A-Za-z]/, { message: 'newPassword must contain at least one letter' })
+  @Matches(/[A-Za-z]/, {
+    message: 'newPassword must contain at least one letter',
+  })
   @Matches(/[0-9]/, { message: 'newPassword must contain at least one number' })
   newPassword!: string;
 }

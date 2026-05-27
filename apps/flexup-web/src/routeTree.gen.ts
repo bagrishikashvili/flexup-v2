@@ -24,6 +24,10 @@ import { Route as AppOnboardingCompanyRouteImport } from './routes/app/onboardin
 import { Route as AppCompaniesNewRouteImport } from './routes/app/companies/new'
 import { Route as AppCompaniesCompanyIdIndexRouteImport } from './routes/app/companies/$companyId/index'
 import { Route as AppCompaniesCompanyIdSettingsRouteImport } from './routes/app/companies/$companyId/settings'
+import { Route as AppCompaniesCompanyIdJobsIndexRouteImport } from './routes/app/companies/$companyId/jobs/index'
+import { Route as AppCompaniesCompanyIdJobsNewRouteImport } from './routes/app/companies/$companyId/jobs/new'
+import { Route as AppCompaniesCompanyIdJobsJobIdIndexRouteImport } from './routes/app/companies/$companyId/jobs/$jobId/index'
+import { Route as AppCompaniesCompanyIdJobsJobIdEditRouteImport } from './routes/app/companies/$companyId/jobs/$jobId/edit'
 
 const DashboardRoute = DashboardRouteImport.update({
   id: '/dashboard',
@@ -102,6 +106,30 @@ const AppCompaniesCompanyIdSettingsRoute =
     path: '/companies/$companyId/settings',
     getParentRoute: () => AppRoute,
   } as any)
+const AppCompaniesCompanyIdJobsIndexRoute =
+  AppCompaniesCompanyIdJobsIndexRouteImport.update({
+    id: '/companies/$companyId/jobs/',
+    path: '/companies/$companyId/jobs/',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppCompaniesCompanyIdJobsNewRoute =
+  AppCompaniesCompanyIdJobsNewRouteImport.update({
+    id: '/companies/$companyId/jobs/new',
+    path: '/companies/$companyId/jobs/new',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppCompaniesCompanyIdJobsJobIdIndexRoute =
+  AppCompaniesCompanyIdJobsJobIdIndexRouteImport.update({
+    id: '/companies/$companyId/jobs/$jobId/',
+    path: '/companies/$companyId/jobs/$jobId/',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppCompaniesCompanyIdJobsJobIdEditRoute =
+  AppCompaniesCompanyIdJobsJobIdEditRouteImport.update({
+    id: '/companies/$companyId/jobs/$jobId/edit',
+    path: '/companies/$companyId/jobs/$jobId/edit',
+    getParentRoute: () => AppRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -119,6 +147,10 @@ export interface FileRoutesByFullPath {
   '/app/companies/': typeof AppCompaniesIndexRoute
   '/app/companies/$companyId/settings': typeof AppCompaniesCompanyIdSettingsRoute
   '/app/companies/$companyId/': typeof AppCompaniesCompanyIdIndexRoute
+  '/app/companies/$companyId/jobs/new': typeof AppCompaniesCompanyIdJobsNewRoute
+  '/app/companies/$companyId/jobs/': typeof AppCompaniesCompanyIdJobsIndexRoute
+  '/app/companies/$companyId/jobs/$jobId/edit': typeof AppCompaniesCompanyIdJobsJobIdEditRoute
+  '/app/companies/$companyId/jobs/$jobId/': typeof AppCompaniesCompanyIdJobsJobIdIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -135,6 +167,10 @@ export interface FileRoutesByTo {
   '/app/companies': typeof AppCompaniesIndexRoute
   '/app/companies/$companyId/settings': typeof AppCompaniesCompanyIdSettingsRoute
   '/app/companies/$companyId': typeof AppCompaniesCompanyIdIndexRoute
+  '/app/companies/$companyId/jobs/new': typeof AppCompaniesCompanyIdJobsNewRoute
+  '/app/companies/$companyId/jobs': typeof AppCompaniesCompanyIdJobsIndexRoute
+  '/app/companies/$companyId/jobs/$jobId/edit': typeof AppCompaniesCompanyIdJobsJobIdEditRoute
+  '/app/companies/$companyId/jobs/$jobId': typeof AppCompaniesCompanyIdJobsJobIdIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -153,6 +189,10 @@ export interface FileRoutesById {
   '/app/companies/': typeof AppCompaniesIndexRoute
   '/app/companies/$companyId/settings': typeof AppCompaniesCompanyIdSettingsRoute
   '/app/companies/$companyId/': typeof AppCompaniesCompanyIdIndexRoute
+  '/app/companies/$companyId/jobs/new': typeof AppCompaniesCompanyIdJobsNewRoute
+  '/app/companies/$companyId/jobs/': typeof AppCompaniesCompanyIdJobsIndexRoute
+  '/app/companies/$companyId/jobs/$jobId/edit': typeof AppCompaniesCompanyIdJobsJobIdEditRoute
+  '/app/companies/$companyId/jobs/$jobId/': typeof AppCompaniesCompanyIdJobsJobIdIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -172,6 +212,10 @@ export interface FileRouteTypes {
     | '/app/companies/'
     | '/app/companies/$companyId/settings'
     | '/app/companies/$companyId/'
+    | '/app/companies/$companyId/jobs/new'
+    | '/app/companies/$companyId/jobs/'
+    | '/app/companies/$companyId/jobs/$jobId/edit'
+    | '/app/companies/$companyId/jobs/$jobId/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -188,6 +232,10 @@ export interface FileRouteTypes {
     | '/app/companies'
     | '/app/companies/$companyId/settings'
     | '/app/companies/$companyId'
+    | '/app/companies/$companyId/jobs/new'
+    | '/app/companies/$companyId/jobs'
+    | '/app/companies/$companyId/jobs/$jobId/edit'
+    | '/app/companies/$companyId/jobs/$jobId'
   id:
     | '__root__'
     | '/'
@@ -205,6 +253,10 @@ export interface FileRouteTypes {
     | '/app/companies/'
     | '/app/companies/$companyId/settings'
     | '/app/companies/$companyId/'
+    | '/app/companies/$companyId/jobs/new'
+    | '/app/companies/$companyId/jobs/'
+    | '/app/companies/$companyId/jobs/$jobId/edit'
+    | '/app/companies/$companyId/jobs/$jobId/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -326,6 +378,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppCompaniesCompanyIdSettingsRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/companies/$companyId/jobs/': {
+      id: '/app/companies/$companyId/jobs/'
+      path: '/companies/$companyId/jobs'
+      fullPath: '/app/companies/$companyId/jobs/'
+      preLoaderRoute: typeof AppCompaniesCompanyIdJobsIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/companies/$companyId/jobs/new': {
+      id: '/app/companies/$companyId/jobs/new'
+      path: '/companies/$companyId/jobs/new'
+      fullPath: '/app/companies/$companyId/jobs/new'
+      preLoaderRoute: typeof AppCompaniesCompanyIdJobsNewRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/companies/$companyId/jobs/$jobId/': {
+      id: '/app/companies/$companyId/jobs/$jobId/'
+      path: '/companies/$companyId/jobs/$jobId'
+      fullPath: '/app/companies/$companyId/jobs/$jobId/'
+      preLoaderRoute: typeof AppCompaniesCompanyIdJobsJobIdIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/companies/$companyId/jobs/$jobId/edit': {
+      id: '/app/companies/$companyId/jobs/$jobId/edit'
+      path: '/companies/$companyId/jobs/$jobId/edit'
+      fullPath: '/app/companies/$companyId/jobs/$jobId/edit'
+      preLoaderRoute: typeof AppCompaniesCompanyIdJobsJobIdEditRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
@@ -336,6 +416,10 @@ interface AppRouteChildren {
   AppCompaniesIndexRoute: typeof AppCompaniesIndexRoute
   AppCompaniesCompanyIdSettingsRoute: typeof AppCompaniesCompanyIdSettingsRoute
   AppCompaniesCompanyIdIndexRoute: typeof AppCompaniesCompanyIdIndexRoute
+  AppCompaniesCompanyIdJobsNewRoute: typeof AppCompaniesCompanyIdJobsNewRoute
+  AppCompaniesCompanyIdJobsIndexRoute: typeof AppCompaniesCompanyIdJobsIndexRoute
+  AppCompaniesCompanyIdJobsJobIdEditRoute: typeof AppCompaniesCompanyIdJobsJobIdEditRoute
+  AppCompaniesCompanyIdJobsJobIdIndexRoute: typeof AppCompaniesCompanyIdJobsJobIdIndexRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
@@ -345,6 +429,12 @@ const AppRouteChildren: AppRouteChildren = {
   AppCompaniesIndexRoute: AppCompaniesIndexRoute,
   AppCompaniesCompanyIdSettingsRoute: AppCompaniesCompanyIdSettingsRoute,
   AppCompaniesCompanyIdIndexRoute: AppCompaniesCompanyIdIndexRoute,
+  AppCompaniesCompanyIdJobsNewRoute: AppCompaniesCompanyIdJobsNewRoute,
+  AppCompaniesCompanyIdJobsIndexRoute: AppCompaniesCompanyIdJobsIndexRoute,
+  AppCompaniesCompanyIdJobsJobIdEditRoute:
+    AppCompaniesCompanyIdJobsJobIdEditRoute,
+  AppCompaniesCompanyIdJobsJobIdIndexRoute:
+    AppCompaniesCompanyIdJobsJobIdIndexRoute,
 }
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)

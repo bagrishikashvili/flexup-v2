@@ -9,12 +9,14 @@ import kaErrors from '@/locales/ka/errors.json';
 import kaValidation from '@/locales/ka/validation.json';
 import kaCompanies from '@/locales/ka/companies.json';
 import kaNavigation from '@/locales/ka/navigation.json';
+import kaJobs from '@/locales/ka/jobs.json';
 import enCommon from '@/locales/en/common.json';
 import enAuth from '@/locales/en/auth.json';
 import enErrors from '@/locales/en/errors.json';
 import enValidation from '@/locales/en/validation.json';
 import enCompanies from '@/locales/en/companies.json';
 import enNavigation from '@/locales/en/navigation.json';
+import enJobs from '@/locales/en/jobs.json';
 import { zodI18nErrorMap } from './zod-error-map';
 
 export const SUPPORTED_LANGUAGES = ['ka', 'en'] as const;
@@ -26,12 +28,12 @@ void i18n
   .init({
     fallbackLng: 'ka',
     supportedLngs: SUPPORTED_LANGUAGES,
-    ns: ['common', 'auth', 'errors', 'validation', 'companies', 'navigation'],
+    ns: ['common', 'auth', 'errors', 'validation', 'companies', 'navigation', 'jobs'],
     defaultNS: 'common',
     interpolation: { escapeValue: false },
     resources: {
-      ka: { common: kaCommon, auth: kaAuth, errors: kaErrors, validation: kaValidation, companies: kaCompanies, navigation: kaNavigation },
-      en: { common: enCommon, auth: enAuth, errors: enErrors, validation: enValidation, companies: enCompanies, navigation: enNavigation },
+      ka: { common: kaCommon, auth: kaAuth, errors: kaErrors, validation: kaValidation, companies: kaCompanies, navigation: kaNavigation, jobs: kaJobs },
+      en: { common: enCommon, auth: enAuth, errors: enErrors, validation: enValidation, companies: enCompanies, navigation: enNavigation, jobs: enJobs },
     },
     detection: {
       order: ['localStorage', 'navigator'],

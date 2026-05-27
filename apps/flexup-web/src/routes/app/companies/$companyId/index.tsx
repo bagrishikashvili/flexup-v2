@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
-import { Globe, ShieldCheck, Users, MapPin, Settings, XCircle } from 'lucide-react';
+import { Globe, ShieldCheck, Users, Briefcase, Settings, XCircle } from 'lucide-react';
 import { AppShell } from '@/shared/components/layout/AppShell';
 import { CompanyRoleBadge } from '@/features/companies/components/CompanyRoleBadge';
 import { useCompanyPermissions } from '@/features/companies/hooks/useCompanyPermissions';
@@ -164,15 +164,17 @@ function CompanyDetailPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl border border-border p-5 shadow-[var(--shadow-xs)] opacity-50 cursor-not-allowed">
+            <Link
+              to="/app/companies/$companyId/jobs"
+              params={{ companyId }}
+              className="bg-white rounded-xl border border-border p-5 shadow-[var(--shadow-xs)] hover:shadow-[var(--shadow-sm)] hover:border-[#D1D5DB] transition-all block"
+            >
               <div className="flex items-center gap-3 mb-2">
-                <MapPin className="w-5 h-5 text-primary" strokeWidth={1.5} />
-                <span className="text-sm font-semibold text-foreground">{t('locations')}</span>
+                <Briefcase className="w-5 h-5 text-primary" strokeWidth={1.5} />
+                <span className="text-sm font-semibold text-foreground">{tNav('jobs')}</span>
               </div>
-              <p className="text-xs text-muted-foreground">
-                {t('comingSoon')}
-              </p>
-            </div>
+              <p className="text-xs text-muted-foreground">{t('quickActions')}</p>
+            </Link>
 
             {permissions.canManage && (
               <Link

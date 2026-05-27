@@ -52,16 +52,6 @@ enum ApplicationStatus {
   WITHDRAWN
 }
 
-enum JobCategory {
-  HOSPITALITY
-  RETAIL
-  LOGISTICS
-  DELIVERY
-  EVENTS
-  CLEANING
-  OTHER
-}
-
 enum DayOfWeek {
   MON
   TUE
@@ -101,6 +91,7 @@ model User {
   companyMembers              CompanyMember[]
   workerProfile               WorkerProfile?
   createdShifts               Shift[]         @relation("ShiftCreatedBy")
+  createdJobPostings          JobPosting[]    @relation("JobCreatedBy")
 
   @@index([email])
   @@index([role])
@@ -181,11 +172,10 @@ model Company {
   updatedAt           DateTime        @updatedAt
 
   members             CompanyMember[]
-  locations           Location[]
   shifts              Shift[]
-  shiftSeries         ShiftSeries[]
   flexpools           Flexpool[]
   rateTemplates       RateTemplate[]
+  jobPostings         JobPosting[]
 
   @@index([name])
 }
@@ -206,33 +196,6 @@ model CompanyMember {
   @@index([userId])
 }
 
-model Location {
-  id                  String          @id @default(cuid())
-  companyId           String
-  company             Company         @relation(fields: [companyId], references: [id], onDelete: Cascade)
-
-  name                String
-  address             String
-  city                String
-  country             String          @default("GE")
-  postalCode          String?
-
-  latitude            Float?
-  longitude           Float?
-
-  isActive            Boolean         @default(true)
-
-  createdAt           DateTime        @default(now())
-  updatedAt           DateTime        @updatedAt
-
-  shifts              Shift[]
-  shiftSeries         ShiftSeries[]
-
-  @@index([companyId])
-  @@index([city])
-  @@index([latitude, longitude])
-}
-
 // ============================================
 // FLEXPOOLS — categorized favorite workers lists
 // ============================================
@@ -244,7 +207,7 @@ model Flexpool {
 
   name                String              // "ჩემი ბარმენები", "Cleaners"
   description         String?
-  category            JobCategory?
+  category            String?             // job category slug, e.g. "barista-junior"
   color               String?             // hex, UI-სთვის
 
   createdAt           DateTime            @default(now())
@@ -315,48 +278,19 @@ model RateTemplateRule {
 // SHIFTS (core)
 // ============================================
 
-model ShiftSeries {
-  id                  String          @id @default(cuid())
-  companyId           String
-  company             Company         @relation(fields: [companyId], references: [id], onDelete: Cascade)
-  locationId          String
-  location            Location        @relation(fields: [locationId], references: [id])
-
-  title               String
-  description         String?
-  category            JobCategory
-
-  seriesStartsOn      DateTime
-  seriesEndsOn        DateTime?       // null = open-ended
-
-  createdAt           DateTime        @default(now())
-  updatedAt           DateTime        @updatedAt
-
-  shifts              Shift[]
-
-  @@index([companyId])
-  @@index([locationId])
-}
-
 model Shift {
   id                  String              @id @default(cuid())
-
-  // optional series membership
-  seriesId            String?
-  series              ShiftSeries?        @relation(fields: [seriesId], references: [id], onDelete: SetNull)
 
   // ownership
   companyId           String
   company             Company             @relation(fields: [companyId], references: [id], onDelete: Cascade)
-  locationId          String
-  location            Location            @relation(fields: [locationId], references: [id])
   createdById         String
   createdBy           User                @relation("ShiftCreatedBy", fields: [createdById], references: [id])
 
   // details
   title               String
   description         String?
-  category            JobCategory
+  category            String              // job category slug, e.g. "barista-junior"
 
   // timing — UTC; timezone-ი ცალკე
   startsAt            DateTime
@@ -390,10 +324,8 @@ model Shift {
   invitations         ShiftInvitation[]
 
   @@index([companyId])
-  @@index([locationId])
   @@index([status])
   @@index([startsAt])
-  @@index([category])
   @@index([visibility, status])
 }
 
@@ -473,4 +405,177 @@ model Application {
   @@index([shiftId])
   @@index([workerProfileId])
   @@index([status])
+}
+
+// ============================================
+// REFERENCE DATA
+// ============================================
+
+model JobSection {
+  id          String        @id @default(cuid())
+  slug        String        @unique
+  name        String        @unique
+  nameKa      String
+  sortOrder   Int           @default(0)
+  isActive    Boolean       @default(true)
+
+  categories  JobCategory[]
+
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([sortOrder])
+}
+
+model JobCategory {
+  id                          String       @id @default(cuid())
+  sectionId                   String
+  section                     JobSection   @relation(fields: [sectionId], references: [id])
+
+  slug                        String       @unique
+  title                       String
+  titleKa                     String
+
+  isExperienceRequired        Boolean      @default(false)
+  isTippable                  Boolean      @default(false)
+  minimumEarningsPerHourMinor Int
+  currency                    String       @default("GEL")
+
+  sortOrder                   Int          @default(0)
+  isActive                    Boolean      @default(true)
+
+  jobPostings                 JobPosting[]
+
+  createdAt                   DateTime     @default(now())
+  updatedAt                   DateTime     @updatedAt
+
+  @@index([sectionId])
+  @@index([slug])
+  @@index([sortOrder])
+}
+
+model Skill {
+  id          String             @id @default(cuid())
+  slug        String             @unique
+  name        String             @unique
+  nameKa      String
+  sortOrder   Int                @default(0)
+  isActive    Boolean            @default(true)
+
+  jobPostings JobPostingSkill[]
+
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+
+  @@index([sortOrder])
+}
+
+model Appearance {
+  id          String                  @id @default(cuid())
+  slug        String                  @unique
+  name        String                  @unique
+  nameKa      String
+  sortOrder   Int                     @default(0)
+  isActive    Boolean                 @default(true)
+
+  jobPostings JobPostingAppearance[]
+
+  createdAt   DateTime                @default(now())
+  updatedAt   DateTime                @updatedAt
+
+  @@index([sortOrder])
+}
+
+model Language {
+  id          String                @id @default(cuid())
+  slug        String                @unique
+  name        String                @unique
+  nameKa      String
+  sortOrder   Int                   @default(0)
+  isActive    Boolean               @default(true)
+
+  jobPostings JobPostingLanguage[]
+
+  createdAt   DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+
+  @@index([sortOrder])
+}
+
+// ============================================
+// JOB POSTINGS (templates)
+// ============================================
+
+model JobPosting {
+  id                  String                 @id @default(cuid())
+
+  companyId           String
+  company             Company                @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  categoryId          String
+  category            JobCategory            @relation(fields: [categoryId], references: [id])
+  createdById         String
+  createdBy           User                   @relation("JobCreatedBy", fields: [createdById], references: [id])
+
+  title               String
+  briefing            String                 @db.Text
+  coverPhotoUrl       String?
+
+  addressLine         String
+  city                String
+  country             String                 @default("GE")
+  postalCode          String?
+  latitude            Float?
+  longitude           Float?
+
+  contactPersonName   String
+  contactPersonPhone  String
+
+  isArchived          Boolean                @default(false)
+  archivedAt          DateTime?
+
+  skills              JobPostingSkill[]
+  appearances         JobPostingAppearance[]
+  languages           JobPostingLanguage[]
+
+  createdAt           DateTime               @default(now())
+  updatedAt           DateTime               @updatedAt
+
+  @@index([companyId])
+  @@index([categoryId])
+  @@index([city])
+  @@index([latitude, longitude])
+  @@index([isArchived])
+}
+
+model JobPostingSkill {
+  jobPostingId  String
+  skillId       String
+
+  jobPosting    JobPosting @relation(fields: [jobPostingId], references: [id], onDelete: Cascade)
+  skill         Skill      @relation(fields: [skillId], references: [id])
+
+  @@id([jobPostingId, skillId])
+  @@index([skillId])
+}
+
+model JobPostingAppearance {
+  jobPostingId  String
+  appearanceId  String
+
+  jobPosting    JobPosting  @relation(fields: [jobPostingId], references: [id], onDelete: Cascade)
+  appearance    Appearance  @relation(fields: [appearanceId], references: [id])
+
+  @@id([jobPostingId, appearanceId])
+  @@index([appearanceId])
+}
+
+model JobPostingLanguage {
+  jobPostingId  String
+  languageId    String
+
+  jobPosting    JobPosting @relation(fields: [jobPostingId], references: [id], onDelete: Cascade)
+  language      Language   @relation(fields: [languageId], references: [id])
+
+  @@id([jobPostingId, languageId])
+  @@index([languageId])
 }

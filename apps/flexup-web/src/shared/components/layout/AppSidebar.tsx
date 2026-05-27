@@ -1,6 +1,6 @@
 import { Link, useRouterState } from '@tanstack/react-router';
 import { useTranslation } from 'react-i18next';
-import { Home, Building2, Settings } from 'lucide-react';
+import { Home, Building2, Briefcase, Settings } from 'lucide-react';
 import { cn } from '@/shared/utils/cn';
 import { useActiveCompany } from '@/features/companies/hooks/useActiveCompany';
 
@@ -70,6 +70,12 @@ export function AppSidebar() {
   const navItems: NavItem[] = [
     { icon: Home, label: t('home'), to: '/app' },
     { icon: Building2, label: t('companies'), to: '/app/companies' },
+    {
+      icon: Briefcase,
+      label: t('jobs'),
+      to: activeCompany ? `/app/companies/${activeCompany.id}/jobs` : '/app',
+      disabled: !activeCompany,
+    },
     {
       icon: Settings,
       label: t('settings'),

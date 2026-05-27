@@ -535,3 +535,75 @@ throw new BadRequestException({
 **Reason:** A password reset implies the account may have been compromised. Existing sessions that were active under the old credentials should not persist — they may belong to the attacker.
 
 **UX trade-off:** User must re-login on every device. Acceptable given the security context (account recovery).
+
+---
+
+## ADR-039: Locations entity removed in favor of inline address on JobPosting
+
+**Decision:** The `Location` model and `ShiftSeries` model were dropped entirely. Address fields (`addressLine`, `city`, `country`, `postalCode`, `latitude`, `longitude`) are stored directly on `JobPosting`.
+
+**Reason:** A JobPosting is the natural "where work happens" concept. The original `Location` was a separate entity requiring managers to create locations first, then reference them — adding friction with no benefit at the MVP stage. `ShiftSeries` was placeholder schema that is now replaced by the JobPosting → Shift parent-child pattern.
+
+**Migration:** Dev DB destructive — acceptable (no production data).
+
+**Trade-off:** Addresses may be duplicated across job postings for the same physical location. Acceptable for now; can add a location picker or address normalisation later.
+
+---
+
+## ADR-040: Reference data via DB tables + seed (not enums)
+
+**Decision:** `JobSection`, `JobCategory`, `Skill`, `Appearance`, `Language` are Postgres tables seeded via `prisma/seed/reference-data.ts` (upsert-idempotent).
+
+**Reason:**
+- Localized (separate `name` / `nameKa` columns, backend returns both, frontend picks language).
+- Growable without a code deploy (an admin inserts a row).
+- Filterable per context (active/inactive flag).
+
+**Alternative considered:** TypeScript/Prisma enums — rejected because they cannot carry localized labels or be added without a migration + redeploy.
+
+---
+
+## ADR-041: Two-tier hierarchy — Section → Category
+
+**Decision:** `JobSection` groups `JobCategory` records (e.g. Hospitality → Barista Junior, Barista Senior, Bartender…).
+
+**Reason:** A flat list of 50+ categories would be overwhelming in the UI. Section grouping allows the create-job form to offer a cascading picker: choose section first, then a shorter category list.
+
+**Trade-off:** One extra join on every category query. Negligible given reference data size (<200 rows total) and `staleTime: 5min` caching on the frontend.
+
+---
+
+## ADR-042: JobPosting is a template; Shifts are instances
+
+**Decision:** `JobPosting` stores the stable description of a role (title, briefing, address, requirements). Future `Shift` records will reference a `JobPosting` as their parent.
+
+**Reason:** Managers describe a role once, then publish many shifts against it (different dates/times). Separating template from instance avoids copy-pasting briefing text and requirements on every shift.
+
+**Future:** Shifts batch will add `jobPostingId` FK to the `Shift` model.
+
+---
+
+## ADR-043: Address autocomplete via external Python service (frontend direct)
+
+**Decision:** The `AddressAutocomplete` React component calls a Python geocoding service directly via `VITE_ADDRESS_AUTOCOMPLETE_URL`. The NestJS backend never proxies this call — it only stores the structured result.
+
+**Reason:**
+- The geocoding service is Georgia-specific (custom address DB).
+- Backend proxying adds latency and a dependency with no security benefit (the endpoint is read-only and public).
+- Frontend can degrade gracefully (manual city/address entry) if the service is unavailable.
+
+**Production:** Address service URL is configured via Vite env var; CORS must be configured on the Python service to allow the web origin.
+
+---
+
+## ADR-044: Skill, Appearance, Language as separate join tables (polymorphism rejected)
+
+**Decision:** Three separate many-to-many join tables (`JobPostingSkill`, `JobPostingAppearance`, `JobPostingLanguage`) rather than a single polymorphic `JobRequirement` table with a `type` discriminator.
+
+**Reason:**
+- Each category has independent sort order, icon, and future metadata.
+- The UI renders them in three distinct sections — separate tables map naturally.
+- Prisma's type system gives full compile-time safety per relation.
+- A single polymorphic table would require runtime `type` checks throughout the codebase.
+
+**Trade-off:** Three queries instead of one to load requirements. Mitigated by Prisma `include` which batches them into a single round-trip via nested joins.
