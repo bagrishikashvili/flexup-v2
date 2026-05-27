@@ -1,16 +1,16 @@
 # Graph Report - flexup  (2026-05-27)
 
 ## Corpus Check
-- 205 files · ~66,470 words
+- 205 files · ~66,497 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1529 nodes · 2071 edges · 103 communities (82 shown, 21 thin omitted)
+- 1601 nodes · 2142 edges · 117 communities (97 shown, 20 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 44 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a8324820`
+- Built from commit: `422afbcd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -66,12 +66,14 @@
 - [[_COMMUNITY_KA Validation Translations|KA Validation Translations]]
 - [[_COMMUNITY_Company Validation Schemas|Company Validation Schemas]]
 - [[_COMMUNITY_Location Schemas & Index|Location Schemas & Index]]
+- [[_COMMUNITY_Community 51|Community 51]]
 - [[_COMMUNITY_ADRs — Guard & Geo Decisions|ADRs — Guard & Geo Decisions]]
 - [[_COMMUNITY_Shared Auth Response Types|Shared Auth Response Types]]
 - [[_COMMUNITY_Shared Error & Pagination Types|Shared Error & Pagination Types]]
 - [[_COMMUNITY_NestJS CLI Config|NestJS CLI Config]]
 - [[_COMMUNITY_Card UI Component|Card UI Component]]
 - [[_COMMUNITY_Build Scripts|Build Scripts]]
+- [[_COMMUNITY_Community 58|Community 58]]
 - [[_COMMUNITY_Email Verification Service|Email Verification Service]]
 - [[_COMMUNITY_Email Verification Concepts|Email Verification Concepts]]
 - [[_COMMUNITY_Location Types|Location Types]]
@@ -101,6 +103,8 @@
 - [[_COMMUNITY_Community 88|Community 88]]
 - [[_COMMUNITY_Community 89|Community 89]]
 - [[_COMMUNITY_Community 90|Community 90]]
+- [[_COMMUNITY_Community 91|Community 91]]
+- [[_COMMUNITY_Community 92|Community 92]]
 - [[_COMMUNITY_Community 93|Community 93]]
 - [[_COMMUNITY_Community 94|Community 94]]
 - [[_COMMUNITY_Community 95|Community 95]]
@@ -114,6 +118,16 @@
 - [[_COMMUNITY_Community 103|Community 103]]
 - [[_COMMUNITY_Community 104|Community 104]]
 - [[_COMMUNITY_Community 105|Community 105]]
+- [[_COMMUNITY_Community 107|Community 107]]
+- [[_COMMUNITY_Community 108|Community 108]]
+- [[_COMMUNITY_Community 109|Community 109]]
+- [[_COMMUNITY_Community 110|Community 110]]
+- [[_COMMUNITY_Community 111|Community 111]]
+- [[_COMMUNITY_Community 112|Community 112]]
+- [[_COMMUNITY_Community 113|Community 113]]
+- [[_COMMUNITY_Community 114|Community 114]]
+- [[_COMMUNITY_Community 115|Community 115]]
+- [[_COMMUNITY_Community 116|Community 116]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `AppConfigService` - 40 edges
@@ -147,11 +161,11 @@
 - **Multi-tenant Access Control: CompanyAccessGuard + Role Hierarchy + Admin Bypass** — concept_company_access_guard, concept_require_company_role, adr_022_admin_bypass [EXTRACTED 0.95]
 - **Frontend Auth Flow: Zustand Store + Bootstrap + Verify Gate** — concept_zustand_auth_store, concept_auth_bootstrap, concept_verify_gate_route [INFERRED 0.85]
 
-## Communities (103 total, 21 thin omitted)
+## Communities (117 total, 20 thin omitted)
 
 ### Community 0 - "Backend NestJS Core"
-Cohesion: 0.06
-Nodes (19): CompaniesModule, CompanyMembersModule, Public(), EmailModule, AllExceptionsFilter, HttpExceptionBody, PRISMA_ERROR_MAP, PrismaExceptionFilter (+11 more)
+Cohesion: 0.10
+Nodes (8): Public(), HealthController, HealthModule, HealthResult, HealthService, ServiceHealth, RedisModule, RedisService
 
 ### Community 1 - "Frontend Auth & Forms"
 Cohesion: 0.07
@@ -159,11 +173,11 @@ Nodes (26): CompaniesListPage(), Route, CompanyOnboardingPage(), Route, AppCompa
 
 ### Community 2 - "User Profile DTOs"
 Cohesion: 0.08
-Nodes (15): Roles(), ChangeEmailDto, ChangePhoneDto, DeactivateAccountDto, UpdateProfileDto, UserListQueryDto, UserPublicResponse, RolesGuard (+7 more)
+Nodes (13): Roles(), ChangeEmailDto, ChangePhoneDto, DeactivateAccountDto, UpdateProfileDto, UserListQueryDto, UserPublicResponse, AuthUser (+5 more)
 
 ### Community 3 - "Companies Module"
-Cohesion: 0.13
-Nodes (11): AuthUser, CompaniesController, toCompanyDetail(), toCompanyPublic(), ALLOWED_LOGO_MIME, CompaniesService, CompanyDetailResponse, CompanyListQueryDto (+3 more)
+Cohesion: 0.12
+Nodes (12): AuthUser, CompaniesController, toCompanyDetail(), toCompanyPublic(), ALLOWED_LOGO_MIME, CompaniesService, CompanyDetailResponse, CompanyListQueryDto (+4 more)
 
 ### Community 4 - "Backend Tech Stack"
 Cohesion: 0.07
@@ -174,12 +188,12 @@ Cohesion: 0.09
 Nodes (15): AuthUser, CompanyMembersController, MemberWithUser, toMemberResponse(), CompanyMembersService, ROLE_ORDER, CurrentMembership, CurrentMembershipPayload (+7 more)
 
 ### Community 6 - "Locations Module"
-Cohesion: 0.14
-Nodes (11): CreateLocationDto, LocationQueryDto, LocationResponse, SetUserActiveDto, UpdateLocationDto, LocationsController, toLocationResponse(), LocationsService (+3 more)
+Cohesion: 0.15
+Nodes (10): CreateLocationDto, LocationQueryDto, LocationResponse, UpdateLocationDto, LocationsController, toLocationResponse(), LocationsService, LocationWithDistance (+2 more)
 
 ### Community 7 - "Backend Package Config"
-Cohesion: 0.06
-Nodes (33): author, description, jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, rootDir, testEnvironment (+25 more)
+Cohesion: 0.11
+Nodes (18): scripts, build, lint, omni:sim, prisma:baseline, prisma:generate, prisma:migrate, prisma:migrate:dev (+10 more)
 
 ### Community 8 - "Backend Runtime Dependencies"
 Cohesion: 0.06
@@ -197,9 +211,13 @@ Nodes (31): devDependencies, eslint, eslint-config-prettier, @eslint/eslintrc, @
 Cohesion: 0.07
 Nodes (27): dependencies, class-variance-authority, clsx, date-fns, @flexup/shared, @hookform/resolvers, i18next, i18next-browser-languagedetector (+19 more)
 
+### Community 12 - "App Config & Bootstrap"
+Cohesion: 0.09
+Nodes (3): AppConfigService, JwtStrategy, JwtPayload
+
 ### Community 13 - "Auth Module"
 Cohesion: 0.12
-Nodes (9): AuthController, CurrentUser, LoginDto, RegisterDto, ZodValidationPipe, AuthCookieConfig, clearRefreshTokenCookie(), getRefreshTokenFromCookie() (+1 more)
+Nodes (9): AuthController, RequestMeta, LoginDto, RegisterDto, ZodValidationPipe, AuthCookieConfig, clearRefreshTokenCookie(), getRefreshTokenFromCookie() (+1 more)
 
 ### Community 14 - "Architecture Decision Records"
 Cohesion: 0.05
@@ -271,7 +289,7 @@ Nodes (21): API კონვენციები, Auth flow, Backend-ის ს
 
 ### Community 31 - "Config & Email Templates"
 Cohesion: 0.15
-Nodes (10): AuthModule, RequestMeta, AppConfigModule, validationSchema, EmailVerificationModule, JwtStrategy, escapeHtml(), renderVerificationEmail() (+2 more)
+Nodes (11): AuthModule, CompaniesModule, CompanyMembersModule, AppConfigModule, validationSchema, EmailModule, JwtAuthGuard, RolesGuard (+3 more)
 
 ### Community 32 - "shadcn/ui Component Config"
 Cohesion: 0.14
@@ -345,6 +363,10 @@ Nodes (8): AddMemberInput, addMemberSchema, CreateCompanyInput, createCompanySch
 Cohesion: 0.22
 Nodes (6): CreateLocationInput, createLocationSchema, SetActiveInput, setActiveSchema, UpdateLocationInput, updateLocationSchema
 
+### Community 51 - "Community 51"
+Cohesion: 0.16
+Nodes (5): EmailVerificationService, PrismaService, escapeHtml(), renderVerificationEmail(), VerificationEmailParams
+
 ### Community 52 - "ADRs — Guard & Geo Decisions"
 Cohesion: 0.20
 Nodes (12): LoginPage(), RegisterPage(), VerifyEmailPage(), Route, VerifyGatePage(), zodResolver(), AppLayout(), Route (+4 more)
@@ -369,9 +391,13 @@ Nodes (6): Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle
 Cohesion: 0.33
 Nodes (6): scripts, build, dev, lint, preview, type-check
 
-### Community 59 - "Email Verification Service"
+### Community 58 - "Community 58"
 Cohesion: 0.21
-Nodes (4): ResendVerificationDto, VerifyEmailDto, EmailVerificationController, EmailVerificationService
+Nodes (5): AllExceptionsFilter, HttpExceptionBody, PRISMA_ERROR_MAP, PrismaExceptionFilter, AppModule
+
+### Community 59 - "Email Verification Service"
+Cohesion: 0.23
+Nodes (5): CurrentUser, ResendVerificationDto, VerifyEmailDto, EmailVerificationController, EmailVerificationModule
 
 ### Community 61 - "Location Types"
 Cohesion: 0.15
@@ -417,6 +443,14 @@ Nodes (13): resetPassword, confirmPassword, confirmPasswordPlaceholder, descript
 Cohesion: 0.50
 Nodes (3): Route, searchSchema, VerifyState
 
+### Community 91 - "Community 91"
+Cohesion: 0.18
+Nodes (9): Manual E2E checklist, OUT OF SCOPE, PART 10 — ACCESS / PERMISSIONS UX, PART 11 — TESTING, PART 7 — ERROR HANDLING, PART 9 — CACHE / INVALIDATION, SECURITY / CORRECTNESS CHECK, Unit/component (+1 more)
+
+### Community 92 - "Community 92"
+Cohesion: 0.22
+Nodes (9): jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, rootDir, testEnvironment, testRegex, transform (+1 more)
+
 ### Community 93 - "Community 93"
 Cohesion: 0.33
 Nodes (5): getInitials(), NAV_ITEMS, NavItem, Route, Sidebar()
@@ -461,25 +495,65 @@ Nodes (6): companies, dashboard, home, settings, shifts, workers
 Cohesion: 0.40
 Nodes (3): Route, RouterContext, FileRoutesById
 
+### Community 107 - "Community 107"
+Cohesion: 0.25
+Nodes (8): A. Company store, B. useActiveCompany hook, C. useCompanyPermissions hook, code:ts (interface CompanyState {), code:ts (flexup.activeCompanyId), code:ts ({), code:ts ({), PART 3 — STATE MANAGEMENT
+
+### Community 108 - "Community 108"
+Cohesion: 0.25
+Nodes (8): A. Source structure, App index behavior, B. Routing rules, code:txt (apps/flexup-web/src/), Company onboarding route, Company routes, PART 1 — FRONTEND ARCHITECTURE, Protected app routes
+
+### Community 109 - "Community 109"
+Cohesion: 0.25
+Nodes (8): ACCEPTANCE CRITERIA, Build, code:bash (npm run type-check -w @flexup/web), code:bash (npm run build -w @flexup/shared), code:bash (cd apps/flexup-web), Design, Functional, Runtime
+
+### Community 110 - "Community 110"
+Cohesion: 0.29
+Nodes (6): author, description, license, name, private, version
+
+### Community 111 - "Community 111"
+Cohesion: 0.29
+Nodes (7): 1. `/app/onboarding/company`, 2. `/app/companies`, 3. `/app/companies/new`, 4. `/app/companies/:companyId`, 5. `/app/companies/:companyId/settings`, Danger zone, PART 6 — PAGES
+
+### Community 112 - "Community 112"
+Cohesion: 0.29
+Nodes (7): A. Use shared schemas, B. CompanyCreateForm, C. CompanyEditForm, code:json ({), D. CompanyLogoUploader, PART 4 — FORMS + VALIDATION, Suggested Georgian labels
+
+### Community 113 - "Community 113"
+Cohesion: 0.29
+Nodes (7): Backend, CRITICAL CONSTRAINT — Web Scope, Frontend, Frontend Batch F2.1 — Companies Onboarding + Company Management, GOAL, INPUT (კონტექსტი), ⚠ პირველი ნაბიჯი — წაიკითხე ეს ფაილები
+
+### Community 114 - "Community 114"
+Cohesion: 0.33
+Nodes (6): A. AppShell, B. Sidebar, C. Topbar, D. Company cards, E. Empty state, PART 5 — UI / DESIGN
+
+### Community 115 - "Community 115"
+Cohesion: 0.33
+Nodes (6): A. Query keys, B. API functions, code:ts (export const companyQueryKeys = {), code:ts (import type {), PART 2 — API LAYER, მნიშვნელოვანი — FormData support
+
+### Community 116 - "Community 116"
+Cohesion: 0.50
+Nodes (4): code:json ({), code:json ({), code:txt (locales/ka/companies.json), PART 8 — i18n
+
 ## Knowledge Gaps
-- **894 isolated node(s):** `AuthState`, `CompanyCardProps`, `CompanyCreateFormProps`, `CompanyEditFormProps`, `ALLOWED_TYPES` (+889 more)
+- **940 isolated node(s):** `⚠ პირველი ნაბიჯი — წაიკითხე ეს ფაილები`, `Backend`, `Frontend`, `CRITICAL CONSTRAINT — Web Scope`, `GOAL` (+935 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `T` connect `ADRs — Guard & Geo Decisions` to `Community 93`, `Community 94`, `Config & Email Templates`?**
-  _High betweenness centrality (0.048) - this node is a cross-community bridge._
-- **Why does `AppConfigService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Email Verification Controller`, `Auth Module`, `Email Verification Service`, `Config & Email Templates`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `Sidebar()` connect `Community 93` to `ADRs — Guard & Geo Decisions`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
-- **What connects `AuthState`, `CompanyCardProps`, `CompanyCreateFormProps` to the rest of the system?**
-  _894 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `T` connect `ADRs — Guard & Geo Decisions` to `Community 51`, `Community 93`, `Community 94`?**
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
+- **Why does `AppConfigService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Email Verification Controller`, `Auth Module`, `Community 51`, `Community 58`, `Config & Email Templates`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `useAuthStore` connect `ADRs — Guard & Geo Decisions` to `Community 98`, `API Client & Error Handling`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **What connects `⚠ პირველი ნაბიჯი — წაიკითხე ეს ფაილები`, `Backend`, `Frontend` to the rest of the system?**
+  _940 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Backend NestJS Core` be split into smaller, more focused modules?**
-  _Cohesion score 0.05589225589225589 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10052910052910052 - nodes in this community are weakly interconnected._
 - **Should `Frontend Auth & Forms` be split into smaller, more focused modules?**
   _Cohesion score 0.07389162561576355 - nodes in this community are weakly interconnected._
 - **Should `User Profile DTOs` be split into smaller, more focused modules?**
-  _Cohesion score 0.07540983606557378 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08145363408521303 - nodes in this community are weakly interconnected._

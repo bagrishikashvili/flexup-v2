@@ -89,31 +89,679 @@
   },
   "nodes": [
     {
+      "label": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L1",
+      "id": "task_batch_f2_1_companies_frontend_md",
+      "community": 91,
+      "norm_label": "task_batch_f2_1_companies_frontend.md"
+    },
+    {
+      "label": "Frontend Batch F2.1 \u2014 Companies Onboarding + Company Management",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L1",
+      "id": "flexup_task_batch_f2_1_companies_frontend_frontend_batch_f2_1_companies_onboarding_company_management",
+      "community": 113,
+      "norm_label": "frontend batch f2.1 \u2014 companies onboarding + company management"
+    },
+    {
+      "label": "\u26a0 \u10de\u10d8\u10e0\u10d5\u10d4\u10da\u10d8 \u10dc\u10d0\u10d1\u10d8\u10ef\u10d8 \u2014 \u10ec\u10d0\u10d8\u10d9\u10d8\u10d7\u10ee\u10d4 \u10d4\u10e1 \u10e4\u10d0\u10d8\u10da\u10d4\u10d1\u10d8",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L3",
+      "id": "flexup_task_batch_f2_1_companies_frontend_\u10de\u10d8\u10e0\u10d5\u10d4\u10da\u10d8_\u10dc\u10d0\u10d1\u10d8\u10ef\u10d8_\u10ec\u10d0\u10d8\u10d9\u10d8\u10d7\u10ee\u10d4_\u10d4\u10e1_\u10e4\u10d0\u10d8\u10da\u10d4\u10d1\u10d8",
+      "community": 113,
+      "norm_label": "\u26a0 \u10de\u10d8\u10e0\u10d5\u10d4\u10da\u10d8 \u10dc\u10d0\u10d1\u10d8\u10ef\u10d8 \u2014 \u10ec\u10d0\u10d8\u10d9\u10d8\u10d7\u10ee\u10d4 \u10d4\u10e1 \u10e4\u10d0\u10d8\u10da\u10d4\u10d1\u10d8"
+    },
+    {
+      "label": "INPUT (\u10d9\u10dd\u10dc\u10e2\u10d4\u10e5\u10e1\u10e2\u10d8)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L22",
+      "id": "flexup_task_batch_f2_1_companies_frontend_input_\u10d9\u10dd\u10dc\u10e2\u10d4\u10e5\u10e1\u10e2\u10d8",
+      "community": 113,
+      "norm_label": "input (\u10d9\u10dd\u10dc\u10e2\u10d4\u10e5\u10e1\u10e2\u10d8)"
+    },
+    {
+      "label": "Backend",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L26",
+      "id": "flexup_task_batch_f2_1_companies_frontend_backend",
+      "community": 113,
+      "norm_label": "backend"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L39",
+      "id": "flexup_task_batch_f2_1_companies_frontend_frontend",
+      "community": 113,
+      "norm_label": "frontend"
+    },
+    {
+      "label": "CRITICAL CONSTRAINT \u2014 Web Scope",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L68",
+      "id": "flexup_task_batch_f2_1_companies_frontend_critical_constraint_web_scope",
+      "community": 113,
+      "norm_label": "critical constraint \u2014 web scope"
+    },
+    {
+      "label": "GOAL",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L82",
+      "id": "flexup_task_batch_f2_1_companies_frontend_goal",
+      "community": 113,
+      "norm_label": "goal"
+    },
+    {
+      "label": "PART 1 \u2014 FRONTEND ARCHITECTURE",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L102",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_1_frontend_architecture",
+      "community": 108,
+      "norm_label": "part 1 \u2014 frontend architecture"
+    },
+    {
+      "label": "A. Source structure",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L104",
+      "id": "flexup_task_batch_f2_1_companies_frontend_a_source_structure",
+      "community": 108,
+      "norm_label": "a. source structure"
+    },
+    {
+      "label": "code:txt (apps/flexup-web/src/)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L108",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_1",
+      "community": 108,
+      "norm_label": "code:txt (apps/flexup-web/src/)"
+    },
+    {
+      "label": "B. Routing rules",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L169",
+      "id": "flexup_task_batch_f2_1_companies_frontend_b_routing_rules",
+      "community": 108,
+      "norm_label": "b. routing rules"
+    },
+    {
+      "label": "Protected app routes",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L171",
+      "id": "flexup_task_batch_f2_1_companies_frontend_protected_app_routes",
+      "community": 108,
+      "norm_label": "protected app routes"
+    },
+    {
+      "label": "App index behavior",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L191",
+      "id": "flexup_task_batch_f2_1_companies_frontend_app_index_behavior",
+      "community": 108,
+      "norm_label": "app index behavior"
+    },
+    {
+      "label": "Company onboarding route",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L201",
+      "id": "flexup_task_batch_f2_1_companies_frontend_company_onboarding_route",
+      "community": 108,
+      "norm_label": "company onboarding route"
+    },
+    {
+      "label": "Company routes",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L216",
+      "id": "flexup_task_batch_f2_1_companies_frontend_company_routes",
+      "community": 108,
+      "norm_label": "company routes"
+    },
+    {
+      "label": "PART 2 \u2014 API LAYER",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L227",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_2_api_layer",
+      "community": 115,
+      "norm_label": "part 2 \u2014 api layer"
+    },
+    {
+      "label": "A. Query keys",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L229",
+      "id": "flexup_task_batch_f2_1_companies_frontend_a_query_keys",
+      "community": 115,
+      "norm_label": "a. query keys"
+    },
+    {
+      "label": "code:ts (export const companyQueryKeys = {)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L233",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_2",
+      "community": 115,
+      "norm_label": "code:ts (export const companyquerykeys = {)"
+    },
+    {
+      "label": "B. API functions",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L241",
+      "id": "flexup_task_batch_f2_1_companies_frontend_b_api_functions",
+      "community": 115,
+      "norm_label": "b. api functions"
+    },
+    {
+      "label": "code:ts (import type {)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L247",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_3",
+      "community": 115,
+      "norm_label": "code:ts (import type {)"
+    },
+    {
+      "label": "\u10db\u10dc\u10d8\u10e8\u10d5\u10dc\u10d4\u10da\u10dd\u10d5\u10d0\u10dc\u10d8 \u2014 FormData support",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L307",
+      "id": "flexup_task_batch_f2_1_companies_frontend_\u10db\u10dc\u10d8\u10e8\u10d5\u10dc\u10d4\u10da\u10dd\u10d5\u10d0\u10dc\u10d8_formdata_support",
+      "community": 115,
+      "norm_label": "\u10db\u10dc\u10d8\u10e8\u10d5\u10dc\u10d4\u10da\u10dd\u10d5\u10d0\u10dc\u10d8 \u2014 formdata support"
+    },
+    {
+      "label": "PART 3 \u2014 STATE MANAGEMENT",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L319",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_3_state_management",
+      "community": 107,
+      "norm_label": "part 3 \u2014 state management"
+    },
+    {
+      "label": "A. Company store",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L321",
+      "id": "flexup_task_batch_f2_1_companies_frontend_a_company_store",
+      "community": 107,
+      "norm_label": "a. company store"
+    },
+    {
+      "label": "code:ts (interface CompanyState {)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L327",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_4",
+      "community": 107,
+      "norm_label": "code:ts (interface companystate {)"
+    },
+    {
+      "label": "code:ts (flexup.activeCompanyId)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L343",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_5",
+      "community": 107,
+      "norm_label": "code:ts (flexup.activecompanyid)"
+    },
+    {
+      "label": "B. useActiveCompany hook",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L347",
+      "id": "flexup_task_batch_f2_1_companies_frontend_b_useactivecompany_hook",
+      "community": 107,
+      "norm_label": "b. useactivecompany hook"
+    },
+    {
+      "label": "code:ts ({)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L357",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_6",
+      "community": 107,
+      "norm_label": "code:ts ({)"
+    },
+    {
+      "label": "C. useCompanyPermissions hook",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L368",
+      "id": "flexup_task_batch_f2_1_companies_frontend_c_usecompanypermissions_hook",
+      "community": 107,
+      "norm_label": "c. usecompanypermissions hook"
+    },
+    {
+      "label": "code:ts ({)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L376",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_7",
+      "community": 107,
+      "norm_label": "code:ts ({)"
+    },
+    {
+      "label": "PART 4 \u2014 FORMS + VALIDATION",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L395",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_4_forms_validation",
+      "community": 112,
+      "norm_label": "part 4 \u2014 forms + validation"
+    },
+    {
+      "label": "A. Use shared schemas",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L397",
+      "id": "flexup_task_batch_f2_1_companies_frontend_a_use_shared_schemas",
+      "community": 112,
+      "norm_label": "a. use shared schemas"
+    },
+    {
+      "label": "B. CompanyCreateForm",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L418",
+      "id": "flexup_task_batch_f2_1_companies_frontend_b_companycreateform",
+      "community": 112,
+      "norm_label": "b. companycreateform"
+    },
+    {
+      "label": "Suggested Georgian labels",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L440",
+      "id": "flexup_task_batch_f2_1_companies_frontend_suggested_georgian_labels",
+      "community": 112,
+      "norm_label": "suggested georgian labels"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L442",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_8",
+      "community": 112,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "C. CompanyEditForm",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L455",
+      "id": "flexup_task_batch_f2_1_companies_frontend_c_companyeditform",
+      "community": 112,
+      "norm_label": "c. companyeditform"
+    },
+    {
+      "label": "D. CompanyLogoUploader",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L467",
+      "id": "flexup_task_batch_f2_1_companies_frontend_d_companylogouploader",
+      "community": 112,
+      "norm_label": "d. companylogouploader"
+    },
+    {
+      "label": "PART 5 \u2014 UI / DESIGN",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L490",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_5_ui_design",
+      "community": 114,
+      "norm_label": "part 5 \u2014 ui / design"
+    },
+    {
+      "label": "A. AppShell",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L494",
+      "id": "flexup_task_batch_f2_1_companies_frontend_a_appshell",
+      "community": 114,
+      "norm_label": "a. appshell"
+    },
+    {
+      "label": "B. Sidebar",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L512",
+      "id": "flexup_task_batch_f2_1_companies_frontend_b_sidebar",
+      "community": 114,
+      "norm_label": "b. sidebar"
+    },
+    {
+      "label": "C. Topbar",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L529",
+      "id": "flexup_task_batch_f2_1_companies_frontend_c_topbar",
+      "community": 114,
+      "norm_label": "c. topbar"
+    },
+    {
+      "label": "D. Company cards",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L545",
+      "id": "flexup_task_batch_f2_1_companies_frontend_d_company_cards",
+      "community": 114,
+      "norm_label": "d. company cards"
+    },
+    {
+      "label": "E. Empty state",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L564",
+      "id": "flexup_task_batch_f2_1_companies_frontend_e_empty_state",
+      "community": 114,
+      "norm_label": "e. empty state"
+    },
+    {
+      "label": "PART 6 \u2014 PAGES",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L576",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_6_pages",
+      "community": 111,
+      "norm_label": "part 6 \u2014 pages"
+    },
+    {
+      "label": "1. `/app/onboarding/company`",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L578",
+      "id": "flexup_task_batch_f2_1_companies_frontend_1_app_onboarding_company",
+      "community": 111,
+      "norm_label": "1. `/app/onboarding/company`"
+    },
+    {
+      "label": "2. `/app/companies`",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L597",
+      "id": "flexup_task_batch_f2_1_companies_frontend_2_app_companies",
+      "community": 111,
+      "norm_label": "2. `/app/companies`"
+    },
+    {
+      "label": "3. `/app/companies/new`",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L608",
+      "id": "flexup_task_batch_f2_1_companies_frontend_3_app_companies_new",
+      "community": 111,
+      "norm_label": "3. `/app/companies/new`"
+    },
+    {
+      "label": "4. `/app/companies/:companyId`",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L616",
+      "id": "flexup_task_batch_f2_1_companies_frontend_4_app_companies_companyid",
+      "community": 111,
+      "norm_label": "4. `/app/companies/:companyid`"
+    },
+    {
+      "label": "5. `/app/companies/:companyId/settings`",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L637",
+      "id": "flexup_task_batch_f2_1_companies_frontend_5_app_companies_companyid_settings",
+      "community": 111,
+      "norm_label": "5. `/app/companies/:companyid/settings`"
+    },
+    {
+      "label": "Danger zone",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L646",
+      "id": "flexup_task_batch_f2_1_companies_frontend_danger_zone",
+      "community": 111,
+      "norm_label": "danger zone"
+    },
+    {
+      "label": "PART 7 \u2014 ERROR HANDLING",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L664",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_7_error_handling",
+      "community": 91,
+      "norm_label": "part 7 \u2014 error handling"
+    },
+    {
+      "label": "PART 8 \u2014 i18n",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L695",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_8_i18n",
+      "community": 116,
+      "norm_label": "part 8 \u2014 i18n"
+    },
+    {
+      "label": "code:txt (locales/ka/companies.json)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L699",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_9",
+      "community": 116,
+      "norm_label": "code:txt (locales/ka/companies.json)"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L708",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_10",
+      "community": 116,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L741",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_11",
+      "community": 116,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "PART 9 \u2014 CACHE / INVALIDATION",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L776",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_9_cache_invalidation",
+      "community": 91,
+      "norm_label": "part 9 \u2014 cache / invalidation"
+    },
+    {
+      "label": "PART 10 \u2014 ACCESS / PERMISSIONS UX",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L802",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_10_access_permissions_ux",
+      "community": 91,
+      "norm_label": "part 10 \u2014 access / permissions ux"
+    },
+    {
+      "label": "PART 11 \u2014 TESTING",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L822",
+      "id": "flexup_task_batch_f2_1_companies_frontend_part_11_testing",
+      "community": 91,
+      "norm_label": "part 11 \u2014 testing"
+    },
+    {
+      "label": "Unit/component",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L828",
+      "id": "flexup_task_batch_f2_1_companies_frontend_unit_component",
+      "community": 91,
+      "norm_label": "unit/component"
+    },
+    {
+      "label": "Manual E2E checklist",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L834",
+      "id": "flexup_task_batch_f2_1_companies_frontend_manual_e2e_checklist",
+      "community": 91,
+      "norm_label": "manual e2e checklist"
+    },
+    {
+      "label": "ACCEPTANCE CRITERIA",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L859",
+      "id": "flexup_task_batch_f2_1_companies_frontend_acceptance_criteria",
+      "community": 109,
+      "norm_label": "acceptance criteria"
+    },
+    {
+      "label": "Build",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L861",
+      "id": "flexup_task_batch_f2_1_companies_frontend_build",
+      "community": 109,
+      "norm_label": "build"
+    },
+    {
+      "label": "code:bash (npm run type-check -w @flexup/web)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L863",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_12",
+      "community": 109,
+      "norm_label": "code:bash (npm run type-check -w @flexup/web)"
+    },
+    {
+      "label": "code:bash (npm run build -w @flexup/shared)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L870",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_13",
+      "community": 109,
+      "norm_label": "code:bash (npm run build -w @flexup/shared)"
+    },
+    {
+      "label": "Runtime",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L874",
+      "id": "flexup_task_batch_f2_1_companies_frontend_runtime",
+      "community": 109,
+      "norm_label": "runtime"
+    },
+    {
+      "label": "code:bash (cd apps/flexup-web)",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L876",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_14",
+      "community": 109,
+      "norm_label": "code:bash (cd apps/flexup-web)"
+    },
+    {
+      "label": "Functional",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L887",
+      "id": "flexup_task_batch_f2_1_companies_frontend_functional",
+      "community": 109,
+      "norm_label": "functional"
+    },
+    {
+      "label": "Design",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L905",
+      "id": "flexup_task_batch_f2_1_companies_frontend_design",
+      "community": 109,
+      "norm_label": "design"
+    },
+    {
+      "label": "OUT OF SCOPE",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L918",
+      "id": "flexup_task_batch_f2_1_companies_frontend_out_of_scope",
+      "community": 91,
+      "norm_label": "out of scope"
+    },
+    {
+      "label": "SECURITY / CORRECTNESS CHECK",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L935",
+      "id": "flexup_task_batch_f2_1_companies_frontend_security_correctness_check",
+      "community": 91,
+      "norm_label": "security / correctness check"
+    },
+    {
+      "label": "\u10d1\u10dd\u10da\u10dd\u10e1",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L950",
+      "id": "flexup_task_batch_f2_1_companies_frontend_\u10d1\u10dd\u10da\u10dd\u10e1",
+      "community": 91,
+      "norm_label": "\u10d1\u10dd\u10da\u10dd\u10e1"
+    },
+    {
+      "label": "code:bash (feat(web): add company onboarding and management dashboard ()",
+      "file_type": "document",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L956",
+      "id": "flexup_task_batch_f2_1_companies_frontend_codeblock_15",
+      "community": 91,
+      "norm_label": "code:bash (feat(web): add company onboarding and management dashboard ()"
+    },
+    {
       "label": "company.tsx",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
       "source_location": "L1",
-      "id": "apps_flexup_web_src_routes_app_onboarding_company_tsx",
       "community": 1,
-      "norm_label": "company.tsx"
+      "norm_label": "company.tsx",
+      "id": "apps_flexup_web_src_routes_app_onboarding_company_tsx"
     },
     {
       "label": "Route",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
       "source_location": "L12",
-      "id": "onboarding_company_route",
       "community": 1,
-      "norm_label": "route"
+      "norm_label": "route",
+      "id": "onboarding_company_route"
     },
     {
       "label": "CompanyOnboardingPage()",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/routes/app/onboarding/company.tsx",
       "source_location": "L16",
-      "id": "onboarding_company_companyonboardingpage",
       "community": 1,
-      "norm_label": "companyonboardingpage()"
+      "norm_label": "companyonboardingpage()",
+      "id": "onboarding_company_companyonboardingpage"
     },
     {
       "label": "auth.store.ts",
@@ -2613,7 +3261,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/config/config.service.ts",
       "source_location": "L1",
-      "community": 31,
+      "community": 13,
       "norm_label": "config.service.ts",
       "id": "apps_flexup_backend_src_config_config_service_ts"
     },
@@ -6357,7 +7005,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L1",
-      "community": 7,
+      "community": 110,
       "norm_label": "package.json",
       "id": "apps_flexup_backend_package_json"
     },
@@ -6366,7 +7014,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L2",
-      "community": 7,
+      "community": 110,
       "norm_label": "name",
       "id": "flexup_backend_package_name"
     },
@@ -6375,7 +7023,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L3",
-      "community": 7,
+      "community": 110,
       "norm_label": "version",
       "id": "flexup_backend_package_version"
     },
@@ -6384,7 +7032,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L4",
-      "community": 7,
+      "community": 110,
       "norm_label": "description",
       "id": "flexup_backend_package_description"
     },
@@ -6393,7 +7041,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L5",
-      "community": 7,
+      "community": 110,
       "norm_label": "author",
       "id": "flexup_backend_package_author"
     },
@@ -6402,7 +7050,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L6",
-      "community": 7,
+      "community": 110,
       "norm_label": "private",
       "id": "flexup_backend_package_private"
     },
@@ -6411,7 +7059,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L7",
-      "community": 7,
+      "community": 110,
       "norm_label": "license",
       "id": "flexup_backend_package_license"
     },
@@ -7158,7 +7806,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L93",
-      "community": 7,
+      "community": 92,
       "norm_label": "jest",
       "id": "flexup_backend_package_jest"
     },
@@ -7167,7 +7815,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L94",
-      "community": 7,
+      "community": 92,
       "norm_label": "modulefileextensions",
       "id": "flexup_backend_package_jest_modulefileextensions"
     },
@@ -7176,7 +7824,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L99",
-      "community": 7,
+      "community": 92,
       "norm_label": "rootdir",
       "id": "flexup_backend_package_jest_rootdir"
     },
@@ -7185,7 +7833,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L100",
-      "community": 7,
+      "community": 92,
       "norm_label": "testregex",
       "id": "flexup_backend_package_jest_testregex"
     },
@@ -7194,7 +7842,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L101",
-      "community": 7,
+      "community": 92,
       "norm_label": "transform",
       "id": "flexup_backend_package_jest_transform"
     },
@@ -7203,7 +7851,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L102",
-      "community": 7,
+      "community": 92,
       "norm_label": "^.+\\\\.(t|j)s$",
       "id": "flexup_backend_package_transform_t_j_s"
     },
@@ -7212,7 +7860,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L104",
-      "community": 7,
+      "community": 92,
       "norm_label": "collectcoveragefrom",
       "id": "flexup_backend_package_jest_collectcoveragefrom"
     },
@@ -7221,7 +7869,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L107",
-      "community": 7,
+      "community": 92,
       "norm_label": "coveragedirectory",
       "id": "flexup_backend_package_jest_coveragedirectory"
     },
@@ -7230,7 +7878,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/package.json",
       "source_location": "L108",
-      "community": 7,
+      "community": 92,
       "norm_label": "testenvironment",
       "id": "flexup_backend_package_jest_testenvironment"
     },
@@ -7473,7 +8121,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/main.ts",
       "source_location": "L1",
-      "community": 0,
+      "community": 58,
       "norm_label": "main.ts",
       "id": "apps_flexup_backend_src_main_ts"
     },
@@ -7482,7 +8130,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/main.ts",
       "source_location": "L13",
-      "community": 0,
+      "community": 58,
       "norm_label": "bootstrap()",
       "id": "src_main_bootstrap"
     },
@@ -7491,7 +8139,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/app.module.ts",
       "source_location": "L1",
-      "community": 0,
+      "community": 31,
       "norm_label": "app.module.ts",
       "id": "apps_flexup_backend_src_app_module_ts"
     },
@@ -7500,7 +8148,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/app.module.ts",
       "source_location": "L40",
-      "community": 0,
+      "community": 58,
       "norm_label": "appmodule",
       "id": "src_app_module_appmodule"
     },
@@ -7509,7 +8157,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email-verification/email-verification.module.ts",
       "source_location": "L1",
-      "community": 31,
+      "community": 59,
       "norm_label": "email-verification.module.ts",
       "id": "apps_flexup_backend_src_email_verification_email_verification_module_ts"
     },
@@ -7518,7 +8166,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email-verification/email-verification.module.ts",
       "source_location": "L10",
-      "community": 31,
+      "community": 59,
       "norm_label": "emailverificationmodule",
       "id": "email_verification_email_verification_module_emailverificationmodule"
     },
@@ -7527,7 +8175,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email-verification/email-verification.service.ts",
       "source_location": "L1",
-      "community": 31,
+      "community": 51,
       "norm_label": "email-verification.service.ts",
       "id": "apps_flexup_backend_src_email_verification_email_verification_service_ts"
     },
@@ -7536,7 +8184,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email-verification/email-verification.service.ts",
       "source_location": "L15",
-      "community": 59,
+      "community": 51,
       "norm_label": "emailverificationservice",
       "id": "email_verification_email_verification_service_emailverificationservice"
     },
@@ -7545,7 +8193,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email-verification/email-verification.service.ts",
       "source_location": "L18",
-      "community": 59,
+      "community": 51,
       "norm_label": ".constructor()",
       "id": "email_verification_email_verification_service_emailverificationservice_constructor"
     },
@@ -7554,7 +8202,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email-verification/email-verification.service.ts",
       "source_location": "L24",
-      "community": 59,
+      "community": 51,
       "norm_label": ".issueandsend()",
       "id": "email_verification_email_verification_service_emailverificationservice_issueandsend"
     },
@@ -7563,7 +8211,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email-verification/email-verification.service.ts",
       "source_location": "L79",
-      "community": 59,
+      "community": 51,
       "norm_label": ".verify()",
       "id": "email_verification_email_verification_service_emailverificationservice_verify"
     },
@@ -7572,7 +8220,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email-verification/email-verification.service.ts",
       "source_location": "L122",
-      "community": 59,
+      "community": 51,
       "norm_label": ".checkratelimits()",
       "id": "email_verification_email_verification_service_emailverificationservice_checkratelimits"
     },
@@ -7581,7 +8229,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email-verification/email-verification.service.ts",
       "source_location": "L157",
-      "community": 59,
+      "community": 51,
       "norm_label": ".hashtoken()",
       "id": "email_verification_email_verification_service_emailverificationservice_hashtoken"
     },
@@ -7797,7 +8445,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/auth.service.ts",
       "source_location": "L1",
-      "community": 31,
+      "community": 13,
       "norm_label": "auth.service.ts",
       "id": "apps_flexup_backend_src_auth_auth_service_ts"
     },
@@ -7806,7 +8454,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/auth.service.ts",
       "source_location": "L24",
-      "community": 31,
+      "community": 13,
       "norm_label": "requestmeta",
       "id": "auth_auth_service_requestmeta"
     },
@@ -7824,7 +8472,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/auth.service.ts",
       "source_location": "L36",
-      "community": 12,
+      "community": 51,
       "norm_label": ".constructor()",
       "id": "auth_auth_service_authservice_constructor"
     },
@@ -7968,7 +8616,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/types/jwt-payload.interface.ts",
       "source_location": "L1",
-      "community": 31,
+      "community": 12,
       "norm_label": "jwt-payload.interface.ts",
       "id": "apps_flexup_backend_src_auth_types_jwt_payload_interface_ts"
     },
@@ -7977,7 +8625,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/types/jwt-payload.interface.ts",
       "source_location": "L3",
-      "community": 31,
+      "community": 12,
       "norm_label": "jwtpayload",
       "id": "types_jwt_payload_interface_jwtpayload"
     },
@@ -7986,7 +8634,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/decorators/current-user.decorator.ts",
       "source_location": "L1",
-      "community": 13,
+      "community": 59,
       "norm_label": "current-user.decorator.ts",
       "id": "apps_flexup_backend_src_auth_decorators_current_user_decorator_ts"
     },
@@ -7995,7 +8643,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/decorators/current-user.decorator.ts",
       "source_location": "L4",
-      "community": 13,
+      "community": 59,
       "norm_label": "currentuser",
       "id": "decorators_current_user_decorator_currentuser"
     },
@@ -8004,7 +8652,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/strategies/jwt.strategy.ts",
       "source_location": "L1",
-      "community": 31,
+      "community": 12,
       "norm_label": "jwt.strategy.ts",
       "id": "apps_flexup_backend_src_auth_strategies_jwt_strategy_ts"
     },
@@ -8013,7 +8661,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/strategies/jwt.strategy.ts",
       "source_location": "L10",
-      "community": 31,
+      "community": 12,
       "norm_label": "jwtstrategy",
       "id": "strategies_jwt_strategy_jwtstrategy"
     },
@@ -8022,7 +8670,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/strategies/jwt.strategy.ts",
       "source_location": "L11",
-      "community": 31,
+      "community": 12,
       "norm_label": ".constructor()",
       "id": "strategies_jwt_strategy_jwtstrategy_constructor"
     },
@@ -8031,7 +8679,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/strategies/jwt.strategy.ts",
       "source_location": "L22",
-      "community": 31,
+      "community": 12,
       "norm_label": ".validate()",
       "id": "strategies_jwt_strategy_jwtstrategy_validate"
     },
@@ -8049,7 +8697,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/guards/roles.guard.ts",
       "source_location": "L7",
-      "community": 2,
+      "community": 31,
       "norm_label": "rolesguard",
       "id": "guards_roles_guard_rolesguard"
     },
@@ -8058,7 +8706,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/guards/roles.guard.ts",
       "source_location": "L8",
-      "community": 2,
+      "community": 31,
       "norm_label": ".constructor()",
       "id": "guards_roles_guard_rolesguard_constructor"
     },
@@ -8067,7 +8715,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/guards/roles.guard.ts",
       "source_location": "L10",
-      "community": 2,
+      "community": 31,
       "norm_label": ".canactivate()",
       "id": "guards_roles_guard_rolesguard_canactivate"
     },
@@ -8076,7 +8724,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/guards/jwt-auth.guard.ts",
       "source_location": "L1",
-      "community": 0,
+      "community": 31,
       "norm_label": "jwt-auth.guard.ts",
       "id": "apps_flexup_backend_src_auth_guards_jwt_auth_guard_ts"
     },
@@ -8085,7 +8733,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/guards/jwt-auth.guard.ts",
       "source_location": "L8",
-      "community": 0,
+      "community": 31,
       "norm_label": "jwtauthguard",
       "id": "guards_jwt_auth_guard_jwtauthguard"
     },
@@ -8094,7 +8742,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/guards/jwt-auth.guard.ts",
       "source_location": "L9",
-      "community": 0,
+      "community": 31,
       "norm_label": ".constructor()",
       "id": "guards_jwt_auth_guard_jwtauthguard_constructor"
     },
@@ -8103,7 +8751,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/auth/guards/jwt-auth.guard.ts",
       "source_location": "L13",
-      "community": 0,
+      "community": 31,
       "norm_label": ".canactivate()",
       "id": "guards_jwt_auth_guard_jwtauthguard_canactivate"
     },
@@ -8238,7 +8886,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/prisma/prisma.service.ts",
       "source_location": "L1",
-      "community": 31,
+      "community": 13,
       "norm_label": "prisma.service.ts",
       "id": "apps_flexup_backend_src_prisma_prisma_service_ts"
     },
@@ -8247,7 +8895,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/prisma/prisma.service.ts",
       "source_location": "L11",
-      "community": 12,
+      "community": 51,
       "norm_label": "prismaservice",
       "id": "prisma_prisma_service_prismaservice"
     },
@@ -8256,7 +8904,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/prisma/prisma.service.ts",
       "source_location": "L17",
-      "community": 12,
+      "community": 51,
       "norm_label": ".constructor()",
       "id": "prisma_prisma_service_prismaservice_constructor"
     },
@@ -8265,7 +8913,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/prisma/prisma.service.ts",
       "source_location": "L26",
-      "community": 12,
+      "community": 51,
       "norm_label": ".onmoduleinit()",
       "id": "prisma_prisma_service_prismaservice_onmoduleinit"
     },
@@ -8274,7 +8922,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/prisma/prisma.service.ts",
       "source_location": "L31",
-      "community": 12,
+      "community": 51,
       "norm_label": ".onmoduledestroy()",
       "id": "prisma_prisma_service_prismaservice_onmoduledestroy"
     },
@@ -8283,7 +8931,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/prisma/prisma.module.ts",
       "source_location": "L1",
-      "community": 0,
+      "community": 31,
       "norm_label": "prisma.module.ts",
       "id": "apps_flexup_backend_src_prisma_prisma_module_ts"
     },
@@ -8292,7 +8940,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/prisma/prisma.module.ts",
       "source_location": "L9",
-      "community": 0,
+      "community": 31,
       "norm_label": "prismamodule",
       "id": "prisma_prisma_module_prismamodule"
     },
@@ -8508,7 +9156,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/company-members/company-members.module.ts",
       "source_location": "L1",
-      "community": 0,
+      "community": 31,
       "norm_label": "company-members.module.ts",
       "id": "apps_flexup_backend_src_company_members_company_members_module_ts"
     },
@@ -8517,7 +9165,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/company-members/company-members.module.ts",
       "source_location": "L11",
-      "community": 0,
+      "community": 31,
       "norm_label": "companymembersmodule",
       "id": "company_members_company_members_module_companymembersmodule"
     },
@@ -8580,7 +9228,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/filters/all-exceptions.filter.ts",
       "source_location": "L1",
-      "community": 0,
+      "community": 58,
       "norm_label": "all-exceptions.filter.ts",
       "id": "apps_flexup_backend_src_common_filters_all_exceptions_filter_ts"
     },
@@ -8589,7 +9237,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/filters/all-exceptions.filter.ts",
       "source_location": "L12",
-      "community": 0,
+      "community": 58,
       "norm_label": "httpexceptionbody",
       "id": "filters_all_exceptions_filter_httpexceptionbody"
     },
@@ -8598,7 +9246,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/filters/all-exceptions.filter.ts",
       "source_location": "L21",
-      "community": 0,
+      "community": 58,
       "norm_label": "allexceptionsfilter",
       "id": "filters_all_exceptions_filter_allexceptionsfilter"
     },
@@ -8607,7 +9255,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/filters/all-exceptions.filter.ts",
       "source_location": "L24",
-      "community": 0,
+      "community": 58,
       "norm_label": ".catch()",
       "id": "filters_all_exceptions_filter_allexceptionsfilter_catch"
     },
@@ -8616,7 +9264,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/filters/all-exceptions.filter.ts",
       "source_location": "L94",
-      "community": 0,
+      "community": 58,
       "norm_label": ".statustocode()",
       "id": "filters_all_exceptions_filter_allexceptionsfilter_statustocode"
     },
@@ -8625,7 +9273,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/filters/all-exceptions.filter.ts",
       "source_location": "L106",
-      "community": 0,
+      "community": 58,
       "norm_label": ".statustoerrorname()",
       "id": "filters_all_exceptions_filter_allexceptionsfilter_statustoerrorname"
     },
@@ -8634,7 +9282,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/filters/prisma-exception.filter.ts",
       "source_location": "L1",
-      "community": 0,
+      "community": 58,
       "norm_label": "prisma-exception.filter.ts",
       "id": "apps_flexup_backend_src_common_filters_prisma_exception_filter_ts"
     },
@@ -8643,7 +9291,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/filters/prisma-exception.filter.ts",
       "source_location": "L12",
-      "community": 0,
+      "community": 58,
       "norm_label": "prisma_error_map",
       "id": "filters_prisma_exception_filter_prisma_error_map"
     },
@@ -8652,7 +9300,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/filters/prisma-exception.filter.ts",
       "source_location": "L34",
-      "community": 0,
+      "community": 58,
       "norm_label": "prismaexceptionfilter",
       "id": "filters_prisma_exception_filter_prismaexceptionfilter"
     },
@@ -8661,7 +9309,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/common/filters/prisma-exception.filter.ts",
       "source_location": "L37",
-      "community": 0,
+      "community": 58,
       "norm_label": ".catch()",
       "id": "filters_prisma_exception_filter_prismaexceptionfilter_catch"
     },
@@ -8967,7 +9615,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/locations/locations.module.ts",
       "source_location": "L1",
-      "community": 0,
+      "community": 31,
       "norm_label": "locations.module.ts",
       "id": "apps_flexup_backend_src_locations_locations_module_ts"
     },
@@ -8976,7 +9624,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/locations/locations.module.ts",
       "source_location": "L12",
-      "community": 0,
+      "community": 31,
       "norm_label": "locationsmodule",
       "id": "locations_locations_module_locationsmodule"
     },
@@ -9030,7 +9678,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/locations/locations.service.ts",
       "source_location": "L25",
-      "community": 12,
+      "community": 51,
       "norm_label": ".constructor()",
       "id": "locations_locations_service_locationsservice_constructor"
     },
@@ -9309,7 +9957,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/users/users.service.ts",
       "source_location": "L44",
-      "community": 12,
+      "community": 2,
       "norm_label": ".constructor()",
       "id": "users_users_service_usersservice_constructor"
     },
@@ -9633,7 +10281,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/users/users.module.ts",
       "source_location": "L1",
-      "community": 2,
+      "community": 31,
       "norm_label": "users.module.ts",
       "id": "apps_flexup_backend_src_users_users_module_ts"
     },
@@ -9642,7 +10290,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/users/users.module.ts",
       "source_location": "L13",
-      "community": 2,
+      "community": 31,
       "norm_label": "usersmodule",
       "id": "users_users_module_usersmodule"
     },
@@ -9669,7 +10317,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/users/dto/set-user-active.dto.ts",
       "source_location": "L1",
-      "community": 6,
+      "community": 3,
       "norm_label": "set-user-active.dto.ts",
       "id": "apps_flexup_backend_src_users_dto_set_user_active_dto_ts"
     },
@@ -9678,7 +10326,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/users/dto/set-user-active.dto.ts",
       "source_location": "L3",
-      "community": 6,
+      "community": 3,
       "norm_label": "setuseractivedto",
       "id": "dto_set_user_active_dto_setuseractivedto"
     },
@@ -9975,7 +10623,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
       "source_location": "L29",
-      "community": 12,
+      "community": 51,
       "norm_label": ".constructor()",
       "id": "companies_companies_service_companiesservice_constructor"
     },
@@ -10092,7 +10740,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/companies/companies.module.ts",
       "source_location": "L1",
-      "community": 0,
+      "community": 31,
       "norm_label": "companies.module.ts",
       "id": "apps_flexup_backend_src_companies_companies_module_ts"
     },
@@ -10101,7 +10749,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/companies/companies.module.ts",
       "source_location": "L14",
-      "community": 0,
+      "community": 31,
       "norm_label": "companiesmodule",
       "id": "companies_companies_module_companiesmodule"
     },
@@ -10209,7 +10857,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email/email.module.ts",
       "source_location": "L11",
-      "community": 0,
+      "community": 31,
       "norm_label": "emailmodule",
       "id": "email_email_module_emailmodule"
     },
@@ -10344,7 +10992,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email/templates/verification-email.template.ts",
       "source_location": "L1",
-      "community": 31,
+      "community": 51,
       "norm_label": "verification-email.template.ts",
       "id": "apps_flexup_backend_src_email_templates_verification_email_template_ts"
     },
@@ -10353,7 +11001,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email/templates/verification-email.template.ts",
       "source_location": "L1",
-      "community": 31,
+      "community": 51,
       "norm_label": "verificationemailparams",
       "id": "templates_verification_email_template_verificationemailparams"
     },
@@ -10371,7 +11019,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email/templates/verification-email.template.ts",
       "source_location": "L35",
-      "community": 31,
+      "community": 51,
       "norm_label": "renderverificationemail()",
       "id": "templates_verification_email_template_renderverificationemail"
     },
@@ -10380,7 +11028,7 @@
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/email/templates/verification-email.template.ts",
       "source_location": "L113",
-      "community": 31,
+      "community": 51,
       "norm_label": "escapehtml()",
       "id": "templates_verification_email_template_escapehtml"
     },
@@ -14155,6 +14803,716 @@
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_frontend_batch_f2_1_companies_onboarding_company_management",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_1_frontend_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_2_api_layer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L319",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_3_state_management",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L395",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_4_forms_validation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L490",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_5_ui_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L576",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_6_pages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L664",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_7_error_handling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L695",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_8_i18n",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L776",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_9_cache_invalidation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L802",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_10_access_permissions_ux",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L822",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_part_11_testing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L859",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L918",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_out_of_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L935",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_security_correctness_check",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L950",
+      "weight": 1.0,
+      "source": "task_batch_f2_1_companies_frontend_md",
+      "target": "flexup_task_batch_f2_1_companies_frontend_\u10d1\u10dd\u10da\u10dd\u10e1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_frontend_batch_f2_1_companies_onboarding_company_management",
+      "target": "flexup_task_batch_f2_1_companies_frontend_\u10de\u10d8\u10e0\u10d5\u10d4\u10da\u10d8_\u10dc\u10d0\u10d1\u10d8\u10ef\u10d8_\u10ec\u10d0\u10d8\u10d9\u10d8\u10d7\u10ee\u10d4_\u10d4\u10e1_\u10e4\u10d0\u10d8\u10da\u10d4\u10d1\u10d8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_frontend_batch_f2_1_companies_onboarding_company_management",
+      "target": "flexup_task_batch_f2_1_companies_frontend_input_\u10d9\u10dd\u10dc\u10e2\u10d4\u10e5\u10e1\u10e2\u10d8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_frontend_batch_f2_1_companies_onboarding_company_management",
+      "target": "flexup_task_batch_f2_1_companies_frontend_critical_constraint_web_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_frontend_batch_f2_1_companies_onboarding_company_management",
+      "target": "flexup_task_batch_f2_1_companies_frontend_goal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_input_\u10d9\u10dd\u10dc\u10e2\u10d4\u10e5\u10e1\u10e2\u10d8",
+      "target": "flexup_task_batch_f2_1_companies_frontend_backend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_input_\u10d9\u10dd\u10dc\u10e2\u10d4\u10e5\u10e1\u10e2\u10d8",
+      "target": "flexup_task_batch_f2_1_companies_frontend_frontend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_1_frontend_architecture",
+      "target": "flexup_task_batch_f2_1_companies_frontend_a_source_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_1_frontend_architecture",
+      "target": "flexup_task_batch_f2_1_companies_frontend_b_routing_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_a_source_structure",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_b_routing_rules",
+      "target": "flexup_task_batch_f2_1_companies_frontend_protected_app_routes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_b_routing_rules",
+      "target": "flexup_task_batch_f2_1_companies_frontend_app_index_behavior",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_b_routing_rules",
+      "target": "flexup_task_batch_f2_1_companies_frontend_company_onboarding_route",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_b_routing_rules",
+      "target": "flexup_task_batch_f2_1_companies_frontend_company_routes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L229",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_2_api_layer",
+      "target": "flexup_task_batch_f2_1_companies_frontend_a_query_keys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L241",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_2_api_layer",
+      "target": "flexup_task_batch_f2_1_companies_frontend_b_api_functions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L233",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_a_query_keys",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L247",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_b_api_functions",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L307",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_b_api_functions",
+      "target": "flexup_task_batch_f2_1_companies_frontend_\u10db\u10dc\u10d8\u10e8\u10d5\u10dc\u10d4\u10da\u10dd\u10d5\u10d0\u10dc\u10d8_formdata_support",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L321",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_3_state_management",
+      "target": "flexup_task_batch_f2_1_companies_frontend_a_company_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L347",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_3_state_management",
+      "target": "flexup_task_batch_f2_1_companies_frontend_b_useactivecompany_hook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L368",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_3_state_management",
+      "target": "flexup_task_batch_f2_1_companies_frontend_c_usecompanypermissions_hook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L327",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_a_company_store",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L343",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_a_company_store",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L357",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_b_useactivecompany_hook",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L376",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_c_usecompanypermissions_hook",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L397",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_4_forms_validation",
+      "target": "flexup_task_batch_f2_1_companies_frontend_a_use_shared_schemas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L418",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_4_forms_validation",
+      "target": "flexup_task_batch_f2_1_companies_frontend_b_companycreateform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L455",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_4_forms_validation",
+      "target": "flexup_task_batch_f2_1_companies_frontend_c_companyeditform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L467",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_4_forms_validation",
+      "target": "flexup_task_batch_f2_1_companies_frontend_d_companylogouploader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L440",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_b_companycreateform",
+      "target": "flexup_task_batch_f2_1_companies_frontend_suggested_georgian_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L442",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_suggested_georgian_labels",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L494",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_5_ui_design",
+      "target": "flexup_task_batch_f2_1_companies_frontend_a_appshell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L512",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_5_ui_design",
+      "target": "flexup_task_batch_f2_1_companies_frontend_b_sidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L529",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_5_ui_design",
+      "target": "flexup_task_batch_f2_1_companies_frontend_c_topbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L545",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_5_ui_design",
+      "target": "flexup_task_batch_f2_1_companies_frontend_d_company_cards",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L564",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_5_ui_design",
+      "target": "flexup_task_batch_f2_1_companies_frontend_e_empty_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L578",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_6_pages",
+      "target": "flexup_task_batch_f2_1_companies_frontend_1_app_onboarding_company",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L597",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_6_pages",
+      "target": "flexup_task_batch_f2_1_companies_frontend_2_app_companies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L608",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_6_pages",
+      "target": "flexup_task_batch_f2_1_companies_frontend_3_app_companies_new",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L616",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_6_pages",
+      "target": "flexup_task_batch_f2_1_companies_frontend_4_app_companies_companyid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L637",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_6_pages",
+      "target": "flexup_task_batch_f2_1_companies_frontend_5_app_companies_companyid_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L646",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_5_app_companies_companyid_settings",
+      "target": "flexup_task_batch_f2_1_companies_frontend_danger_zone",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L699",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_8_i18n",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L708",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_8_i18n",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L741",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_8_i18n",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L828",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_11_testing",
+      "target": "flexup_task_batch_f2_1_companies_frontend_unit_component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L834",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_part_11_testing",
+      "target": "flexup_task_batch_f2_1_companies_frontend_manual_e2e_checklist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L861",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_acceptance_criteria",
+      "target": "flexup_task_batch_f2_1_companies_frontend_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L874",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_acceptance_criteria",
+      "target": "flexup_task_batch_f2_1_companies_frontend_runtime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L887",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_acceptance_criteria",
+      "target": "flexup_task_batch_f2_1_companies_frontend_functional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L905",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_acceptance_criteria",
+      "target": "flexup_task_batch_f2_1_companies_frontend_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L863",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_build",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L870",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_build",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L876",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_runtime",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TASK_BATCH_F2_1_COMPANIES_FRONTEND.md",
+      "source_location": "L956",
+      "weight": 1.0,
+      "source": "flexup_task_batch_f2_1_companies_frontend_\u10d1\u10dd\u10da\u10dd\u10e1",
+      "target": "flexup_task_batch_f2_1_companies_frontend_codeblock_15",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -35667,5 +37025,5 @@
       "source_file": "docs/tasks/TASK_BATCH_F1_1.md"
     }
   ],
-  "built_at_commit": "a8324820ac50ea687b02bd384ff5beb6330d8cb9"
+  "built_at_commit": "422afbcd21f030456deb52989d4aedf09a994b8e"
 }
