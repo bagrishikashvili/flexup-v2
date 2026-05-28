@@ -114,6 +114,10 @@
   border-color: var(--border);
 }
 
+button {
+  outline: none;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--background);

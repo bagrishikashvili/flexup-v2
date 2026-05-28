@@ -77,7 +77,7 @@ export class CompaniesService {
     const memberships = await this.prisma.companyMember.findMany({
       where: { userId },
       include: { company: true },
-      orderBy: { company: { updatedAt: 'desc' } },
+      orderBy: { company: { updatedAt: 'asc' } },
     });
     return memberships.map((m) =>
       toCompanyPublic(m.company, m.role as CompanyMemberRole),

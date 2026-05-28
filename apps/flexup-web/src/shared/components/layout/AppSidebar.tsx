@@ -11,21 +11,6 @@ interface NavItem {
   disabled?: boolean;
 }
 
-function BrandLogo() {
-  return (
-    <div className="h-14 flex items-center px-4 border-b border-border flex-shrink-0">
-      <div className="flex items-center gap-2.5">
-        <div
-          className="w-7 h-7 rounded-lg flex-shrink-0"
-          style={{ background: 'var(--gradient-cool)' }}
-        />
-        <span className="text-base font-bold" style={{ fontFamily: 'var(--font-display)' }}>
-          Flex<span className="gradient-text">Up</span>
-        </span>
-      </div>
-    </div>
-  );
-}
 
 function SidebarNavItem({ item }: { item: NavItem }) {
   const routerState = useRouterState();
@@ -33,32 +18,16 @@ function SidebarNavItem({ item }: { item: NavItem }) {
     (item.to !== '/app' && routerState.location.pathname.startsWith(item.to));
   const Icon = item.icon;
 
-  if (item.disabled) {
-    return (
-      <span
-        className={cn(
-          'flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-sm font-medium border-l-[3px] border-transparent pl-[7px]',
-          'text-muted-foreground/40 cursor-not-allowed',
-        )}
-      >
-        <Icon className="w-[18px] h-[18px] flex-shrink-0" strokeWidth={1.5} />
-        {item.label}
-      </span>
-    );
-  }
-
   return (
-    <Link
-      to={item.to}
+    <Link to={item.to}
       className={cn(
-        'flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-sm font-medium transition-colors border-l-[3px] pl-[7px]',
-        isActive
-          ? 'bg-primary/10 text-primary border-primary'
-          : 'text-muted-foreground hover:bg-black/5 hover:text-foreground border-transparent',
+        'flex flex-col items-center gap-.5 text-[#fff] hover:opacity-100 transition-opacity duration-200 ease-in-out min-w-0 w-full',
+        isActive ? 'opacity-100' : 'opacity-80',
+        item.disabled && 'cursor-not-allowed opacity-60'
       )}
     >
-      <Icon className="w-[18px] h-[18px] flex-shrink-0" strokeWidth={1.5} />
-      {item.label}
+      <Icon className="w-[22px] h-[22px] flex-shrink-0" strokeWidth={1.5} />
+      <span className={cn('text-[9px] truncate w-full text-center')}>{item.label}</span>
     </Link>
   );
 }
@@ -83,13 +52,12 @@ export function AppSidebar() {
       disabled: !activeCompany,
     },
   ];
-
+  // w-[77px] bg-gradient-to-b from-[#5A43D6] to-[#2B216A] h-full p-1 rounded-[7px]
   return (
-    <aside className="w-[240px] flex-shrink-0 flex flex-col bg-[#F9FAFB] border-r border-border h-screen sticky top-0">
-      <BrandLogo />
-      <nav className="flex-1 p-3 flex flex-col gap-0.5 overflow-y-auto">
-        {navItems.map((item) => (
-          <SidebarNavItem key={item.to} item={item} />
+    <aside className="w-[65px] bg-gradient-to-b from-[#000] to-[#000] h-full p-1 rounded-[7px]">
+      <nav className="flex-1 px-1 py-3 flex flex-col gap-4 overflow-y-auto">
+        {navItems.map((item, index) => (
+          <SidebarNavItem key={item.to+'_'+index} item={item} />
         ))}
       </nav>
     </aside>
