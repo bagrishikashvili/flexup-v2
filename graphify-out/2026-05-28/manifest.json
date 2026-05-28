@@ -1,0 +1,1147 @@
+{
+  "/Users/bacho/Desktop/flexup/package.json": {
+    "mtime": 1779697855.1415267,
+    "ast_hash": "3ec2fb780fbae7b58346ba629d63b5ed",
+    "semantic_hash": "3ec2fb780fbae7b58346ba629d63b5ed"
+  },
+  "/Users/bacho/Desktop/flexup/.claude/settings.local.json": {
+    "mtime": 1779882373.840501,
+    "ast_hash": "04302d7a0532c8cbc1f1d1820cc97737",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/package.json": {
+    "mtime": 1779616959.0068228,
+    "ast_hash": "3f06e740aa60bc164387250ade74f9cd",
+    "semantic_hash": "3f06e740aa60bc164387250ade74f9cd"
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/tsconfig.build.json": {
+    "mtime": 1779616963.274784,
+    "ast_hash": "c874406a1efd29e14525ac2027bacf6b",
+    "semantic_hash": "c874406a1efd29e14525ac2027bacf6b"
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/tsconfig.json": {
+    "mtime": 1779616961.5853896,
+    "ast_hash": "60694ab6c533702d89867b4a6a2e2371",
+    "semantic_hash": "60694ab6c533702d89867b4a6a2e2371"
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/index.ts": {
+    "mtime": 1779617045.8293664,
+    "ast_hash": "f14b4c9b50d2338a23deade7508d502f",
+    "semantic_hash": "f14b4c9b50d2338a23deade7508d502f"
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/types/member.types.ts": {
+    "mtime": 1779617016.2357512,
+    "ast_hash": "5d39bbd71960522a60e33163a616b5c8",
+    "semantic_hash": "5d39bbd71960522a60e33163a616b5c8"
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/types/auth.types.ts": {
+    "mtime": 1779810774.9053085,
+    "ast_hash": "a85a33e4e15ac38c51633cca7b598036",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/types/index.ts": {
+    "mtime": 1779868674.5416043,
+    "ast_hash": "dd589c955e2e534dd3845712404f2fe5",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/types/pagination.types.ts": {
+    "mtime": 1779616993.7944193,
+    "ast_hash": "3871363cbb08cb10dacb8d24019b605a",
+    "semantic_hash": "3871363cbb08cb10dacb8d24019b605a"
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/types/error.types.ts": {
+    "mtime": 1779868669.32816,
+    "ast_hash": "81ae4a2e1dceea2c89e95b746c1890be",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/types/user.types.ts": {
+    "mtime": 1779617008.9095342,
+    "ast_hash": "aceed5fedcc3dc23f214fddcb0f04155",
+    "semantic_hash": "aceed5fedcc3dc23f214fddcb0f04155"
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/types/company.types.ts": {
+    "mtime": 1779617013.6306088,
+    "ast_hash": "6c6b27df3f7f236b165610537089444d",
+    "semantic_hash": "6c6b27df3f7f236b165610537089444d"
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/enums/index.ts": {
+    "mtime": 1779616992.267131,
+    "ast_hash": "3874fbb965f476550d20652c7d917c7a",
+    "semantic_hash": "3874fbb965f476550d20652c7d917c7a"
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/validation/user.schemas.ts": {
+    "mtime": 1779617035.2080154,
+    "ast_hash": "9a030170e87720aba3df06c379bce255",
+    "semantic_hash": "9a030170e87720aba3df06c379bce255"
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/validation/auth.schemas.ts": {
+    "mtime": 1779810774.9056268,
+    "ast_hash": "7e335cc6bc03a2c96eb9fc01b0a3cff4",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/validation/index.ts": {
+    "mtime": 1779868678.8510218,
+    "ast_hash": "a2a5c3f8b11b0e79de48d767d2fb7716",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/validation/company.schemas.ts": {
+    "mtime": 1779617039.8874927,
+    "ast_hash": "e9cf9cfdca43cf15b0bebc50343343fd",
+    "semantic_hash": "e9cf9cfdca43cf15b0bebc50343343fd"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/nest-cli.json": {
+    "mtime": 1779617563.1282604,
+    "ast_hash": "747c2229420b995d13d3c85b5309318d",
+    "semantic_hash": "747c2229420b995d13d3c85b5309318d"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/package.json": {
+    "mtime": 1779868432.8237715,
+    "ast_hash": "8670285e0b6494ca867d3564be9b6342",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/tsconfig.build.json": {
+    "mtime": 1779882656.755521,
+    "ast_hash": "368b5131501d1061e949f270dbe05560",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/tsconfig.json": {
+    "mtime": 1779881978.7003198,
+    "ast_hash": "25c3f17ddacd6c6054b0415867310913",
+    "semantic_hash": "25c3f17ddacd6c6054b0415867310913"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/eslint.config.mjs": {
+    "mtime": 1779537467.4927137,
+    "ast_hash": "1f00e65662d1b92aa60406ece74b9aa7",
+    "semantic_hash": "1f00e65662d1b92aa60406ece74b9aa7"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/prisma/migrations/20260523110832/migration.sql": {
+    "mtime": 1779534512.2617025,
+    "ast_hash": "9632ed79bff9ff04f85a0ab4189ee720",
+    "semantic_hash": "9632ed79bff9ff04f85a0ab4189ee720"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/prisma/migrations/20260525152223_email_verification_token/migration.sql": {
+    "mtime": 1779722543.6800423,
+    "ast_hash": "eed43d8f02e52432fe8e001621c4f518",
+    "semantic_hash": "eed43d8f02e52432fe8e001621c4f518"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/main.ts": {
+    "mtime": 1779644156.3730788,
+    "ast_hash": "b98d28c0f6eb98b337d1102d1593a002",
+    "semantic_hash": "b98d28c0f6eb98b337d1102d1593a002"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/app.module.ts": {
+    "mtime": 1779868878.4271612,
+    "ast_hash": "abfdab714aea83beda4fb7bf8c6fdeb8",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email-verification/email-verification.module.ts": {
+    "mtime": 1779722044.6168609,
+    "ast_hash": "17b1f568a69bc37d11f807ae5aac664c",
+    "semantic_hash": "17b1f568a69bc37d11f807ae5aac664c"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email-verification/email-verification.service.ts": {
+    "mtime": 1779722570.9483485,
+    "ast_hash": "75eba5fcc0217d6b66785765aa6d84df",
+    "semantic_hash": "75eba5fcc0217d6b66785765aa6d84df"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email-verification/email-verification.controller.ts": {
+    "mtime": 1779722570.9483137,
+    "ast_hash": "92efeb811669ba2fb85779585aa5e8ca",
+    "semantic_hash": "92efeb811669ba2fb85779585aa5e8ca"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email-verification/dto/resend-verification.dto.ts": {
+    "mtime": 1779721786.5114987,
+    "ast_hash": "80bdd488d9db8878a59c63849e6b4c0c",
+    "semantic_hash": "80bdd488d9db8878a59c63849e6b4c0c"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email-verification/dto/verify-email.dto.ts": {
+    "mtime": 1779721782.2565053,
+    "ast_hash": "6abd8231d040759a7f33384767acd4db",
+    "semantic_hash": "6abd8231d040759a7f33384767acd4db"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/config/config.module.ts": {
+    "mtime": 1779535694.5875251,
+    "ast_hash": "69bf3f659792b0941dad7450f0b7294d",
+    "semantic_hash": "69bf3f659792b0941dad7450f0b7294d"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/config/config.schema.ts": {
+    "mtime": 1779880322.6529524,
+    "ast_hash": "65b8e069b164a63e8af527a6425ec9fe",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/config/config.service.ts": {
+    "mtime": 1779810774.904057,
+    "ast_hash": "69869d1c5af14e97e2c50b27cc4c6d54",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/redis/redis.module.ts": {
+    "mtime": 1779534884.4417346,
+    "ast_hash": "6d4ac413865adab1ecb57fb4ad09a8eb",
+    "semantic_hash": "6d4ac413865adab1ecb57fb4ad09a8eb"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/redis/redis.service.ts": {
+    "mtime": 1779535034.584133,
+    "ast_hash": "680566582f6e46a31fcfa6da1cb97b76",
+    "semantic_hash": "680566582f6e46a31fcfa6da1cb97b76"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/auth.controller.ts": {
+    "mtime": 1779810774.9033837,
+    "ast_hash": "a28d534f75b9f8bb8ac1d5b5541043f9",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/auth.service.ts": {
+    "mtime": 1779722629.804435,
+    "ast_hash": "f9ae1f7fde57659723fc5f516b7c5752",
+    "semantic_hash": "f9ae1f7fde57659723fc5f516b7c5752"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/auth.module.ts": {
+    "mtime": 1779810774.9035692,
+    "ast_hash": "a4893317dce6ee547e54377e066b66cd",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/dto/login.dto.ts": {
+    "mtime": 1779537289.999129,
+    "ast_hash": "4aa58610b0a5dd01ddc0effe0e270935",
+    "semantic_hash": "4aa58610b0a5dd01ddc0effe0e270935"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/dto/refresh.dto.ts": {
+    "mtime": 1779537293.8205667,
+    "ast_hash": "902fc58749cf970222892969b0330c00",
+    "semantic_hash": "902fc58749cf970222892969b0330c00"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/dto/register.dto.ts": {
+    "mtime": 1779741253.1893294,
+    "ast_hash": "b283ea2d281306e07119f21f1d8b162a",
+    "semantic_hash": "b283ea2d281306e07119f21f1d8b162a"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/types/jwt-payload.interface.ts": {
+    "mtime": 1779617161.5507066,
+    "ast_hash": "27485f1b4b3c87894240ff40d0f49bb6",
+    "semantic_hash": "27485f1b4b3c87894240ff40d0f49bb6"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/decorators/current-user.decorator.ts": {
+    "mtime": 1779537406.5204446,
+    "ast_hash": "b416ea96d926b7731ec820ebcf02f295",
+    "semantic_hash": "b416ea96d926b7731ec820ebcf02f295"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/strategies/jwt.strategy.ts": {
+    "mtime": 1779537428.7022154,
+    "ast_hash": "a6c91c2c8690bc0ee1dd7bc88e78b0f2",
+    "semantic_hash": "a6c91c2c8690bc0ee1dd7bc88e78b0f2"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/guards/roles.guard.ts": {
+    "mtime": 1779617161.5426743,
+    "ast_hash": "5db8ade0b151e66389cce6b916097976",
+    "semantic_hash": "5db8ade0b151e66389cce6b916097976"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/auth/guards/jwt-auth.guard.ts": {
+    "mtime": 1779537406.52022,
+    "ast_hash": "22f072d4bf0580adb549f227939d927f",
+    "semantic_hash": "22f072d4bf0580adb549f227939d927f"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/health/health.service.ts": {
+    "mtime": 1779535034.5841029,
+    "ast_hash": "0a32e93d41a2280d793522ea9ba916bb",
+    "semantic_hash": "0a32e93d41a2280d793522ea9ba916bb"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/health/health.module.ts": {
+    "mtime": 1779534937.2119253,
+    "ast_hash": "2782a9032b82e4c314685beebc386f28",
+    "semantic_hash": "2782a9032b82e4c314685beebc386f28"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/health/health.controller.ts": {
+    "mtime": 1779617496.625804,
+    "ast_hash": "5af0e6f227320c26ca83360d14c43d2e",
+    "semantic_hash": "5af0e6f227320c26ca83360d14c43d2e"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/prisma/prisma.service.ts": {
+    "mtime": 1779535034.5841265,
+    "ast_hash": "ed6ecc7527e599d0d6583c10c32cd91d",
+    "semantic_hash": "ed6ecc7527e599d0d6583c10c32cd91d"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/prisma/prisma.module.ts": {
+    "mtime": 1779534862.2293506,
+    "ast_hash": "0919e9bacc91c9b71beda185fa91912d",
+    "semantic_hash": "0919e9bacc91c9b71beda185fa91912d"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/company-members/company-members.mapper.ts": {
+    "mtime": 1779617246.052989,
+    "ast_hash": "8f3940f04c674c181839fe598a798218",
+    "semantic_hash": "8f3940f04c674c181839fe598a798218"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/company-members/company-members.controller.ts": {
+    "mtime": 1779617579.4577687,
+    "ast_hash": "5a46a91e5821f87cda3643eabc70234d",
+    "semantic_hash": "5a46a91e5821f87cda3643eabc70234d"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/company-members/company-members.service.ts": {
+    "mtime": 1779617669.333448,
+    "ast_hash": "dbca15e054513e63024bdf21de33bd5e",
+    "semantic_hash": "dbca15e054513e63024bdf21de33bd5e"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/company-members/company-members.module.ts": {
+    "mtime": 1779546547.2966092,
+    "ast_hash": "2cc876ee01035b69c377d2fc2b77dcdb",
+    "semantic_hash": "2cc876ee01035b69c377d2fc2b77dcdb"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/company-members/dto/member.response.ts": {
+    "mtime": 1779617161.5713165,
+    "ast_hash": "350f7c7aaa59758efc20cf568b0cc3ef",
+    "semantic_hash": "350f7c7aaa59758efc20cf568b0cc3ef"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/company-members/dto/update-member-role.dto.ts": {
+    "mtime": 1779617161.5686445,
+    "ast_hash": "7d26cadf04e4ce2b266b30129a6cdcc7",
+    "semantic_hash": "7d26cadf04e4ce2b266b30129a6cdcc7"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/company-members/dto/add-member.dto.ts": {
+    "mtime": 1779617161.5656233,
+    "ast_hash": "90a094c11a0dcb1df38684828594269c",
+    "semantic_hash": "90a094c11a0dcb1df38684828594269c"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/filters/all-exceptions.filter.ts": {
+    "mtime": 1779617723.4512832,
+    "ast_hash": "2052e2372f10af92aae7e4a56dc3f58d",
+    "semantic_hash": "2052e2372f10af92aae7e4a56dc3f58d"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/filters/prisma-exception.filter.ts": {
+    "mtime": 1779617358.7264733,
+    "ast_hash": "a1410bac2e90d8d479290d1b840e0fbf",
+    "semantic_hash": "a1410bac2e90d8d479290d1b840e0fbf"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/types/paginated.response.ts": {
+    "mtime": 1779544919.8832302,
+    "ast_hash": "3871363cbb08cb10dacb8d24019b605a",
+    "semantic_hash": "3871363cbb08cb10dacb8d24019b605a"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/decorators/require-company-role.decorator.ts": {
+    "mtime": 1779617161.5605958,
+    "ast_hash": "41c8e3f8b39283c253cfd55249e0ca8e",
+    "semantic_hash": "41c8e3f8b39283c253cfd55249e0ca8e"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/decorators/roles.decorator.ts": {
+    "mtime": 1779617161.5532706,
+    "ast_hash": "458f609a0d88d97fd691382d3f33ba64",
+    "semantic_hash": "458f609a0d88d97fd691382d3f33ba64"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/decorators/current-membership.decorator.ts": {
+    "mtime": 1779617161.557121,
+    "ast_hash": "6997ef3d1f473dce69f4f8adcd57369f",
+    "semantic_hash": "6997ef3d1f473dce69f4f8adcd57369f"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/decorators/public.decorator.ts": {
+    "mtime": 1779534915.022624,
+    "ast_hash": "04ce66f12d6dcfdf76cc0f072fa90b45",
+    "semantic_hash": "04ce66f12d6dcfdf76cc0f072fa90b45"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/utils/auth-cookies.utils.ts": {
+    "mtime": 1779644164.5073872,
+    "ast_hash": "e98c65a19cd9fbbf6aeee461f648e2a8",
+    "semantic_hash": "e98c65a19cd9fbbf6aeee461f648e2a8"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/utils/geo.utils.ts": {
+    "mtime": 1779550626.3190768,
+    "ast_hash": "928605bb4b4b6180339f46fe735cebfb",
+    "semantic_hash": "928605bb4b4b6180339f46fe735cebfb"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/pipes/zod-validation.pipe.ts": {
+    "mtime": 1779617433.876691,
+    "ast_hash": "b17746d41e7edec0ee167025f695cb94",
+    "semantic_hash": "b17746d41e7edec0ee167025f695cb94"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/guards/company-access.guard.ts": {
+    "mtime": 1779617411.029296,
+    "ast_hash": "f68acde912835279f3693604ee1fbbff",
+    "semantic_hash": "f68acde912835279f3693604ee1fbbff"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/common/guards/email-verified.guard.ts": {
+    "mtime": 1779722130.8865457,
+    "ast_hash": "aabb1c0ef9fd6df106542f2bba623d88",
+    "semantic_hash": "aabb1c0ef9fd6df106542f2bba623d88"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/users.service.ts": {
+    "mtime": 1779617190.8153377,
+    "ast_hash": "d323c3030beb918ae83565ce2fa1817b",
+    "semantic_hash": "d323c3030beb918ae83565ce2fa1817b"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/users.controller.ts": {
+    "mtime": 1779617597.3959315,
+    "ast_hash": "8f580a86d37c8bd05b56cb94660d4049",
+    "semantic_hash": "8f580a86d37c8bd05b56cb94660d4049"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/users.module.ts": {
+    "mtime": 1779545155.4500897,
+    "ast_hash": "09fae26d13990e818daf8139cc32eb6e",
+    "semantic_hash": "09fae26d13990e818daf8139cc32eb6e"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/users.mapper.ts": {
+    "mtime": 1779617238.1583507,
+    "ast_hash": "4c73b1e0ca8bb23b0f996e4463e0c7da",
+    "semantic_hash": "4c73b1e0ca8bb23b0f996e4463e0c7da"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/dto/set-user-active.dto.ts": {
+    "mtime": 1779544963.8079786,
+    "ast_hash": "ee77226dc8e55ae1722889e019b7a4b3",
+    "semantic_hash": "ee77226dc8e55ae1722889e019b7a4b3"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/dto/change-phone.dto.ts": {
+    "mtime": 1779544945.4783344,
+    "ast_hash": "613b990bd8086f95f33ddf6fe8f3fd36",
+    "semantic_hash": "613b990bd8086f95f33ddf6fe8f3fd36"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/dto/deactivate-account.dto.ts": {
+    "mtime": 1779544959.969432,
+    "ast_hash": "b9b64756d4488e3a10e437844c75db40",
+    "semantic_hash": "b9b64756d4488e3a10e437844c75db40"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/dto/user-public.response.ts": {
+    "mtime": 1779617161.5760427,
+    "ast_hash": "b5024a4f4f01f4ce5c951c667a652072",
+    "semantic_hash": "b5024a4f4f01f4ce5c951c667a652072"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/dto/change-email.dto.ts": {
+    "mtime": 1779544939.3969135,
+    "ast_hash": "446d22a0cfdf1492af37dbd56d9642a7",
+    "semantic_hash": "446d22a0cfdf1492af37dbd56d9642a7"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/dto/update-profile.dto.ts": {
+    "mtime": 1779544929.897939,
+    "ast_hash": "e473bb5e378a138597cf65252f359ce5",
+    "semantic_hash": "e473bb5e378a138597cf65252f359ce5"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/users/dto/user-list-query.dto.ts": {
+    "mtime": 1779617161.5736015,
+    "ast_hash": "cdb5767de47a31d949f5304b00ba05fb",
+    "semantic_hash": "cdb5767de47a31d949f5304b00ba05fb"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/companies/companies.controller.ts": {
+    "mtime": 1779617575.2865043,
+    "ast_hash": "c70ae20f117b59b8937f0e48a49515d4",
+    "semantic_hash": "c70ae20f117b59b8937f0e48a49515d4"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/companies/companies.mapper.ts": {
+    "mtime": 1779617187.4118154,
+    "ast_hash": "81e4a588909a368ae147a4b3f377d70e",
+    "semantic_hash": "81e4a588909a368ae147a4b3f377d70e"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/companies/companies.service.ts": {
+    "mtime": 1779617661.5840464,
+    "ast_hash": "ccd6bcba9658a73f3620f3dc7bb62b73",
+    "semantic_hash": "ccd6bcba9658a73f3620f3dc7bb62b73"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/companies/companies.module.ts": {
+    "mtime": 1779546474.1561394,
+    "ast_hash": "9375a5bd31eb20c808d2bbeed2bac155",
+    "semantic_hash": "9375a5bd31eb20c808d2bbeed2bac155"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/companies/dto/update-company.dto.ts": {
+    "mtime": 1779546388.526757,
+    "ast_hash": "b200328ee7f0e22c2fcffb4f98729cae",
+    "semantic_hash": "b200328ee7f0e22c2fcffb4f98729cae"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/companies/dto/company-detail.response.ts": {
+    "mtime": 1779546401.0175934,
+    "ast_hash": "d548d18aee9c695bd8d200a78035ba56",
+    "semantic_hash": "d548d18aee9c695bd8d200a78035ba56"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/companies/dto/company-public.response.ts": {
+    "mtime": 1779617161.563247,
+    "ast_hash": "5c60c3f677758ecaa5d6fa9af21dd77a",
+    "semantic_hash": "5c60c3f677758ecaa5d6fa9af21dd77a"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/companies/dto/create-company.dto.ts": {
+    "mtime": 1779546583.5174747,
+    "ast_hash": "d2152a1555de284a9cfa598fe6c6b387",
+    "semantic_hash": "d2152a1555de284a9cfa598fe6c6b387"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/companies/dto/company-list-query.dto.ts": {
+    "mtime": 1779546583.5168192,
+    "ast_hash": "9fc8c12a5f5093cafab2a4eb3db54d6c",
+    "semantic_hash": "9fc8c12a5f5093cafab2a4eb3db54d6c"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email/email.module.ts": {
+    "mtime": 1779721737.7648282,
+    "ast_hash": "3c373910d45528dd4fe3303c22788b00",
+    "semantic_hash": "3c373910d45528dd4fe3303c22788b00"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email/email.service.ts": {
+    "mtime": 1779722590.8873022,
+    "ast_hash": "0dfd998d4ef4d00b1e13f3fcc071c5cf",
+    "semantic_hash": "0dfd998d4ef4d00b1e13f3fcc071c5cf"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email/providers/console.provider.ts": {
+    "mtime": 1779722596.8428748,
+    "ast_hash": "8102fd46d95fe0e6068e8f2c35059066",
+    "semantic_hash": "8102fd46d95fe0e6068e8f2c35059066"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email/providers/smtp.provider.ts": {
+    "mtime": 1779722616.9814816,
+    "ast_hash": "e675180e94698d0a3fa2f19eca09e772",
+    "semantic_hash": "e675180e94698d0a3fa2f19eca09e772"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email/providers/email-provider.interface.ts": {
+    "mtime": 1779721715.6686032,
+    "ast_hash": "0218e3ec9149c81a660488462a336405",
+    "semantic_hash": "0218e3ec9149c81a660488462a336405"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/email/templates/verification-email.template.ts": {
+    "mtime": 1779722570.9485528,
+    "ast_hash": "3ec9c51ca5fdcc4b5e09a96128eb7a3e",
+    "semantic_hash": "3ec9c51ca5fdcc4b5e09a96128eb7a3e"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/tsconfig.node.json": {
+    "mtime": 1779696861.671493,
+    "ast_hash": "bbc85e0f94fe17dbe57d6befd73ef297",
+    "semantic_hash": "bbc85e0f94fe17dbe57d6befd73ef297"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/tsconfig.app.json": {
+    "mtime": 1779697613.4602637,
+    "ast_hash": "d24325db11826634006191cfdd7d7722",
+    "semantic_hash": "d24325db11826634006191cfdd7d7722"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/package.json": {
+    "mtime": 1779697039.3349583,
+    "ast_hash": "64cbb3a0baa62409652d2164c3b30274",
+    "semantic_hash": "64cbb3a0baa62409652d2164c3b30274"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/components.json": {
+    "mtime": 1779696877.454975,
+    "ast_hash": "d55cd0b8baddae1c75d2bedb208a23f7",
+    "semantic_hash": "d55cd0b8baddae1c75d2bedb208a23f7"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/tsconfig.json": {
+    "mtime": 1779696852.5396218,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": "a3d39fa780ebff65444de257f291ce6c"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/eslint.config.js": {
+    "mtime": 1779696883.1393073,
+    "ast_hash": "bf97f809183add447760edac13a4db4f",
+    "semantic_hash": "bf97f809183add447760edac13a4db4f"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/vite.config.ts": {
+    "mtime": 1779703701.0178225,
+    "ast_hash": "c7d83a3ada5981431f62edd26376287d",
+    "semantic_hash": "c7d83a3ada5981431f62edd26376287d"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/main.tsx": {
+    "mtime": 1779697209.556984,
+    "ast_hash": "a5fe54390fa83dc2af19913cb739e8c3",
+    "semantic_hash": "a5fe54390fa83dc2af19913cb739e8c3"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routeTree.gen.ts": {
+    "mtime": 1779869188.6933343,
+    "ast_hash": "43d0d46ae077f84a4a1ab65a91c33661",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/ka/errors.json": {
+    "mtime": 1779722228.4274638,
+    "ast_hash": "b0da1808cc2455aef2aef60b03785ef2",
+    "semantic_hash": "b0da1808cc2455aef2aef60b03785ef2"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/ka/common.json": {
+    "mtime": 1779697111.447082,
+    "ast_hash": "f7103734d1e242e0f4e56e639cf6807c",
+    "semantic_hash": "f7103734d1e242e0f4e56e639cf6807c"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/ka/validation.json": {
+    "mtime": 1779705602.0912044,
+    "ast_hash": "75758f69067d3a1e7e026b65697e2113",
+    "semantic_hash": "75758f69067d3a1e7e026b65697e2113"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/ka/auth.json": {
+    "mtime": 1779810774.9044397,
+    "ast_hash": "feded0d7f0410962499ea6f4bbaafa6d",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/en/errors.json": {
+    "mtime": 1779722217.893243,
+    "ast_hash": "7061a92409ed97bb0be7ad68656dfa5c",
+    "semantic_hash": "7061a92409ed97bb0be7ad68656dfa5c"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/en/common.json": {
+    "mtime": 1779697127.8528981,
+    "ast_hash": "7cbd31316dea35ec8632de3f892cbbc8",
+    "semantic_hash": "7cbd31316dea35ec8632de3f892cbbc8"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/en/validation.json": {
+    "mtime": 1779705595.706486,
+    "ast_hash": "7a687ce0be441c85d8911f1e20226cdf",
+    "semantic_hash": "7a687ce0be441c85d8911f1e20226cdf"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/en/auth.json": {
+    "mtime": 1779810774.904237,
+    "ast_hash": "4af2b3b67dc00053d6e6be524e4c0955",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/auth/stores/auth.store.ts": {
+    "mtime": 1779826379.7997499,
+    "ast_hash": "d681f15b11c25d046ae588e3fe83dca1",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/utils/cn.ts": {
+    "mtime": 1779697075.8840652,
+    "ast_hash": "8595c2f874aa1ff8c7cc28df2999f354",
+    "semantic_hash": "8595c2f874aa1ff8c7cc28df2999f354"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/LanguageSwitcher.tsx": {
+    "mtime": 1779697140.35846,
+    "ast_hash": "d9b919ae3f2f6f70b76a027cbe6e0499",
+    "semantic_hash": "d9b919ae3f2f6f70b76a027cbe6e0499"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/card.tsx": {
+    "mtime": 1779701572.249347,
+    "ast_hash": "657c5449ba3d43bf1c4ad511946496ef",
+    "semantic_hash": "657c5449ba3d43bf1c4ad511946496ef"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/label.tsx": {
+    "mtime": 1779697407.6504714,
+    "ast_hash": "f7fd05765778b771e18a5b54a0815cf2",
+    "semantic_hash": "f7fd05765778b771e18a5b54a0815cf2"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/sonner.tsx": {
+    "mtime": 1779697407.6517458,
+    "ast_hash": "b54909b98d4ffa8ba6c6835bc04ac732",
+    "semantic_hash": "b54909b98d4ffa8ba6c6835bc04ac732"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/alert.tsx": {
+    "mtime": 1779697407.6435843,
+    "ast_hash": "1dd84cea468fb326234aa5117f993c8c",
+    "semantic_hash": "1dd84cea468fb326234aa5117f993c8c"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/avatar.tsx": {
+    "mtime": 1779697407.6441708,
+    "ast_hash": "e2f468d9439f7ef7429e186c021c3daa",
+    "semantic_hash": "e2f468d9439f7ef7429e186c021c3daa"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/separator.tsx": {
+    "mtime": 1779697407.65085,
+    "ast_hash": "ade1dd75f44ac0087de116eb79303a4b",
+    "semantic_hash": "ade1dd75f44ac0087de116eb79303a4b"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/button.tsx": {
+    "mtime": 1779704011.8891294,
+    "ast_hash": "fc91ec89b71425912fe3ae55a014c971",
+    "semantic_hash": "fc91ec89b71425912fe3ae55a014c971"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/dropdown-menu.tsx": {
+    "mtime": 1779697407.6477606,
+    "ast_hash": "10ed91f46e13b83be5b4439bc677f206",
+    "semantic_hash": "10ed91f46e13b83be5b4439bc677f206"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/input.tsx": {
+    "mtime": 1779706541.8399186,
+    "ast_hash": "a7b22c5553c861a75da3ceb55e0a0be6",
+    "semantic_hash": "a7b22c5553c861a75da3ceb55e0a0be6"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/skeleton.tsx": {
+    "mtime": 1779697407.6511269,
+    "ast_hash": "2391927c1934af56a2295cce50e17507",
+    "semantic_hash": "2391927c1934af56a2295cce50e17507"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/ui/form.tsx": {
+    "mtime": 1779705843.3702168,
+    "ast_hash": "0274edd1278ed331d8ee44438858a729",
+    "semantic_hash": "0274edd1278ed331d8ee44438858a729"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/api/errors.ts": {
+    "mtime": 1779697098.9492862,
+    "ast_hash": "259825c2f0edf75a0595b409297e2cd7",
+    "semantic_hash": "259825c2f0edf75a0595b409297e2cd7"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/api/refresh-interceptor.ts": {
+    "mtime": 1779697097.9229994,
+    "ast_hash": "278ffe79b259f2d723ce84f3f65d52fb",
+    "semantic_hash": "278ffe79b259f2d723ce84f3f65d52fb"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/api/client.ts": {
+    "mtime": 1779824363.7953668,
+    "ast_hash": "e721b61c425bab41ae6bb7815f92cb4d",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/lib/query-client.ts": {
+    "mtime": 1779827208.6387255,
+    "ast_hash": "c588aa4b4ec604028a258d5cb539c61d",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/lib/router.ts": {
+    "mtime": 1779697157.165895,
+    "ast_hash": "f5a9019f68c9ac4dc6b441909b6b4ba1",
+    "semantic_hash": "f5a9019f68c9ac4dc6b441909b6b4ba1"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/lib/i18n.ts": {
+    "mtime": 1779868987.2320108,
+    "ast_hash": "22c4c3a1082481cb42d1c8e2c4e1588e",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/lib/zod-error-map.ts": {
+    "mtime": 1779741004.255245,
+    "ast_hash": "945b2a296a2bd1e06ba988067a3d8c22",
+    "semantic_hash": "945b2a296a2bd1e06ba988067a3d8c22"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/lib/zod-resolver.ts": {
+    "mtime": 1779740791.0791738,
+    "ast_hash": "d503e0a2a58ddc9fd7a4b21074b3e488",
+    "semantic_hash": "d503e0a2a58ddc9fd7a4b21074b3e488"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/index.tsx": {
+    "mtime": 1779824363.7952049,
+    "ast_hash": "be1113b25e74cbaef97069ad8021a661",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/__root.tsx": {
+    "mtime": 1779697168.8807752,
+    "ast_hash": "fef9bb631ef264d17c8d09823b55a012",
+    "semantic_hash": "fef9bb631ef264d17c8d09823b55a012"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/dashboard.tsx": {
+    "mtime": 1779722356.0951781,
+    "ast_hash": "864e198efc9046faf5d1df989332dca8",
+    "semantic_hash": "864e198efc9046faf5d1df989332dca8"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/auth/verify-gate.tsx": {
+    "mtime": 1779722315.7194839,
+    "ast_hash": "963dfcc7a3195a2f743daf75c9b849ab",
+    "semantic_hash": "963dfcc7a3195a2f743daf75c9b849ab"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/auth/login.tsx": {
+    "mtime": 1779824363.7950454,
+    "ast_hash": "9f93b7174dc17be24be54b57b15006af",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/auth/register.tsx": {
+    "mtime": 1779741240.4940484,
+    "ast_hash": "fe0a24b435da21ed3b5ef898d77bc2ee",
+    "semantic_hash": "fe0a24b435da21ed3b5ef898d77bc2ee"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/auth/verify-email.tsx": {
+    "mtime": 1779722331.2182677,
+    "ast_hash": "5ec26c91003c42483b7db870e8c16179",
+    "semantic_hash": "5ec26c91003c42483b7db870e8c16179"
+  },
+  "/Users/bacho/Desktop/flexup/README.md": {
+    "mtime": 1779536024.6108015,
+    "ast_hash": "0319734acafc2e89d88db62ab9b90aa5",
+    "semantic_hash": "0319734acafc2e89d88db62ab9b90aa5"
+  },
+  "/Users/bacho/Desktop/flexup/docker-compose.yml": {
+    "mtime": 1779721697.2435112,
+    "ast_hash": "9b67ac6fcdce54a653a7a91b67e8327a",
+    "semantic_hash": "9b67ac6fcdce54a653a7a91b67e8327a"
+  },
+  "/Users/bacho/Desktop/flexup/DESIGN.md": {
+    "mtime": 1779701149.2090526,
+    "ast_hash": "c765670b79c553770b465fd1fd08b86c",
+    "semantic_hash": "c765670b79c553770b465fd1fd08b86c"
+  },
+  "/Users/bacho/Desktop/flexup/CLAUDE.md": {
+    "mtime": 1779806273.7915685,
+    "ast_hash": "b771e81e82fda922c6dd4bed2c156ecf",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/.claude/skills/handoff/SKILL.md": {
+    "mtime": 1779528518.5341532,
+    "ast_hash": "335946abcbfe3d58f55671c30afca234",
+    "semantic_hash": "335946abcbfe3d58f55671c30afca234"
+  },
+  "/Users/bacho/Desktop/flexup/docs/ARCHITECTURE.md": {
+    "mtime": 1779880383.564336,
+    "ast_hash": "bdadd5a870305ebd0ca28dbf3783ed54",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/docs/tasks/TASK_BATCH_1_3.md": {
+    "mtime": 1779541420.0511062,
+    "ast_hash": "0c3354436279b8088beddef8b0352473",
+    "semantic_hash": "0c3354436279b8088beddef8b0352473"
+  },
+  "/Users/bacho/Desktop/flexup/docs/tasks/TASK_BATCH_2_1.md": {
+    "mtime": 1779546160.800902,
+    "ast_hash": "a48eaf8008b512d98b32d3324279b936",
+    "semantic_hash": "a48eaf8008b512d98b32d3324279b936"
+  },
+  "/Users/bacho/Desktop/flexup/docs/tasks/TASK_BATCH_1_2.md": {
+    "mtime": 1779537116.0642831,
+    "ast_hash": "e53dc8d9d02f5540e4efbf9ce0acb700",
+    "semantic_hash": "e53dc8d9d02f5540e4efbf9ce0acb700"
+  },
+  "/Users/bacho/Desktop/flexup/docs/tasks/TASK_BATCH_2_2.md": {
+    "mtime": 1779550556.9414375,
+    "ast_hash": "4f5149583e34a9856ada7c0d8f3b016e",
+    "semantic_hash": "4f5149583e34a9856ada7c0d8f3b016e"
+  },
+  "/Users/bacho/Desktop/flexup/docs/tasks/TASK_BATCH_1_1.md": {
+    "mtime": 1779534692.948299,
+    "ast_hash": "51d92aed61c71dff9c93a808974f6a45",
+    "semantic_hash": "51d92aed61c71dff9c93a808974f6a45"
+  },
+  "/Users/bacho/Desktop/flexup/docs/tasks/TASK_BATCH_2_Y.md": {
+    "mtime": 1779643561.198898,
+    "ast_hash": "c4e374a5cd98955cfaddcade9bfe745b",
+    "semantic_hash": "c4e374a5cd98955cfaddcade9bfe745b"
+  },
+  "/Users/bacho/Desktop/flexup/docs/tasks/TASK_BATCH_F1_1.md": {
+    "mtime": 1779696560.0799158,
+    "ast_hash": "12e57ea03f5e82cc8fb5450c5108dded",
+    "semantic_hash": "12e57ea03f5e82cc8fb5450c5108dded"
+  },
+  "/Users/bacho/Desktop/flexup/docs/tasks/TASK_BATCH_2Z_F1_2.md": {
+    "mtime": 1779741356.6434941,
+    "ast_hash": "d7266ebcc04eb05bac1bb038af4fe606",
+    "semantic_hash": "d7266ebcc04eb05bac1bb038af4fe606"
+  },
+  "/Users/bacho/Desktop/flexup/docs/tasks/TASK_BATCH_2_X.md": {
+    "mtime": 1779616717.1375036,
+    "ast_hash": "25c1822bedaff2a1963da3554f259891",
+    "semantic_hash": "25c1822bedaff2a1963da3554f259891"
+  },
+  "/Users/bacho/Desktop/flexup/docs/routes/locations.md": {
+    "mtime": 1779550799.5505943,
+    "ast_hash": "3a5e4db2b8195d096fc5eaaf9fb9bad9",
+    "semantic_hash": "3a5e4db2b8195d096fc5eaaf9fb9bad9"
+  },
+  "/Users/bacho/Desktop/flexup/docs/routes/companies.md": {
+    "mtime": 1779546673.6528234,
+    "ast_hash": "e6071ba7a1ee2079b9748e6315e33c8b",
+    "semantic_hash": "e6071ba7a1ee2079b9748e6315e33c8b"
+  },
+  "/Users/bacho/Desktop/flexup/docs/routes/README.md": {
+    "mtime": 1779617820.2033832,
+    "ast_hash": "d062c9ebf401dbb9152dcda56885c5bf",
+    "semantic_hash": "d062c9ebf401dbb9152dcda56885c5bf"
+  },
+  "/Users/bacho/Desktop/flexup/docs/routes/users.md": {
+    "mtime": 1779545684.570504,
+    "ast_hash": "43fd15511b27fdaf29dcda48d3d78d90",
+    "semantic_hash": "43fd15511b27fdaf29dcda48d3d78d90"
+  },
+  "/Users/bacho/Desktop/flexup/docs/routes/auth.md": {
+    "mtime": 1779644196.2564561,
+    "ast_hash": "8432d91f571044263eaeea0ded3342e7",
+    "semantic_hash": "8432d91f571044263eaeea0ded3342e7"
+  },
+  "/Users/bacho/Desktop/flexup/docs/routes/company-members.md": {
+    "mtime": 1779546692.45514,
+    "ast_hash": "d8080d0bbe1f98ac95aba06eddf34733",
+    "semantic_hash": "d8080d0bbe1f98ac95aba06eddf34733"
+  },
+  "/Users/bacho/Desktop/flexup/docs/routes/health.md": {
+    "mtime": 1779545634.1066031,
+    "ast_hash": "d10d3b5828d9bf133861a46aab12cea8",
+    "semantic_hash": "d10d3b5828d9bf133861a46aab12cea8"
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/index.html": {
+    "mtime": 1779701498.2868829,
+    "ast_hash": "8d3af71fe455be18e3af216a247dc0aa",
+    "semantic_hash": "8d3af71fe455be18e3af216a247dc0aa"
+  },
+  "/Users/bacho/Desktop/flexup/.claude/settings.json": {
+    "mtime": 1779806273.7918491,
+    "ast_hash": "87f0d903477984d0587a02f8fe185263",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/graphify-out/memory/query_20260526_143500_\u10e0\u10dd\u10d2\u10dd\u10e0_\u10db\u10e3\u10e8\u10d0\u10dd\u10d1\u10e1_authentication.md": {
+    "mtime": 1779806100.35185,
+    "ast_hash": "698a0b69e5f09f9d7c18e8062b3b73c9",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/prisma/migrations/20260526154259_password_reset_token/migration.sql": {
+    "mtime": 1779810179.890936,
+    "ast_hash": "b0f8a1e9c4545e5a920dfb42cb33e7b2",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/ka/navigation.json": {
+    "mtime": 1779868965.5890715,
+    "ast_hash": "9613c5accf629d324535fa4da0eb7cc1",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/ka/companies.json": {
+    "mtime": 1779823941.2950711,
+    "ast_hash": "355e711d7a2359947741f7707423dabd",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/en/navigation.json": {
+    "mtime": 1779868969.5474284,
+    "ast_hash": "d8afb6182aa4f96b49c47b2b0ca31557",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/en/companies.json": {
+    "mtime": 1779823959.7591507,
+    "ast_hash": "2fb326bfe41eb440ff2d4eb8d53be26e",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/stores/company.store.ts": {
+    "mtime": 1779823842.3437397,
+    "ast_hash": "a936716b93790fd894c2109a235c085b",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/components/CompanyCard.tsx": {
+    "mtime": 1779824078.400485,
+    "ast_hash": "3a7270c7cb666c8a5fe53564d4d1651d",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/components/CompanyCreateForm.tsx": {
+    "mtime": 1779824117.7328577,
+    "ast_hash": "a5617e343e19cf49e51698152c8b0b70",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/components/CompanyEditForm.tsx": {
+    "mtime": 1779824135.2387621,
+    "ast_hash": "e2fad2b9fde8af364104932d2cc43383",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/components/CompanySelector.tsx": {
+    "mtime": 1779824097.8792171,
+    "ast_hash": "28ab312228d4293de1b9206b2f542876",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/components/CompanyLogoUploader.tsx": {
+    "mtime": 1779824154.7333758,
+    "ast_hash": "a1b100ac328bb83385cef8541c63a3b7",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/components/CompanyRoleBadge.tsx": {
+    "mtime": 1779824063.121114,
+    "ast_hash": "013f17bbd3c772e20a2c940575209996",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/components/CompanyEmptyState.tsx": {
+    "mtime": 1779824087.0934682,
+    "ast_hash": "21107ae713b6071de28de485d12be91b",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/hooks/useActiveCompany.ts": {
+    "mtime": 1779827186.2426689,
+    "ast_hash": "2c58bd1555d81311df46e5947f3d51da",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/hooks/useCompanyPermissions.ts": {
+    "mtime": 1779823896.664406,
+    "ast_hash": "7bbba7aebc319fda5eb80efc004ddd97",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/api/companies.queries.ts": {
+    "mtime": 1779823859.2204733,
+    "ast_hash": "6cb8f48f62cf32d76e1df8134f96a364",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/companies/api/companies.api.ts": {
+    "mtime": 1779827193.7828484,
+    "ast_hash": "3475dd8e37e808d7d841034644ce473b",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/layout/AppTopbar.tsx": {
+    "mtime": 1779824024.5933146,
+    "ast_hash": "e816c798a8700508fb0aec21ebd2d58a",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/layout/AppShell.tsx": {
+    "mtime": 1779824030.552179,
+    "ast_hash": "0001f0bf8b14226bad286e3394a23f2e",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/layout/AppSidebar.tsx": {
+    "mtime": 1779869239.8583653,
+    "ast_hash": "aafb6d516fc43b78043b43a5289d64f0",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app.tsx": {
+    "mtime": 1779824177.696564,
+    "ast_hash": "e200dc0875b0866c00fdbe7c9d4ba66e",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app/index.tsx": {
+    "mtime": 1779826068.900558,
+    "ast_hash": "6d7d3aa23c1a5858fe4159715965e771",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app/companies/index.tsx": {
+    "mtime": 1779824221.4451215,
+    "ast_hash": "a97fe46caf5b1dc13c1c89d19391c399",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app/companies/new.tsx": {
+    "mtime": 1779824230.0761795,
+    "ast_hash": "abb1ba0140e70f5aee0538e5398da0e5",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app/companies/$companyId/settings.tsx": {
+    "mtime": 1779824289.6920574,
+    "ast_hash": "cf89dd773972348667e02d62f315868f",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app/companies/$companyId/index.tsx": {
+    "mtime": 1779869256.005395,
+    "ast_hash": "bc46ea440e4c5fbbde5a7af5dd66dad6",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app/onboarding/company.tsx": {
+    "mtime": 1779862618.3003285,
+    "ast_hash": "9d3d8dde97039cf8acbe4aa55ac164c6",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/TASK_BATCH_F2_1_COMPANIES_FRONTEND.md": {
+    "mtime": 1779823572.3207414,
+    "ast_hash": "8b73c43210055f8510c18dabb446a787",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/types/job-posting.types.ts": {
+    "mtime": 1779868654.6527262,
+    "ast_hash": "f65756136b3d3ce1559eba65c8a92b55",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/types/reference-data.types.ts": {
+    "mtime": 1779868645.4181678,
+    "ast_hash": "3bf52be92a4f7b50530af5c03aeac668",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/packages/shared/src/validation/job-posting.schemas.ts": {
+    "mtime": 1779868696.714573,
+    "ast_hash": "9d5cc61a94f181f81ccd379492a0470e",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/prisma/migrations/20260527075117_remove_locations/migration.sql": {
+    "mtime": 1779868277.8103795,
+    "ast_hash": "69624c839110915d2439d32bfed360e7",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/prisma/migrations/20260527075228_job_postings_and_reference_data/migration.sql": {
+    "mtime": 1779868348.46972,
+    "ast_hash": "10571dddb316c9e50f55757e4bb712d6",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/prisma/seed/reference-data.ts": {
+    "mtime": 1779868424.3753633,
+    "ast_hash": "1350608e988507f285978315022a9628",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/job-postings/job-postings.controller.ts": {
+    "mtime": 1779880322.65292,
+    "ast_hash": "101180e0262842f7e1ff6e23cb4829d4",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/job-postings/job-postings.service.ts": {
+    "mtime": 1779880322.653061,
+    "ast_hash": "e3c0c3af280f59a589ebe7fc99a08ed1",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/job-postings/job-postings.mapper.ts": {
+    "mtime": 1779880322.6529272,
+    "ast_hash": "7082c80829c720e0e8b047ec38e07e01",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/job-postings/job-postings.module.ts": {
+    "mtime": 1779868857.9747665,
+    "ast_hash": "9a2676a62ff143200c658b600738795a",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/job-postings/dto/set-archived.dto.ts": {
+    "mtime": 1779868779.4402304,
+    "ast_hash": "8913a48bda321ee32b1a55e24e431dd7",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/job-postings/dto/job-posting-list-query.dto.ts": {
+    "mtime": 1779880322.6528971,
+    "ast_hash": "bf8971c13a8d701c9aca9ef6ed77c74f",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/job-postings/dto/create-job-posting.dto.ts": {
+    "mtime": 1779868763.3991401,
+    "ast_hash": "7ec005332a64e0423decf61582f8b99e",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/job-postings/dto/update-job-posting.dto.ts": {
+    "mtime": 1779880336.8899488,
+    "ast_hash": "741981cce1a11f42b72f989499760c74",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/reference-data/reference-data.module.ts": {
+    "mtime": 1779868734.948479,
+    "ast_hash": "0aa7267ae64a65689c908e104a1797b8",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/reference-data/reference-data.controller.ts": {
+    "mtime": 1779868750.9031136,
+    "ast_hash": "556facbc1399c317ac29b010f1f37c65",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/src/reference-data/reference-data.service.ts": {
+    "mtime": 1779868723.451421,
+    "ast_hash": "21b23b87c8d40e75722a22e552c3ab24",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/ka/jobs.json": {
+    "mtime": 1779868916.0727932,
+    "ast_hash": "6911156adc58a474a2984f5c19689729",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/locales/en/jobs.json": {
+    "mtime": 1779868926.1488485,
+    "ast_hash": "af6e8487840d82ddbf8970c3153a2938",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/jobs/components/JobPostingForm.tsx": {
+    "mtime": 1779869289.7556212,
+    "ast_hash": "920722e3fb53d3fee703703db3d5626e",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/jobs/api/reference-data.api.ts": {
+    "mtime": 1779869035.3142037,
+    "ast_hash": "761dfe4b6b7704ed823c8350db0c4a34",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/jobs/api/jobs.queries.ts": {
+    "mtime": 1779869061.1978388,
+    "ast_hash": "9f359775834d5e427da2c6f56a62a5b3",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/features/jobs/api/jobs.api.ts": {
+    "mtime": 1779869076.0686636,
+    "ast_hash": "fea7d54235d3d120700e15452d135b6b",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/components/AddressAutocomplete.tsx": {
+    "mtime": 1779869357.1843774,
+    "ast_hash": "3b21117a0258895f870352b0e94ac8da",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/shared/hooks/useDebounce.ts": {
+    "mtime": 1779869009.8036034,
+    "ast_hash": "dbbfbe0a3f97801705e75449550f4893",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app/companies/$companyId/jobs/index.tsx": {
+    "mtime": 1779869134.1196194,
+    "ast_hash": "5e5b818dceb42fb1e120e3c8790cedce",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app/companies/$companyId/jobs/new.tsx": {
+    "mtime": 1779869307.0655458,
+    "ast_hash": "f05e64a14c214b1e0802dcbec6b5b8b0",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app/companies/$companyId/jobs/$jobId/index.tsx": {
+    "mtime": 1779869173.7245,
+    "ast_hash": "c7dbf8b3d663aa1c059f199e1e973f42",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-web/src/routes/app/companies/$companyId/jobs/$jobId/edit.tsx": {
+    "mtime": 1779869188.5488071,
+    "ast_hash": "e4dddb34f3cce7524a13d0b3c68a253b",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/docs/tasks/TASK_BATCH_3_0.md": {
+    "mtime": 1779867771.1112216,
+    "ast_hash": "628cdf291527f8e300c1bc013e7ecfe1",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/prisma/seed/reference-data.d.ts": {
+    "mtime": 1779881962.2550824,
+    "ast_hash": "e2ebd7ddedcadeeadbf819c35985c768",
+    "semantic_hash": ""
+  },
+  "/Users/bacho/Desktop/flexup/apps/flexup-backend/prisma/seed/reference-data.js": {
+    "mtime": 1779881962.2546306,
+    "ast_hash": "40bb3a662b9b03e3ff0dc8c23dcffc08",
+    "semantic_hash": ""
+  }
+}

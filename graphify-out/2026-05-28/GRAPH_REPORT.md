@@ -1,16 +1,16 @@
-# Graph Report - flexup  (2026-05-28)
+# Graph Report - flexup  (2026-05-27)
 
 ## Corpus Check
-- 228 files · ~80,911 words
+- 227 files · ~80,967 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1888 nodes · 2438 edges · 155 communities (124 shown, 31 thin omitted)
+- 1887 nodes · 2438 edges · 154 communities (123 shown, 31 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 48 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c7ef9de1`
+- Built from commit: `56358a7e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -197,7 +197,7 @@
 - **Multi-tenant Access Control: CompanyAccessGuard + Role Hierarchy + Admin Bypass** — concept_company_access_guard, concept_require_company_role, adr_022_admin_bypass [EXTRACTED 0.95]
 - **Frontend Auth Flow: Zustand Store + Bootstrap + Verify Gate** — concept_zustand_auth_store, concept_auth_bootstrap, concept_verify_gate_route [INFERRED 0.85]
 
-## Communities (155 total, 31 thin omitted)
+## Communities (154 total, 31 thin omitted)
 
 ### Community 0 - "Backend NestJS Core"
 Cohesion: 0.19
@@ -500,7 +500,7 @@ Cohesion: 0.03
 Nodes (62): active, changeLogo, comingSoon, companyCreated, companyDeactivated, companyName, companyNamePlaceholder, companyUpdated (+54 more)
 
 ### Community 98 - "Community 98"
-Cohesion: 0.08
+Cohesion: 0.07
 Nodes (20): createCompany(), getMyCompanies(), removeCompanyLogo(), updateCompany(), uploadCompanyLogo(), companyQueryKeys, CompanyCreateForm(), CompanyCreateFormProps (+12 more)
 
 ### Community 99 - "Community 99"
@@ -672,7 +672,7 @@ Cohesion: 0.50
 Nodes (3): Route, searchSchema, VerifyState
 
 ## Knowledge Gaps
-- **1110 isolated node(s):** `ALLOWED_LOGO_MIME`, `AppShellProps`, `NavItem`, `AppTopbarProps`, `buttonVariants` (+1105 more)
+- **1110 isolated node(s):** `client_1`, `extends`, `rootDir`, `tsBuildInfoFile`, `exclude` (+1105 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -680,12 +680,12 @@ Nodes (3): Route, searchSchema, VerifyState
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `T` connect `ADRs — Guard & Geo Decisions` to `Community 51`, `Community 93`, `Community 94`?**
-  _High betweenness centrality (0.042) - this node is a cross-community bridge._
-- **Why does `AppConfigService` connect `App Config & Bootstrap` to `User Profile DTOs`, `Companies Module`, `Community 131`, `Email Verification Controller`, `Auth Module`, `Community 51`, `Community 118`, `Community 58`, `Community 124`, `Community 125`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **Why does `PrismaService` connect `App Config & Bootstrap` to `Backend NestJS Core`, `User Profile DTOs`, `Companies Module`, `Company Members Access Control`, `Community 51`, `Community 118`, `Community 90`, `Community 125`, `Config & Email Templates`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
-- **What connects `ALLOWED_LOGO_MIME`, `AppShellProps`, `NavItem` to the rest of the system?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `AppConfigService` connect `App Config & Bootstrap` to `User Profile DTOs`, `Community 131`, `Companies Module`, `Email Verification Controller`, `Auth Module`, `Community 51`, `Community 118`, `Community 58`, `Community 124`, `Community 125`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **What connects `client_1`, `extends`, `rootDir` to the rest of the system?**
   _1110 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Frontend Auth & Forms` be split into smaller, more focused modules?**
   _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._

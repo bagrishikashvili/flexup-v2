@@ -89,400 +89,94 @@
   },
   "nodes": [
     {
-      "label": "companies.service.ts",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L1",
-      "id": "apps_flexup_backend_src_companies_companies_service_ts",
-      "community": 3,
-      "norm_label": "companies.service.ts"
-    },
-    {
-      "label": "ALLOWED_LOGO_MIME",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L23",
-      "id": "companies_companies_service_allowed_logo_mime",
-      "community": 3,
-      "norm_label": "allowed_logo_mime"
-    },
-    {
-      "label": "CompaniesService",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L26",
-      "id": "companies_companies_service_companiesservice",
-      "community": 3,
-      "norm_label": "companiesservice"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L29",
-      "id": "companies_companies_service_companiesservice_constructor",
-      "community": 12,
-      "norm_label": ".constructor()"
-    },
-    {
-      "label": ".create()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L36",
-      "id": "companies_companies_service_companiesservice_create",
-      "community": 3,
-      "norm_label": ".create()"
-    },
-    {
-      "label": ".findUserCompanies()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L76",
-      "id": "companies_companies_service_companiesservice_findusercompanies",
-      "community": 3,
-      "norm_label": ".findusercompanies()"
-    },
-    {
-      "label": ".findById()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L87",
-      "id": "companies_companies_service_companiesservice_findbyid",
-      "community": 3,
-      "norm_label": ".findbyid()"
-    },
-    {
-      "label": ".update()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L107",
-      "id": "companies_companies_service_companiesservice_update",
-      "community": 3,
-      "norm_label": ".update()"
-    },
-    {
-      "label": ".deactivate()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L134",
-      "id": "companies_companies_service_companiesservice_deactivate",
-      "community": 3,
-      "norm_label": ".deactivate()"
-    },
-    {
-      "label": ".uploadLogo()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L144",
-      "id": "companies_companies_service_companiesservice_uploadlogo",
-      "community": 3,
-      "norm_label": ".uploadlogo()"
-    },
-    {
-      "label": ".removeLogo()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L200",
-      "id": "companies_companies_service_companiesservice_removelogo",
-      "community": 3,
-      "norm_label": ".removelogo()"
-    },
-    {
-      "label": ".listAll()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L218",
-      "id": "companies_companies_service_companiesservice_listall",
-      "community": 3,
-      "norm_label": ".listall()"
-    },
-    {
-      "label": ".verifyCompany()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L255",
-      "id": "companies_companies_service_companiesservice_verifycompany",
-      "community": 3,
-      "norm_label": ".verifycompany()"
-    },
-    {
-      "label": ".setActive()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L267",
-      "id": "companies_companies_service_companiesservice_setactive",
-      "community": 3,
-      "norm_label": ".setactive()"
-    },
-    {
-      "label": ".requireCompany()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L284",
-      "id": "companies_companies_service_companiesservice_requirecompany",
-      "community": 3,
-      "norm_label": ".requirecompany()"
-    },
-    {
-      "label": ".deleteLogoFile()",
-      "file_type": "code",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L294",
-      "id": "companies_companies_service_companiesservice_deletelogofile",
-      "community": 3,
-      "norm_label": ".deletelogofile()"
-    },
-    {
-      "label": "CompanySelector.tsx",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
-      "source_location": "L1",
-      "id": "apps_flexup_web_src_features_companies_components_companyselector_tsx",
-      "community": 98,
-      "norm_label": "companyselector.tsx"
-    },
-    {
-      "label": "CompanySelector()",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
-      "source_location": "L14",
-      "id": "components_companyselector_companyselector",
-      "community": 98,
-      "norm_label": "companyselector()"
-    },
-    {
-      "label": "AppShell.tsx",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
-      "source_location": "L1",
-      "id": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
-      "community": 98,
-      "norm_label": "appshell.tsx"
-    },
-    {
-      "label": "AppShellProps",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
-      "source_location": "L4",
-      "id": "layout_appshell_appshellprops",
-      "community": 98,
-      "norm_label": "appshellprops"
-    },
-    {
-      "label": "AppShell()",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
-      "source_location": "L8",
-      "id": "layout_appshell_appshell",
-      "community": 98,
-      "norm_label": "appshell()"
-    },
-    {
-      "label": "AppSidebar.tsx",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
-      "source_location": "L1",
-      "id": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx",
-      "community": 98,
-      "norm_label": "appsidebar.tsx"
-    },
-    {
-      "label": "NavItem",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
-      "source_location": "L7",
-      "id": "layout_appsidebar_navitem",
-      "community": 98,
-      "norm_label": "navitem"
-    },
-    {
-      "label": "SidebarNavItem()",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
-      "source_location": "L15",
-      "id": "layout_appsidebar_sidebarnavitem",
-      "community": 98,
-      "norm_label": "sidebarnavitem()"
-    },
-    {
-      "label": "AppSidebar()",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
-      "source_location": "L35",
-      "id": "layout_appsidebar_appsidebar",
-      "community": 98,
-      "norm_label": "appsidebar()"
-    },
-    {
-      "label": "AppTopbar.tsx",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
-      "source_location": "L1",
-      "id": "apps_flexup_web_src_shared_components_layout_apptopbar_tsx",
-      "community": 98,
-      "norm_label": "apptopbar.tsx"
-    },
-    {
-      "label": "AppTopbarProps",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
-      "source_location": "L10",
-      "id": "layout_apptopbar_apptopbarprops",
-      "community": 98,
-      "norm_label": "apptopbarprops"
-    },
-    {
-      "label": "AppTopbar()",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
-      "source_location": "L12",
-      "id": "layout_apptopbar_apptopbar",
-      "community": 98,
-      "norm_label": "apptopbar()"
-    },
-    {
-      "label": "button.tsx",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
-      "source_location": "L1",
-      "id": "apps_flexup_web_src_shared_components_ui_button_tsx",
-      "community": 19,
-      "norm_label": "button.tsx"
-    },
-    {
-      "label": "buttonVariants",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
-      "source_location": "L7",
-      "id": "ui_button_buttonvariants",
-      "community": 19,
-      "norm_label": "buttonvariants"
-    },
-    {
-      "label": "ButtonProps",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
-      "source_location": "L40",
-      "id": "ui_button_buttonprops",
-      "community": 19,
-      "norm_label": "buttonprops"
-    },
-    {
-      "label": "Button",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
-      "source_location": "L46",
-      "id": "ui_button_button",
-      "community": 19,
-      "norm_label": "button"
-    },
-    {
-      "label": "select.tsx",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/ui/select.tsx",
-      "source_location": "L1",
-      "id": "apps_flexup_web_src_shared_components_ui_select_tsx",
-      "community": 154,
-      "norm_label": "select.tsx"
-    },
-    {
-      "label": "DataSelect()",
-      "file_type": "code",
-      "source_file": "apps/flexup-web/src/shared/components/ui/select.tsx",
-      "source_location": "L6",
-      "id": "ui_select_dataselect",
-      "community": 154,
-      "norm_label": "dataselect()"
-    },
-    {
       "label": "reference-data.d.ts",
       "file_type": "code",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.d.ts",
       "source_location": "L1",
+      "id": "apps_flexup_backend_prisma_seed_reference_data_d_ts",
       "community": 151,
-      "norm_label": "reference-data.d.ts",
-      "id": "apps_flexup_backend_prisma_seed_reference_data_d_ts"
+      "norm_label": "reference-data.d.ts"
     },
     {
       "label": "reference-data.js",
       "file_type": "code",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L1",
+      "id": "apps_flexup_backend_prisma_seed_reference_data_js",
       "community": 129,
-      "norm_label": "reference-data.js",
-      "id": "apps_flexup_backend_prisma_seed_reference_data_js"
+      "norm_label": "reference-data.js"
     },
     {
       "label": "client_1",
       "file_type": "code",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L3",
+      "id": "seed_reference_data_client_1",
       "community": 129,
-      "norm_label": "client_1",
-      "id": "seed_reference_data_client_1"
+      "norm_label": "client_1"
     },
     {
       "label": "prisma",
       "file_type": "code",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L4",
+      "id": "seed_reference_data_prisma",
       "community": 129,
-      "norm_label": "prisma",
-      "id": "seed_reference_data_prisma"
+      "norm_label": "prisma"
     },
     {
       "label": "SECTIONS",
       "file_type": "code",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L5",
+      "id": "seed_reference_data_sections",
       "community": 129,
-      "norm_label": "sections",
-      "id": "seed_reference_data_sections"
+      "norm_label": "sections"
     },
     {
       "label": "CATEGORIES",
       "file_type": "code",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L14",
+      "id": "seed_reference_data_categories",
       "community": 129,
-      "norm_label": "categories",
-      "id": "seed_reference_data_categories"
+      "norm_label": "categories"
     },
     {
       "label": "SKILLS",
       "file_type": "code",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L39",
+      "id": "seed_reference_data_skills",
       "community": 129,
-      "norm_label": "skills",
-      "id": "seed_reference_data_skills"
+      "norm_label": "skills"
     },
     {
       "label": "APPEARANCES",
       "file_type": "code",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L59",
+      "id": "seed_reference_data_appearances",
       "community": 129,
-      "norm_label": "appearances",
-      "id": "seed_reference_data_appearances"
+      "norm_label": "appearances"
     },
     {
       "label": "LANGUAGES",
       "file_type": "code",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L77",
+      "id": "seed_reference_data_languages",
       "community": 129,
-      "norm_label": "languages",
-      "id": "seed_reference_data_languages"
+      "norm_label": "languages"
     },
     {
       "label": "seedReferenceData()",
       "file_type": "code",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L85",
+      "id": "seed_reference_data_seedreferencedata",
       "community": 129,
-      "norm_label": "seedreferencedata()",
-      "id": "seed_reference_data_seedreferencedata"
+      "norm_label": "seedreferencedata()"
     },
     {
       "label": "tsconfig.build.json",
@@ -3932,6 +3626,51 @@
       "id": "components_addressautocomplete_addressautocomplete"
     },
     {
+      "label": "AppSidebar.tsx",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
+      "source_location": "L1",
+      "community": 98,
+      "norm_label": "appsidebar.tsx",
+      "id": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx"
+    },
+    {
+      "label": "NavItem",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
+      "source_location": "L7",
+      "community": 98,
+      "norm_label": "navitem",
+      "id": "layout_appsidebar_navitem"
+    },
+    {
+      "label": "BrandLogo()",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
+      "source_location": "L14",
+      "community": 98,
+      "norm_label": "brandlogo()",
+      "id": "layout_appsidebar_brandlogo"
+    },
+    {
+      "label": "SidebarNavItem()",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
+      "source_location": "L30",
+      "community": 98,
+      "norm_label": "sidebarnavitem()",
+      "id": "layout_appsidebar_sidebarnavitem"
+    },
+    {
+      "label": "AppSidebar()",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
+      "source_location": "L66",
+      "community": 98,
+      "norm_label": "appsidebar()",
+      "id": "layout_appsidebar_appsidebar"
+    },
+    {
       "label": "useDebounce.ts",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/shared/hooks/useDebounce.ts",
@@ -6254,6 +5993,24 @@
       "id": "components_companyrolebadge_companyrolebadge"
     },
     {
+      "label": "CompanySelector.tsx",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
+      "source_location": "L1",
+      "community": 98,
+      "norm_label": "companyselector.tsx",
+      "id": "apps_flexup_web_src_features_companies_components_companyselector_tsx"
+    },
+    {
+      "label": "CompanySelector()",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
+      "source_location": "L14",
+      "community": 98,
+      "norm_label": "companyselector()",
+      "id": "components_companyselector_companyselector"
+    },
+    {
       "label": "useActiveCompany.ts",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/features/companies/hooks/useActiveCompany.ts",
@@ -7710,6 +7467,60 @@
       "community": 28,
       "norm_label": "apirequest()",
       "id": "api_client_apirequest"
+    },
+    {
+      "label": "AppShell.tsx",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
+      "source_location": "L1",
+      "community": 98,
+      "norm_label": "appshell.tsx",
+      "id": "apps_flexup_web_src_shared_components_layout_appshell_tsx"
+    },
+    {
+      "label": "AppShellProps",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
+      "source_location": "L4",
+      "community": 98,
+      "norm_label": "appshellprops",
+      "id": "layout_appshell_appshellprops"
+    },
+    {
+      "label": "AppShell()",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
+      "source_location": "L9",
+      "community": 98,
+      "norm_label": "appshell()",
+      "id": "layout_appshell_appshell"
+    },
+    {
+      "label": "AppTopbar.tsx",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
+      "source_location": "L1",
+      "community": 98,
+      "norm_label": "apptopbar.tsx",
+      "id": "apps_flexup_web_src_shared_components_layout_apptopbar_tsx"
+    },
+    {
+      "label": "AppTopbarProps",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
+      "source_location": "L10",
+      "community": 98,
+      "norm_label": "apptopbarprops",
+      "id": "layout_apptopbar_apptopbarprops"
+    },
+    {
+      "label": "AppTopbar()",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
+      "source_location": "L14",
+      "community": 98,
+      "norm_label": "apptopbar()",
+      "id": "layout_apptopbar_apptopbar"
     },
     {
       "label": "auth.controller.ts",
@@ -13418,6 +13229,150 @@
       "id": "companies_companies_mapper_tocompanydetail"
     },
     {
+      "label": "companies.service.ts",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "companies.service.ts",
+      "id": "apps_flexup_backend_src_companies_companies_service_ts"
+    },
+    {
+      "label": "ALLOWED_LOGO_MIME",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L23",
+      "community": 3,
+      "norm_label": "allowed_logo_mime",
+      "id": "companies_companies_service_allowed_logo_mime"
+    },
+    {
+      "label": "CompaniesService",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L26",
+      "community": 3,
+      "norm_label": "companiesservice",
+      "id": "companies_companies_service_companiesservice"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L29",
+      "community": 12,
+      "norm_label": ".constructor()",
+      "id": "companies_companies_service_companiesservice_constructor"
+    },
+    {
+      "label": ".create()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L36",
+      "community": 3,
+      "norm_label": ".create()",
+      "id": "companies_companies_service_companiesservice_create"
+    },
+    {
+      "label": ".findUserCompanies()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L76",
+      "community": 3,
+      "norm_label": ".findusercompanies()",
+      "id": "companies_companies_service_companiesservice_findusercompanies"
+    },
+    {
+      "label": ".findById()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L87",
+      "community": 3,
+      "norm_label": ".findbyid()",
+      "id": "companies_companies_service_companiesservice_findbyid"
+    },
+    {
+      "label": ".update()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L107",
+      "community": 3,
+      "norm_label": ".update()",
+      "id": "companies_companies_service_companiesservice_update"
+    },
+    {
+      "label": ".deactivate()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L134",
+      "community": 3,
+      "norm_label": ".deactivate()",
+      "id": "companies_companies_service_companiesservice_deactivate"
+    },
+    {
+      "label": ".uploadLogo()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L144",
+      "community": 3,
+      "norm_label": ".uploadlogo()",
+      "id": "companies_companies_service_companiesservice_uploadlogo"
+    },
+    {
+      "label": ".removeLogo()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L200",
+      "community": 3,
+      "norm_label": ".removelogo()",
+      "id": "companies_companies_service_companiesservice_removelogo"
+    },
+    {
+      "label": ".listAll()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L218",
+      "community": 3,
+      "norm_label": ".listall()",
+      "id": "companies_companies_service_companiesservice_listall"
+    },
+    {
+      "label": ".verifyCompany()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L255",
+      "community": 3,
+      "norm_label": ".verifycompany()",
+      "id": "companies_companies_service_companiesservice_verifycompany"
+    },
+    {
+      "label": ".setActive()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L267",
+      "community": 3,
+      "norm_label": ".setactive()",
+      "id": "companies_companies_service_companiesservice_setactive"
+    },
+    {
+      "label": ".requireCompany()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L284",
+      "community": 3,
+      "norm_label": ".requirecompany()",
+      "id": "companies_companies_service_companiesservice_requirecompany"
+    },
+    {
+      "label": ".deleteLogoFile()",
+      "file_type": "code",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L294",
+      "community": 3,
+      "norm_label": ".deletelogofile()",
+      "id": "companies_companies_service_companiesservice_deletelogofile"
+    },
+    {
       "label": "companies.module.ts",
       "file_type": "code",
       "source_file": "apps/flexup-backend/src/companies/companies.module.ts",
@@ -15857,6 +15812,42 @@
       "id": "ui_separator_separator"
     },
     {
+      "label": "button.tsx",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
+      "source_location": "L1",
+      "community": 19,
+      "norm_label": "button.tsx",
+      "id": "apps_flexup_web_src_shared_components_ui_button_tsx"
+    },
+    {
+      "label": "buttonVariants",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
+      "source_location": "L7",
+      "community": 19,
+      "norm_label": "buttonvariants",
+      "id": "ui_button_buttonvariants"
+    },
+    {
+      "label": "ButtonProps",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
+      "source_location": "L38",
+      "community": 19,
+      "norm_label": "buttonprops",
+      "id": "ui_button_buttonprops"
+    },
+    {
+      "label": "Button",
+      "file_type": "code",
+      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
+      "source_location": "L44",
+      "community": 19,
+      "norm_label": "button",
+      "id": "ui_button_button"
+    },
+    {
       "label": "dropdown-menu.tsx",
       "file_type": "code",
       "source_file": "apps/flexup-web/src/shared/components/ui/dropdown-menu.tsx",
@@ -17359,1075 +17350,24 @@
   ],
   "links": [
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "prisma_prisma_service_prismaservice"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "config_config_service_appconfigservice"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "types_paginated_response_paginatedresponse"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "dto_create_company_dto_createcompanydto"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "dto_update_company_dto_updatecompanydto"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "dto_company_list_query_dto_companylistquerydto"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "dto_company_public_response_companypublicresponse"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "dto_company_detail_response_companydetailresponse"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "companies_companies_mapper_tocompanydetail"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "companies_companies_mapper_tocompanypublic"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "companies_companies_service_allowed_logo_mime"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "companies_companies_service_companiesservice"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "apps_flexup_backend_src_config_config_service_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "apps_flexup_backend_src_prisma_prisma_service_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "apps_flexup_backend_src_common_types_paginated_response_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.controller.ts",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_controller_ts",
-      "target": "apps_flexup_backend_src_companies_companies_service_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "apps_flexup_backend_src_companies_companies_mapper_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "apps_flexup_backend_src_companies_dto_create_company_dto_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "apps_flexup_backend_src_companies_dto_update_company_dto_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "apps_flexup_backend_src_companies_dto_company_list_query_dto_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "apps_flexup_backend_src_companies_dto_company_public_response_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_service_ts",
-      "target": "apps_flexup_backend_src_companies_dto_company_detail_response_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.module.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_module_ts",
-      "target": "apps_flexup_backend_src_companies_companies_service_ts"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_constructor"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_create"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L76",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_findusercompanies"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L87",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_findbyid"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L107",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_update"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L134",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_deactivate"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L144",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_uploadlogo"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L200",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_removelogo"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L218",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_listall"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L255",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_verifycompany"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L267",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_setactive"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L284",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_requirecompany"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L294",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice",
-      "target": "companies_companies_service_companiesservice_deletelogofile"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.controller.ts",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_controller_ts",
-      "target": "companies_companies_service_companiesservice"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.controller.ts",
-      "source_location": "L43",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_controller_companiescontroller_constructor",
-      "target": "companies_companies_service_companiesservice"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.module.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_src_companies_companies_module_ts",
-      "target": "companies_companies_service_companiesservice"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_constructor",
-      "target": "config_config_service_appconfigservice"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_constructor",
-      "target": "prisma_prisma_service_prismaservice"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L71",
-      "weight": 1.0,
-      "source": "companies_companies_service_companiesservice_create",
-      "target": "companies_companies_mapper_tocompanydetail"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_create",
-      "target": "dto_create_company_dto_createcompanydto"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_create",
-      "target": "dto_company_detail_response_companydetailresponse"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L76",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_findusercompanies",
-      "target": "dto_company_public_response_companypublicresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L91",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_findbyid",
-      "target": "companies_companies_service_companiesservice_requirecompany"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L98",
-      "weight": 1.0,
-      "source": "companies_companies_service_companiesservice_findbyid",
-      "target": "companies_companies_mapper_tocompanydetail"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L87",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_findbyid",
-      "target": "dto_company_detail_response_companydetailresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L111",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_update",
-      "target": "companies_companies_service_companiesservice_requirecompany"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L136",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_deactivate",
-      "target": "companies_companies_service_companiesservice_update"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L190",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_uploadlogo",
-      "target": "companies_companies_service_companiesservice_update"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L206",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_removelogo",
-      "target": "companies_companies_service_companiesservice_update"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L257",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_verifycompany",
-      "target": "companies_companies_service_companiesservice_update"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L272",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_setactive",
-      "target": "companies_companies_service_companiesservice_update"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L131",
-      "weight": 1.0,
-      "source": "companies_companies_service_companiesservice_update",
-      "target": "companies_companies_mapper_tocompanydetail"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L107",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_update",
-      "target": "dto_update_company_dto_updatecompanydto"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L107",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_update",
-      "target": "dto_company_detail_response_companydetailresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L135",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_deactivate",
-      "target": "companies_companies_service_companiesservice_requirecompany"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L165",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_uploadlogo",
-      "target": "companies_companies_service_companiesservice_requirecompany"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L186",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_uploadlogo",
-      "target": "companies_companies_service_companiesservice_deletelogofile"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L197",
-      "weight": 1.0,
-      "source": "companies_companies_service_companiesservice_uploadlogo",
-      "target": "companies_companies_mapper_tocompanydetail"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L144",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_uploadlogo",
-      "target": "dto_company_detail_response_companydetailresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L201",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_removelogo",
-      "target": "companies_companies_service_companiesservice_requirecompany"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L204",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_removelogo",
-      "target": "companies_companies_service_companiesservice_deletelogofile"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L213",
-      "weight": 1.0,
-      "source": "companies_companies_service_companiesservice_removelogo",
-      "target": "companies_companies_mapper_tocompanydetail"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L200",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_removelogo",
-      "target": "dto_company_detail_response_companydetailresponse"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L218",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_listall",
-      "target": "types_paginated_response_paginatedresponse"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L218",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_listall",
-      "target": "dto_company_list_query_dto_companylistquerydto"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L218",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_listall",
-      "target": "dto_company_detail_response_companydetailresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L256",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_verifycompany",
-      "target": "companies_companies_service_companiesservice_requirecompany"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L264",
-      "weight": 1.0,
-      "source": "companies_companies_service_companiesservice_verifycompany",
-      "target": "companies_companies_mapper_tocompanydetail"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L255",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_verifycompany",
-      "target": "dto_company_detail_response_companydetailresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L271",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_setactive",
-      "target": "companies_companies_service_companiesservice_requirecompany"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L279",
-      "weight": 1.0,
-      "source": "companies_companies_service_companiesservice_setactive",
-      "target": "companies_companies_mapper_tocompanydetail"
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
-      "source_location": "L267",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "companies_companies_service_companiesservice_setactive",
-      "target": "dto_company_detail_response_companydetailresponse"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_features_companies_components_companyselector_tsx",
-      "target": "hooks_useactivecompany_useactivecompany"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_features_companies_components_companyselector_tsx",
-      "target": "components_companyselector_companyselector"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_features_companies_components_companyselector_tsx",
-      "target": "apps_flexup_web_src_features_companies_hooks_useactivecompany_ts"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "components_companyselector_companyselector",
-      "target": "hooks_useactivecompany_useactivecompany"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
-      "target": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
-      "target": "layout_appsidebar_appsidebar"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
-      "target": "apps_flexup_web_src_shared_components_layout_apptopbar_tsx"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
-      "target": "layout_apptopbar_apptopbar"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
-      "target": "layout_appshell_appshellprops"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
-      "target": "layout_appshell_appshell"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx",
-      "target": "layout_appsidebar_navitem"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx",
-      "target": "layout_appsidebar_sidebarnavitem"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx",
-      "target": "layout_appsidebar_appsidebar"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
-      "source_location": "L68",
-      "weight": 1.0,
-      "source": "layout_appsidebar_appsidebar",
-      "target": "hooks_useactivecompany_useactivecompany"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_apptopbar_tsx",
-      "target": "layout_apptopbar_apptopbarprops"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_layout_apptopbar_tsx",
-      "target": "layout_apptopbar_apptopbar"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "layout_apptopbar_apptopbar",
-      "target": "stores_auth_store_useauthstore"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_ui_button_tsx",
-      "target": "ui_button_buttonvariants"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_ui_button_tsx",
-      "target": "ui_button_buttonprops"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
-      "source_location": "L44",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_ui_button_tsx",
-      "target": "ui_button_button"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/LanguageSwitcher.tsx",
+      "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_languageswitcher_tsx",
-      "target": "apps_flexup_web_src_shared_components_ui_button_tsx"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/LanguageSwitcher.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_web_src_shared_components_languageswitcher_tsx",
-      "target": "ui_button_button"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-web/src/shared/components/ui/select.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "apps_flexup_web_src_shared_components_ui_select_tsx",
-      "target": "ui_select_dataselect",
+      "source": "apps_flexup_backend_prisma_seed_reference_data_js",
+      "target": "seed_reference_data_client_1",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "apps_flexup_backend_prisma_seed_reference_data_js",
-      "target": "seed_reference_data_client_1"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "apps_flexup_backend_prisma_seed_reference_data_js",
-      "target": "seed_reference_data_prisma"
+      "target": "seed_reference_data_prisma",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18435,9 +17375,9 @@
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "apps_flexup_backend_prisma_seed_reference_data_js",
-      "target": "seed_reference_data_sections"
+      "target": "seed_reference_data_sections",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18445,9 +17385,9 @@
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L14",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "apps_flexup_backend_prisma_seed_reference_data_js",
-      "target": "seed_reference_data_categories"
+      "target": "seed_reference_data_categories",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18455,9 +17395,9 @@
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L39",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "apps_flexup_backend_prisma_seed_reference_data_js",
-      "target": "seed_reference_data_skills"
+      "target": "seed_reference_data_skills",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18465,9 +17405,9 @@
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L59",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "apps_flexup_backend_prisma_seed_reference_data_js",
-      "target": "seed_reference_data_appearances"
+      "target": "seed_reference_data_appearances",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18475,9 +17415,9 @@
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L77",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "apps_flexup_backend_prisma_seed_reference_data_js",
-      "target": "seed_reference_data_languages"
+      "target": "seed_reference_data_languages",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18485,9 +17425,9 @@
       "source_file": "apps/flexup-backend/prisma/seed/reference-data.js",
       "source_location": "L85",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "apps_flexup_backend_prisma_seed_reference_data_js",
-      "target": "seed_reference_data_seedreferencedata"
+      "target": "seed_reference_data_seedreferencedata",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -23909,6 +22849,79 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx",
+      "target": "layout_appsidebar_navitem"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx",
+      "target": "layout_appsidebar_brandlogo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx",
+      "target": "layout_appsidebar_sidebarnavitem"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx",
+      "target": "layout_appsidebar_appsidebar"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
+      "target": "apps_flexup_web_src_shared_components_layout_appsidebar_tsx"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppSidebar.tsx",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "layout_appsidebar_appsidebar",
+      "target": "hooks_useactivecompany_useactivecompany"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
+      "target": "layout_appsidebar_appsidebar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "apps/flexup-web/src/shared/hooks/useDebounce.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -26318,6 +25331,17 @@
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "layout_apptopbar_apptopbar",
+      "target": "stores_auth_store_useauthstore"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
       "source_file": "apps/flexup-web/src/routes/dashboard.tsx",
       "source_location": "L156",
       "weight": 1.0,
@@ -26880,6 +25904,49 @@
       "confidence_score": 1.0,
       "source": "apps_flexup_web_src_features_companies_components_companyrolebadge_tsx",
       "target": "components_companyrolebadge_companyrolebadge"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_features_companies_components_companyselector_tsx",
+      "target": "apps_flexup_web_src_features_companies_hooks_useactivecompany_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_features_companies_components_companyselector_tsx",
+      "target": "hooks_useactivecompany_useactivecompany"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_features_companies_components_companyselector_tsx",
+      "target": "components_companyselector_companyselector"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flexup-web/src/features/companies/components/CompanySelector.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "components_companyselector_companyselector",
+      "target": "hooks_useactivecompany_useactivecompany"
     },
     {
       "relation": "imports_from",
@@ -28536,6 +27603,68 @@
       "target": "api_client_apirequest"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
+      "target": "apps_flexup_web_src_shared_components_layout_apptopbar_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
+      "target": "layout_apptopbar_apptopbar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
+      "target": "layout_appshell_appshellprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppShell.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_appshell_tsx",
+      "target": "layout_appshell_appshell"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_apptopbar_tsx",
+      "target": "layout_apptopbar_apptopbarprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/layout/AppTopbar.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_layout_apptopbar_tsx",
+      "target": "layout_apptopbar_apptopbar"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -29274,6 +28403,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "apps_flexup_backend_src_config_config_service_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "apps/flexup-backend/src/email/email.service.ts",
       "source_location": "L2",
       "weight": 1.0,
@@ -29555,6 +28695,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "config_config_service_appconfigservice"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "apps/flexup-backend/src/email/email.service.ts",
       "source_location": "L2",
       "weight": 1.0,
@@ -29626,6 +28777,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "users_users_service_usersservice_constructor",
+      "target": "config_config_service_appconfigservice"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_constructor",
       "target": "config_config_service_appconfigservice"
     },
     {
@@ -34990,6 +34152,17 @@
       "target": "apps_flexup_backend_src_prisma_prisma_service_ts"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "apps_flexup_backend_src_prisma_prisma_service_ts"
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/flexup-backend/src/prisma/prisma.service.ts",
@@ -35064,6 +34237,17 @@
       "target": "prisma_prisma_service_prismaservice"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "prisma_prisma_service_prismaservice"
+    },
+    {
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
@@ -35094,6 +34278,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "users_users_service_usersservice_constructor",
+      "target": "prisma_prisma_service_prismaservice"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_constructor",
       "target": "prisma_prisma_service_prismaservice"
     },
     {
@@ -35997,6 +35192,17 @@
       "target": "apps_flexup_backend_src_common_types_paginated_response_ts"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "apps_flexup_backend_src_common_types_paginated_response_ts"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -36030,6 +35236,17 @@
       "target": "types_paginated_response_paginatedresponse"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "types_paginated_response_paginatedresponse"
+    },
+    {
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
@@ -36060,6 +35277,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "companies_companies_controller_companiescontroller_listall",
+      "target": "types_paginated_response_paginatedresponse"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L218",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_listall",
       "target": "types_paginated_response_paginatedresponse"
     },
     {
@@ -37912,6 +37140,28 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "apps/flexup-backend/src/companies/companies.controller.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_controller_ts",
+      "target": "apps_flexup_backend_src_companies_companies_service_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.controller.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_controller_ts",
+      "target": "companies_companies_service_companiesservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.controller.ts",
       "source_location": "L27",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -38174,6 +37424,17 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "apps/flexup-backend/src/companies/companies.controller.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_controller_companiescontroller_constructor",
+      "target": "companies_companies_service_companiesservice"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.controller.ts",
       "source_location": "L48",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -38366,6 +37627,17 @@
       "target": "companies_companies_mapper_tocompanydetail"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "apps_flexup_backend_src_companies_companies_mapper_ts"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -38375,6 +37647,673 @@
       "confidence_score": 1.0,
       "source": "companies_companies_mapper_tocompanydetail",
       "target": "companies_companies_mapper_tocompanypublic"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "companies_companies_mapper_tocompanypublic"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "companies_companies_mapper_tocompanydetail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "companies_companies_service_companiesservice_create",
+      "target": "companies_companies_mapper_tocompanydetail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "companies_companies_service_companiesservice_findbyid",
+      "target": "companies_companies_mapper_tocompanydetail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "companies_companies_service_companiesservice_update",
+      "target": "companies_companies_mapper_tocompanydetail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L197",
+      "weight": 1.0,
+      "source": "companies_companies_service_companiesservice_uploadlogo",
+      "target": "companies_companies_mapper_tocompanydetail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "companies_companies_service_companiesservice_removelogo",
+      "target": "companies_companies_mapper_tocompanydetail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L264",
+      "weight": 1.0,
+      "source": "companies_companies_service_companiesservice_verifycompany",
+      "target": "companies_companies_mapper_tocompanydetail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L279",
+      "weight": 1.0,
+      "source": "companies_companies_service_companiesservice_setactive",
+      "target": "companies_companies_mapper_tocompanydetail"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "apps_flexup_backend_src_companies_dto_create_company_dto_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "dto_create_company_dto_createcompanydto"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "apps_flexup_backend_src_companies_dto_update_company_dto_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "dto_update_company_dto_updatecompanydto"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "apps_flexup_backend_src_companies_dto_company_list_query_dto_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "dto_company_list_query_dto_companylistquerydto"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "apps_flexup_backend_src_companies_dto_company_public_response_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "dto_company_public_response_companypublicresponse"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "apps_flexup_backend_src_companies_dto_company_detail_response_ts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "dto_company_detail_response_companydetailresponse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "companies_companies_service_allowed_logo_mime"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_service_ts",
+      "target": "companies_companies_service_companiesservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.module.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_module_ts",
+      "target": "apps_flexup_backend_src_companies_companies_service_ts"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_create"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_findusercompanies"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_findbyid"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L107",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_update"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L134",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_deactivate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L144",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_uploadlogo"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L200",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_removelogo"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L218",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_listall"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L255",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_verifycompany"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L267",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_setactive"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L284",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_requirecompany"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L294",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice",
+      "target": "companies_companies_service_companiesservice_deletelogofile"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.module.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_backend_src_companies_companies_module_ts",
+      "target": "companies_companies_service_companiesservice"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_create",
+      "target": "dto_create_company_dto_createcompanydto"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_create",
+      "target": "dto_company_detail_response_companydetailresponse"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_findusercompanies",
+      "target": "dto_company_public_response_companypublicresponse"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L91",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_findbyid",
+      "target": "companies_companies_service_companiesservice_requirecompany"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_findbyid",
+      "target": "dto_company_detail_response_companydetailresponse"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L111",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_update",
+      "target": "companies_companies_service_companiesservice_requirecompany"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L136",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_deactivate",
+      "target": "companies_companies_service_companiesservice_update"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L190",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_uploadlogo",
+      "target": "companies_companies_service_companiesservice_update"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L206",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_removelogo",
+      "target": "companies_companies_service_companiesservice_update"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L257",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_verifycompany",
+      "target": "companies_companies_service_companiesservice_update"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L272",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_setactive",
+      "target": "companies_companies_service_companiesservice_update"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L107",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_update",
+      "target": "dto_update_company_dto_updatecompanydto"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L107",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_update",
+      "target": "dto_company_detail_response_companydetailresponse"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L135",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_deactivate",
+      "target": "companies_companies_service_companiesservice_requirecompany"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L165",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_uploadlogo",
+      "target": "companies_companies_service_companiesservice_requirecompany"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L186",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_uploadlogo",
+      "target": "companies_companies_service_companiesservice_deletelogofile"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L144",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_uploadlogo",
+      "target": "dto_company_detail_response_companydetailresponse"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L201",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_removelogo",
+      "target": "companies_companies_service_companiesservice_requirecompany"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L204",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_removelogo",
+      "target": "companies_companies_service_companiesservice_deletelogofile"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L200",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_removelogo",
+      "target": "dto_company_detail_response_companydetailresponse"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L218",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_listall",
+      "target": "dto_company_list_query_dto_companylistquerydto"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L218",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_listall",
+      "target": "dto_company_detail_response_companydetailresponse"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L256",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_verifycompany",
+      "target": "companies_companies_service_companiesservice_requirecompany"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L255",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_verifycompany",
+      "target": "dto_company_detail_response_companydetailresponse"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L271",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_setactive",
+      "target": "companies_companies_service_companiesservice_requirecompany"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-backend/src/companies/companies.service.ts",
+      "source_location": "L267",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "companies_companies_service_companiesservice_setactive",
+      "target": "dto_company_detail_response_companydetailresponse"
     },
     {
       "relation": "contains",
@@ -40990,6 +40929,28 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "apps/flexup-web/src/shared/components/LanguageSwitcher.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_languageswitcher_tsx",
+      "target": "apps_flexup_web_src_shared_components_ui_button_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/LanguageSwitcher.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_languageswitcher_tsx",
+      "target": "ui_button_button"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/LanguageSwitcher.tsx",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -41207,6 +41168,36 @@
       "confidence_score": 1.0,
       "source": "apps_flexup_web_src_shared_components_ui_separator_tsx",
       "target": "ui_separator_separator"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_ui_button_tsx",
+      "target": "ui_button_buttonvariants"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_ui_button_tsx",
+      "target": "ui_button_buttonprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/flexup-web/src/shared/components/ui/button.tsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_flexup_web_src_shared_components_ui_button_tsx",
+      "target": "ui_button_button"
     },
     {
       "relation": "contains",
@@ -42567,5 +42558,5 @@
       "source_file": "docs/tasks/TASK_BATCH_F1_1.md"
     }
   ],
-  "built_at_commit": "c7ef9de1bc77640a59ba68aa0aac17f5837e0132"
+  "built_at_commit": "56358a7e682411f37dd5ce532d4ae314d36f03c4"
 }
